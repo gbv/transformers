@@ -6,9 +6,8 @@
 	<xsl:strip-space elements="*"/>
 
 	<!-- Maintenance note: For each revision, change the content of <recordInfo><recordOrigin> to reflect the new revision number.
-	MARC21slim2MODS3-4 (Revision 1.74gbv) 20110718
-	
-Revision 1.70gbv - Added splitting of names in given and family name 2011/05/18 - voss
+	MARC21slim2MODS3-4 (Revision 1.74) 20110715
+
 Revision 1.74 - Fixed 510 note - 2011/07/15 tmee
 Revision 1.73 - Fixed 506 540 - 2011/07/11 tmee
 Revision 1.72 - Fixed frequency error - 2011/07/07 and 2011/07/14 tmee
@@ -1557,7 +1556,7 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 		<xsl:for-each select="marc:datafield[@tag=505]">
 			<xsl:call-template name="createTOCFrom505"/>
 		</xsl:for-each>
-		
+
 		<xsl:for-each select="marc:datafield[@tag=521]">
 			<xsl:call-template name="createTargetAudienceFrom521"/>
 		</xsl:for-each>
@@ -1569,6 +1568,7 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 		<xsl:for-each select="marc:datafield[@tag=540]">
 			<xsl:call-template name="createAccessConditionFrom540"/>
 		</xsl:for-each>
+
 
 		<xsl:if test="$typeOf008='BK' or $typeOf008='CF' or $typeOf008='MU' or $typeOf008='VM'">
 			<xsl:variable name="controlField008-22" select="substring($controlField008,23,1)"/>
@@ -1851,6 +1851,7 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 				</note>
 			</relatedItem>
 		</xsl:for-each>
+
 
 		<xsl:for-each select="marc:datafield[@tag=534]">
 			<relatedItem type="original">
@@ -2493,7 +2494,7 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 			</xsl:for-each>
 
 			<recordOrigin>Converted from MARCXML to MODS version 3.4 using MARC21slim2MODS3-4.xsl
-				(Revision 1.70gbv)</recordOrigin>
+				(Revision 1.74)</recordOrigin>
 
 			<xsl:for-each select="marc:datafield[@tag=040]/marc:subfield[@code='b']">
 				<languageOfCataloging>
@@ -2739,37 +2740,13 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 		</genre>
 	</xsl:template>
 
-	<!-- split given, surname in to namePart elements because most MARC data is such broken (voss) -->
-	<xsl:template name="splitNamePart">
-		<xsl:param name="nameString"/>
-		<xsl:variable name="length" select="string-length($nameString)"/>
-
-		<xsl:choose>
-			<xsl:when test="contains(substring($nameString,1,$length - 1),',')">
-				<namePart type="family">
-					<xsl:value-of select="normalize-space(substring-before($nameString,','))"/>
-				</namePart>
-				<namePart type="given">
-					<xsl:value-of select="normalize-space(substring-after($nameString,','))"/>
-				</namePart>
-			</xsl:when>
-			<xsl:otherwise>
-				<namePart>
-					<xsl:value-of select="$nameString"/>
-				</namePart>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:template>
-
 	<xsl:template name="nameABCDN">
 		<xsl:for-each select="marc:subfield[@code='a']">
-			<xsl:call-template name="splitNamePart">
-				<xsl:with-param name="nameString">
-					<xsl:call-template name="chopPunctuation">
-						<xsl:with-param name="chopString" select="."/>
-					</xsl:call-template>
-				</xsl:with-param>
-			</xsl:call-template>
+			<namePart>
+				<xsl:call-template name="chopPunctuation">
+					<xsl:with-param name="chopString" select="."/>
+				</xsl:call-template>
+			</namePart>
 		</xsl:for-each>
 		<xsl:for-each select="marc:subfield[@code='b']">
 			<namePart>
@@ -2786,31 +2763,27 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 		</xsl:if>
 	</xsl:template>
 	<xsl:template name="nameABCDQ">
-		<xsl:call-template name="splitNamePart">
-			<xsl:with-param name="nameString">
-				<xsl:call-template name="chopPunctuation">
-					<xsl:with-param name="chopString">
-						<xsl:call-template name="subfieldSelect">
-							<xsl:with-param name="codes">aq</xsl:with-param>
-						</xsl:call-template>
-					</xsl:with-param>
-					<xsl:with-param name="punctuation">
-						<xsl:text>:,;/ </xsl:text>
-					</xsl:with-param>
-				</xsl:call-template>
-			</xsl:with-param>
-		</xsl:call-template>
+		<namePart>
+			<xsl:call-template name="chopPunctuation">
+				<xsl:with-param name="chopString">
+					<xsl:call-template name="subfieldSelect">
+						<xsl:with-param name="codes">aq</xsl:with-param>
+					</xsl:call-template>
+				</xsl:with-param>
+				<xsl:with-param name="punctuation">
+					<xsl:text>:,;/ </xsl:text>
+				</xsl:with-param>
+			</xsl:call-template>
+		</namePart>
 		<xsl:call-template name="termsOfAddress"/>
 		<xsl:call-template name="nameDate"/>
 	</xsl:template>
 	<xsl:template name="nameACDEQ">
-		<xsl:call-template name="splitNamePart">
-			<xsl:with-param name="nameString">
-				<xsl:call-template name="subfieldSelect">
-					<xsl:with-param name="codes">acdeq</xsl:with-param>
-				</xsl:call-template>
-			</xsl:with-param>
-		</xsl:call-template>
+		<namePart>
+			<xsl:call-template name="subfieldSelect">
+				<xsl:with-param name="codes">acdeq</xsl:with-param>
+			</xsl:call-template>
+		</namePart>
 	</xsl:template>
 	<xsl:template name="constituentOrRelatedType">
 		<xsl:if test="@ind2=2">
@@ -4724,6 +4697,7 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 					</role>
 				</xsl:for-each>
 			</name>
+			<xsl:if test="marc:subfield[@code='t']">
 			<titleInfo>
 				<title>
 					<xsl:call-template name="chopPunctuation">
@@ -4736,6 +4710,7 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 				</title>
 				<xsl:call-template name="part"/>
 			</titleInfo>
+			</xsl:if>
 			<xsl:call-template name="subjectAnyOrder"/>
 		</subject>
 	</xsl:template>
