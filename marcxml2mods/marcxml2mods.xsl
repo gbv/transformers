@@ -2526,6 +2526,19 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 			</xsl:attribute>
 		</xsl:for-each>
 	</xsl:template>
+	<xsl:template name="authorityUri">
+		<xsl:for-each select="marc:subfield[@code='0' and starts-with(.,'(DE-588a)')]">
+			<xsl:attribute name="authority">
+				<xsl:value-of select="'gnd'"/>
+			</xsl:attribute>
+			<xsl:attribute name="authorityURI">
+				<xsl:value-of select="'http://d-nb.info/gnd/'"/>
+			</xsl:attribute>
+			<xsl:attribute name="valueURI">
+				<xsl:value-of select="concat('http://d-nb.info/gnd/',substring-after(.,'(DE-588a)'))"/>
+			</xsl:attribute>
+		</xsl:for-each>
+	</xsl:template>
 	<xsl:template name="role">
 		<xsl:for-each select="marc:subfield[@code='e']">
 			<role>
@@ -4102,6 +4115,7 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 
 	<xsl:template name="createNameFrom700">
 		<name type="personal">
+			<xsl:call-template name="authorityUri"/>
 			<xsl:call-template name="xxx880"/>
 			<xsl:call-template name="nameABCDQ"/>
 			<xsl:call-template name="affiliation"/>
