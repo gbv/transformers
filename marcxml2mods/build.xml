@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="marcxml2mods">
+  
+  <property name="script" value="marcxml2mods.xsl"/>
+  <property name="schema" value="schemas/mods-3-4.xsd"/>
+
+  <!-- erstmal nur eine Datei - später besser über ein Fileset iterieren -->
+  <property name="input" value="tests/588514489.marc.xml"/>
+
+  <target name="test">
+    <echo>Testing ${input}</echo>
+
+    <!-- XSLT-Transformation muss durchlaufen -->
+    <xslt in="${input}" out="tmp.xml" style="${script}"/>
+
+    <!-- Ausgabe muss gültiges MODS sein -->
+    <schemavalidate file="tmp.xml"/>
+
+    <!-- TODO: weitere Bedingungen testen, z.B. mit Schematron -->
+
+    <delete file="tmp.xml" quiet="yes"/>
+
+  </target>
+</project>

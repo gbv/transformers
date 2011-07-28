@@ -1,0 +1,27 @@
+marcxml2mods.xsl is based on the official MODS Stylesheets from
+
+http://www.loc.gov/standards/mods/mods-conversions.html
+
+with local additions. Please check the official stylesheets and merge its
+updates before adding more changes. New revisions are announced at the MODS
+mailing list: 
+
+http://listserv.loc.gov/listarch/mods.html
+
+General additions may also become part of the official stylesheet, please
+contact Tracy Meehleib <tmee@loc.gov> for requests.
+
+The schemas/ directory contains MODS schemas for testing from
+
+http://www.loc.gov/standards/mods/mods-schemas.html
+
+The tests/ directory contains unit tests to be run with Apache ant. Running
+
+$ ant test
+
+will ensure that marcxml2mods.xsl is valid XSLT and creates valid MODS, at
+least for the test cases. Additional tests require Schematron for Apache Ant,
+available at
+
+http://www.schematron.com/implementation.html
+
