@@ -44,9 +44,9 @@
     <subfield code="0">(DE-STW)186611</subfield>
     <subfield code="2">stw</subfield>
   </datafield>
-  <datafield tag="700" ind1="1" ind2=" ">
+  <!--datafield tag="700" ind1="1" ind2=" ">
     <subfield code="a">Mega, Cataldo.</subfield>
-  </datafield>
+  </datafield-->
   <datafield tag="700" ind1="1" ind2=" ">
     <subfield code="a">Krebs, Kathleen.</subfield>
     <subfield code="0">(DE-601)571663702</subfield>
@@ -57,12 +57,12 @@
     <subfield code="0">(DE-601)588514438</subfield>
     <subfield code="0">(DE-588a)136993451</subfield>
   </datafield>
-  <datafield tag="700" ind1="1" ind2=" ">
+  <!--datafield tag="700" ind1="1" ind2=" ">
     <subfield code="a">Ritter, Norbert.</subfield>
   </datafield>
   <datafield tag="700" ind1="1" ind2=" ">
     <subfield code="a">Mitschang, Bernhard.</subfield>
-  </datafield>
+  </datafield-->
   <datafield tag="773" ind1="0" ind2="8">
     <subfield code="i">In: </subfield>
     <subfield code="t">Wissens- und Informationsmanagement</subfield>

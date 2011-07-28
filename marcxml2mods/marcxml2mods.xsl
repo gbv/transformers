@@ -6,9 +6,9 @@
 	<xsl:strip-space elements="*"/>
 
 	<!-- Maintenance note: For each revision, change the content of <recordInfo><recordOrigin> to reflect the new revision number.
-	MARC21slim2MODS3-4 (Revision 1.74gbv) 20110718
+	MARC21slim2MODS3-4 (Revision 1.74gbv) 20110728
 	
-Revision 1.70gbv - Added splitting of names in given and family name 2011/05/18 - voss
+Revision 1.74gbv - Added splitting of names in given and family name and added GND authority 2011/05/18 - voss/kkrebs
 Revision 1.74 - Fixed 510 note - 2011/07/15 tmee
 Revision 1.73 - Fixed 506 540 - 2011/07/11 tmee
 Revision 1.72 - Fixed frequency error - 2011/07/07 and 2011/07/14 tmee
@@ -2528,14 +2528,11 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 	</xsl:template>
 	<xsl:template name="authorityUri">
 		<xsl:for-each select="marc:subfield[@code='0' and starts-with(.,'(DE-588a)')]">
-			<xsl:attribute name="authority">
-				<xsl:value-of select="'gnd'"/>
-			</xsl:attribute>
-			<xsl:attribute name="authorityURI">
-				<xsl:value-of select="'http://d-nb.info/gnd/'"/>
-			</xsl:attribute>
+			<xsl:attribute name="authority">gnd</xsl:attribute>
+			<xsl:attribute name="authorityURI">http://d-nb.info/gnd/</xsl:attribute>
 			<xsl:attribute name="valueURI">
-				<xsl:value-of select="concat('http://d-nb.info/gnd/',substring-after(.,'(DE-588a)'))"/>
+				<xsl:text>http://d-nb.info/gnd/</xsl:text>
+				<xsl:value-of select="substring-after(.,'(DE-588a)')"/>
 			</xsl:attribute>
 		</xsl:for-each>
 	</xsl:template>
