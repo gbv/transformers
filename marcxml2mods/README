@@ -17,11 +17,16 @@ http://www.loc.gov/standards/mods/mods-schemas.html
 
 The tests/ directory contains unit tests to be run with Apache ant. Running
 
-$ ant test
+    ant -lib lib test
 
 will ensure that marcxml2mods.xsl is valid XSLT and creates valid MODS, at
-least for the test cases. Additional tests require Schematron for Apache Ant,
-available at
+least for the test cases. Additional tests require ant-contrib and Schematron 
+for Apache Ant, which requires Saxon 9:
 
+http://ant-contrib.sourceforge.net/
 http://www.schematron.com/implementation.html
+http://code.google.com/p/schematron/
+http://saxon.sourceforge.net
 
+Unfortunately I found no way to include the right saxon jar files in build.xml,
+so you must point to them when calling ant.

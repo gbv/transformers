@@ -1,0 +1,10 @@
+# temporary files
+*~
+*.bak
+
+# build artifacts
+marcxml2mods/tests/*.mods.xml
+marcxml2mods/result.xml
+
+# eclipse
+.project

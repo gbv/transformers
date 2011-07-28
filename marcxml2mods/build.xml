@@ -1,24 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="marcxml2mods">
   
-  <property name="script" value="marcxml2mods.xsl"/>
-  <property name="schema" value="schemas/mods-3-4.xsd"/>
+    <property name="script" value="marcxml2mods.xsl"/>
+    <property name="schema" value="schemas/mods-3-4.xsd"/>
 
-  <!-- erstmal nur eine Datei - später besser über ein Fileset iterieren -->
-  <property name="input" value="tests/588514489.marc.xml"/>
+    <!-- additional tasks from ant-contrib and ant-schematron -->
+    <taskdef resource="net/sf/antcontrib/antlib.xml">
+        <classpath>
+            <pathelement location="lib/ant-contrib-1.0b3.jar"/>
+        </classpath>
+    </taskdef>
+    <!-- Schematron requires Saxon. FIXME! -->
+    <taskdef name="schematron" 
+        classname="com.schematron.ant.SchematronTask"  
+        classpath="lib/ant-schematron.jar;lib/saxon9-dom.jar;lib/saxon9.jar;lib/saxon-jdom.jar" />
 
-  <target name="test">
-    <echo>Testing ${input}</echo>
+    <target name="test">
+        <for param="marcfile">
+            <fileset dir="tests/">
+                <filename name="*.marc.xml"/>
+            </fileset>
+            <sequential>
+                <propertyregex override="yes"
+                    property="modsfile"  input="@{marcfile}"
+                    regexp="(.+)\.marc\.xml" replace="\1.mods.xml"/>
 
-    <!-- XSLT-Transformation muss durchlaufen -->
-    <xslt in="${input}" out="tmp.xml" style="${script}"/>
+                <echo>Transforming @{marcfile} to ${modsfile}</echo>
+                <xslt in="@{marcfile}" out="${modsfile}" style="${script}"/>
 
-    <!-- Ausgabe muss gültiges MODS sein -->
-    <schemavalidate file="tmp.xml"/>
+                <!-- output must be valid MODS -->
+                <schemavalidate file="${modsfile}"/>
 
-    <!-- TODO: weitere Bedingungen testen, z.B. mit Schematron -->
+                <propertyregex override="yes"
+                    property="schematronfile"  input="@{marcfile}"
+                    regexp="(.+)\.marc\.xml" replace="\1.schematron.xml"/>
+                <if>
+                    <available file="${schematronfile}"/>
+                    <then>
+                        <echo>Additional constraints ${schematronfile}</echo>
+                        <schematron schema="${schematronfile}" file="${modsfile}" />
+                        <fail message="some schematron asserts failed">
+                            <condition>
+                                <resourcecontains resource="result.xml" substring="failed-assert"/>
+                            </condition>
+                        </fail>
+                    </then>
+                </if>
+            </sequential>
+        </for>
+    </target>
 
-    <delete file="tmp.xml" quiet="yes"/>
+    <target name="clean">
+        <echo>Removing tests/*.mods.xml</echo>
+        <delete file="result.xml">
+            <fileset dir="tests" includes="*.mods.xml" />
+        </delete>
+    </target>
 
-  </target>
 </project>
