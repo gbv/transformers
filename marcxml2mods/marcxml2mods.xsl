@@ -6,8 +6,9 @@
 	<xsl:strip-space elements="*"/>
 
 	<!-- Maintenance note: For each revision, change the content of <recordInfo><recordOrigin> to reflect the new revision number.
-	MARC21slim2MODS3-4 (Revision 1.74gbv) 20110728
+	MARC21slim2MODS3-4 (Revision 1.74gbv2) 20130115
 	
+Revision 1.74gbv2 - Modified issuance to catch all c-Level PICA records 2013/01/15 - voss
 Revision 1.74gbv - Added splitting of names in given and family name and added GND authority 2011/05/18 - voss/kkrebs
 Revision 1.74 - Fixed 510 note - 2011/07/15 tmee
 Revision 1.73 - Fixed 506 540 - 2011/07/11 tmee
@@ -834,16 +835,15 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 			<xsl:for-each select="marc:leader">
 				<issuance>
 					<xsl:choose>
-						<xsl:when
-							test="$leader7='a' or $leader7='c' or $leader7='d' or $leader7='m'"
-							>monographic</xsl:when>
-						<xsl:when test="$leader7='b'">continuing</xsl:when>
-						<xsl:when
-							test="$leader7='m' and ($leader19='a' or $leader19='b' or $leader19='c')"
+						<xsl:when test="$leader19='a'"
 							>multipart monograph</xsl:when>
+						<xsl:when test="$leader7='b'">continuing</xsl:when>
 						<xsl:when test="$leader7='m' and ($leader19='#')">single unit</xsl:when>
 						<xsl:when test="$leader7='i'">integrating resource</xsl:when>
 						<xsl:when test="$leader7='s'">serial</xsl:when>
+						<xsl:when
+							test="$leader7='a' or $leader7='c' or $leader7='d' or $leader7='m'"
+							>monographic</xsl:when>
 					</xsl:choose>
 				</issuance>
 			</xsl:for-each>
