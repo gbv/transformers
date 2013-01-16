@@ -6,8 +6,9 @@
 	<xsl:strip-space elements="*"/>
 
 	<!-- Maintenance note: For each revision, change the content of <recordInfo><recordOrigin> to reflect the new revision number.
-	MARC21slim2MODS3-4 (Revision 1.74gbv2) 20130115
+	MARC21slim2MODS3-4 (Revision 1.74gbv3) 20130116
 	
+Revision 1.74gbv3 - Fixed GND authority and added GND subject field 689 2013/01/16 - voss
 Revision 1.74gbv2 - Modified issuance to catch all c-Level PICA records 2013/01/15 - voss
 Revision 1.74gbv - Added splitting of names in given and family name and added GND authority 2011/05/18 - voss/kkrebs
 Revision 1.74 - Fixed 510 note - 2011/07/15 tmee
@@ -2212,6 +2213,10 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 			<xsl:apply-templates select="self::*" mode="trans880"/>
 		</xsl:for-each>
 
+        <!-- German/Austrian subject field 689 -->
+        <xsl:for-each select="marc:datafield[@tag='689'][@ind2!=' ']">
+            <xsl:call-template name="gndSubject"/>
+        </xsl:for-each>
 
 		<!-- 856, 020, 024, 022, 028, 010, 035, 037 -->
 
@@ -2493,7 +2498,7 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 			</xsl:for-each>
 
 			<recordOrigin>Converted from MARCXML to MODS version 3.4 using MARC21slim2MODS3-4.xsl
-				(Revision 1.70gbv2)</recordOrigin>
+				(Revision 1.74gbv3)</recordOrigin>
 
 			<xsl:for-each select="marc:datafield[@tag=040]/marc:subfield[@code='b']">
 				<languageOfCataloging>
@@ -2526,13 +2531,15 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 			</xsl:attribute>
 		</xsl:for-each>
 	</xsl:template>
-	<xsl:template name="authorityUri">
-		<xsl:for-each select="marc:subfield[@code='0' and starts-with(.,'(DE-588a)')]">
+	<xsl:template name="gndAuthorityURI">
+		<xsl:for-each select="marc:subfield[@code='0' and (
+            starts-with(.,'(DE-588)') or starts-with(.,'(DE-588a)') or starts-with(.,'(DE-588b)') or starts-with(.,'(DE-588c)')
+        )]">
 			<xsl:attribute name="authority">gnd</xsl:attribute>
 			<xsl:attribute name="authorityURI">http://d-nb.info/gnd/</xsl:attribute>
 			<xsl:attribute name="valueURI">
 				<xsl:text>http://d-nb.info/gnd/</xsl:text>
-				<xsl:value-of select="substring-after(.,'(DE-588a)')"/>
+				<xsl:value-of select="substring-after(.,')')"/>
 			</xsl:attribute>
 		</xsl:for-each>
 	</xsl:template>
@@ -4067,6 +4074,7 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 
 	<xsl:template name="createNameFrom100">
 		<name type="personal">
+			<xsl:call-template name="gndAuthorityURI"/>
 			<xsl:attribute name="usage">
 				<xsl:text>primary</xsl:text>
 			</xsl:attribute>
@@ -4112,7 +4120,7 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 
 	<xsl:template name="createNameFrom700">
 		<name type="personal">
-			<xsl:call-template name="authorityUri"/>
+			<xsl:call-template name="gndAuthorityURI"/>
 			<xsl:call-template name="xxx880"/>
 			<xsl:call-template name="nameABCDQ"/>
 			<xsl:call-template name="affiliation"/>
@@ -5149,6 +5157,22 @@ Revision 1.02 - Added Log Comment  2003/03/24 19:37:42  ckeith
 			</xsl:call-template>
 		</accessCondition>
 	</xsl:template>
+
+    <!-- Link to GND authority, introduced by German and Austrian National libraries (tag 689) -->
+    <xsl:template name="gndSubject">
+		<xsl:if test="marc:subfield[@code='0' and (
+            starts-with(.,'(DE-588)') or starts-with(.,'(DE-588a)') or starts-with(.,'(DE-588b)') or starts-with(.,'(DE-588c)')
+        )]">
+            <subject>
+			    <xsl:call-template name="gndAuthorityURI"/>
+                <xsl:for-each select="marc:subfield[@code='a']">
+                    <xsl:attribute name="displayLabel">
+                        <xsl:value-of select="."/>
+                    </xsl:attribute>
+                </xsl:for-each>
+            </subject>
+        </xsl:if>
+    </xsl:template>
 
 	<!-- recordInfo 040 005 001 003 -->
 
