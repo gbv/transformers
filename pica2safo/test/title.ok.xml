@@ -1,5 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Error>
-  <gvkppn>65811381X</gvkppn>
-  <Message>not an authority record</Message>
-</Error>
+<Error xmlns="http://d-nb.info/standards/elementset/gnd#" ppn="65811381X">not an authority record</Error>

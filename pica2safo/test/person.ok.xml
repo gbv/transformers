@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Person id="http://d-nb.info/gnd/11852786X">
-  <gvkppn>133817024</gvkppn>
+<Person xmlns="http://d-nb.info/standards/elementset/gnd#" uri="http://d-nb.info/gnd/11852786X" ppn="133817024">
   <Name>
-    <Given>Albrecht</Given>
-    <Surname>Dürer</Surname>
+    <forename>Albrecht</forename>
+    <surname>Dürer</surname>
   </Name>
+  <placeOfBirth uri="http://d-nb.info/gnd/4042742-0">Nürnberg</placeOfBirth>
+  <placeOfDeath uri="http://d-nb.info/gnd/4042742-0">Nürnberg</placeOfDeath>
 </Person>
