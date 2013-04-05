@@ -11,3 +11,7 @@ marcxml2mods/result.xml
 # eclipse
 .project
 /.settings
+
+.DS_Store
+
+.gitignore
