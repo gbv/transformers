@@ -6,6 +6,8 @@
 marcxml2mods/tests/*.mods.xml
 marcxml2mods/result.xml
 
+*.out.xml
+
 # eclipse
 .project
 /.settings

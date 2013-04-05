@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="info:srw/schema/5/picaXML-v1.0">
+  <datafield tag="001A">
+    <subfield code="0">2012:19-04-12</subfield>
+  </datafield>
+  <datafield tag="001B">
+    <subfield code="0">2012:29-03-13</subfield>
+    <subfield code="t">01:13:04.000</subfield>
+  </datafield>
+  <datafield tag="001D">
+    <subfield code="0">2012:19-08-02</subfield>
+  </datafield>
+  <datafield tag="001U">
+    <subfield code="0">utf8</subfield>
+  </datafield>
+  <datafield tag="001X">
+    <subfield code="0">0</subfield>
+  </datafield>
+  <datafield tag="002@">
+    <subfield code="0">Tpv1</subfield>
+  </datafield>
+  <datafield tag="003@">
+    <subfield code="0">133817024</subfield>
+  </datafield>
+  <datafield tag="003U">
+    <subfield code="a">http://d-nb.info/gnd/11852786X</subfield>
+  </datafield>
+  <datafield tag="004B">
+    <subfield code="a">piz</subfield>
+  </datafield>
+  <datafield tag="007K">
+    <subfield code="a">gnd</subfield>
+    <subfield code="0">11852786X</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">pnd</subfield>
+    <subfield code="0">11852786X</subfield>
+    <subfield code="v">zg</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">pnd</subfield>
+    <subfield code="0">137232675</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">pnd</subfield>
+    <subfield code="0">119657422</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">pnd</subfield>
+    <subfield code="0">130937770</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">pnd</subfield>
+    <subfield code="0">127253521</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">pnd</subfield>
+    <subfield code="0">127245227</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">pnd</subfield>
+    <subfield code="0">127002707</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">pnd</subfield>
+    <subfield code="0">126356092</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">swd</subfield>
+    <subfield code="0">4013240-7</subfield>
+    <subfield code="v">zg</subfield>
+  </datafield>
+  <datafield tag="008A">
+    <subfield code="a">s</subfield>
+    <subfield code="a">a</subfield>
+    <subfield code="a">f</subfield>
+    <subfield code="a">d</subfield>
+    <subfield code="a">l</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Albert</subfield>
+    <subfield code="a">Dürer</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Albert Albrecht</subfield>
+    <subfield code="a">Dürer</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Alberto</subfield>
+    <subfield code="a">Dürer</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">...</subfield>
+    <subfield code="a">Dürer</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Albrecht</subfield>
+    <subfield code="a">Duerer</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Alberto</subfield>
+    <subfield code="a">Dürero</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Albert</subfield>
+    <subfield code="a">Durer</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Alberto</subfield>
+    <subfield code="a">Durer</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Albertus</subfield>
+    <subfield code="a">Durer</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Albrecht</subfield>
+    <subfield code="a">Durer</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">...</subfield>
+    <subfield code="a">Durer</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Alberto</subfield>
+    <subfield code="a">Durero</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">...</subfield>
+    <subfield code="a">Durero</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Albertus</subfield>
+    <subfield code="a">Durerus</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Albreht</subfield>
+    <subfield code="a">Direr</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Albrehts</subfield>
+    <subfield code="a">Dīrers</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Albrecht</subfield>
+    <subfield code="a">Djurer</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">A.</subfield>
+    <subfield code="a">Djurer</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Alb.</subfield>
+    <subfield code="a">Dürrer</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">...</subfield>
+    <subfield code="a">Dyûrâ</subfield>
+  </datafield>
+  <datafield tag="028A">
+    <subfield code="d">Albrecht</subfield>
+    <subfield code="a">Dürer</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="d">Albertus</subfield>
+    <subfield code="a">Dürer</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="d">Albrecht</subfield>
+    <subfield code="c">von</subfield>
+    <subfield code="a">Duerer</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="d">Albert</subfield>
+    <subfield code="a">Duerer</subfield>
+  </datafield>
+  <datafield tag="028P">
+    <subfield code="d">Albrecht</subfield>
+    <subfield code="a">Dürer</subfield>
+    <subfield code="D">DLC</subfield>
+    <subfield code="0">n 79118011</subfield>
+    <subfield code="2">naf</subfield>
+    <subfield code="v">1471-1528.</subfield>
+  </datafield>
+  <datafield tag="028P">
+    <subfield code="T">01</subfield>
+    <subfield code="U">Hans</subfield>
+    <subfield code="P">阿尔布雷特·丢勒</subfield>
+    <subfield code="5">DE-576</subfield>
+    <subfield code="v">Original</subfield>
+  </datafield>
+  <datafield tag="028R">
+    <subfield code="d">Jodocus</subfield>
+    <subfield code="a">Badius</subfield>
+    <subfield code="4">beza</subfield>
+    <subfield code="v">VD-16 Mitverf.</subfield>
+  </datafield>
+  <datafield tag="028R">
+    <subfield code="P">Maximilian I.</subfield>
+    <subfield code="l">Kaiser</subfield>
+    <subfield code="4">beza</subfield>
+    <subfield code="v">VD-16 Mitverf.</subfield>
+  </datafield>
+  <datafield tag="028R">
+    <subfield code="d">Johannes</subfield>
+    <subfield code="a">Stab</subfield>
+    <subfield code="4">beza</subfield>
+    <subfield code="v">VD-16 Mitverf.</subfield>
+  </datafield>
+  <datafield tag="028R">
+    <subfield code="P">Birgitta</subfield>
+    <subfield code="l">aus Finst°a</subfield>
+    <subfield code="4">beza</subfield>
+    <subfield code="v">VD-16 Mitverf.</subfield>
+  </datafield>
+  <datafield tag="028R">
+    <subfield code="9">133421570</subfield>
+    <subfield code="a">Brant</subfield>
+    <subfield code="d">Sebastian</subfield>
+    <subfield code="0">gnd/118514474</subfield>
+    <subfield code="4">beza</subfield>
+    <subfield code="v">VD-16 Mitverf.</subfield>
+  </datafield>
+  <datafield tag="028R">
+    <subfield code="9">079754503</subfield>
+    <subfield code="P">Matthias</subfield>
+    <subfield code="l">Lincopiensis</subfield>
+    <subfield code="0">gnd/11897405X</subfield>
+    <subfield code="4">beza</subfield>
+    <subfield code="v">VD-16 Mitverf.</subfield>
+  </datafield>
+  <datafield tag="028R">
+    <subfield code="d">Jakob</subfield>
+    <subfield code="a">Locher</subfield>
+    <subfield code="4">beza</subfield>
+    <subfield code="v">VD-16 Mitverf.</subfield>
+  </datafield>
+  <datafield tag="028R">
+    <subfield code="9">148931979</subfield>
+    <subfield code="a">Ptolemaeus</subfield>
+    <subfield code="d">Claudius</subfield>
+    <subfield code="0">gnd/118641786</subfield>
+    <subfield code="4">beza</subfield>
+    <subfield code="v">VD-16 Mitverf.</subfield>
+  </datafield>
+  <datafield tag="028R">
+    <subfield code="9">539080268</subfield>
+    <subfield code="P">Alphonsus Pecha</subfield>
+    <subfield code="0">gnd/119604957</subfield>
+    <subfield code="4">beza</subfield>
+    <subfield code="v">VD-16 Mitverf.</subfield>
+  </datafield>
+  <datafield tag="028R">
+    <subfield code="d">Benedikt</subfield>
+    <subfield code="a">Schwalbe</subfield>
+    <subfield code="4">beza</subfield>
+    <subfield code="v">VD-16 Mitverf.</subfield>
+  </datafield>
+  <datafield tag="028R">
+    <subfield code="9">691553955</subfield>
+    <subfield code="a">Frey</subfield>
+    <subfield code="d">Anna</subfield>
+    <subfield code="0">gnd/133536491</subfield>
+    <subfield code="4">bezf</subfield>
+    <subfield code="v">Schwiegermutter</subfield>
+  </datafield>
+  <datafield tag="028R">
+    <subfield code="9">691559317</subfield>
+    <subfield code="a">Frey</subfield>
+    <subfield code="d">Hans</subfield>
+    <subfield code="0">gnd/13354205X</subfield>
+    <subfield code="4">bezf</subfield>
+    <subfield code="v">Schwiegervater</subfield>
+  </datafield>
+  <datafield tag="028R">
+    <subfield code="9">079168027</subfield>
+    <subfield code="a">Dürer</subfield>
+    <subfield code="d">Albrecht</subfield>
+    <subfield code="0">gnd/117751669</subfield>
+    <subfield code="4">bezf</subfield>
+    <subfield code="v">Vater</subfield>
+  </datafield>
+  <datafield tag="028R">
+    <subfield code="9">691632251</subfield>
+    <subfield code="a">Dürer</subfield>
+    <subfield code="d">Endres</subfield>
+    <subfield code="0">gnd/133606635</subfield>
+    <subfield code="4">bezf</subfield>
+    <subfield code="v">Bruder</subfield>
+  </datafield>
+  <datafield tag="028R">
+    <subfield code="9">470646772</subfield>
+    <subfield code="a">Dürer</subfield>
+    <subfield code="d">Hans</subfield>
+    <subfield code="0">gnd/12950517X</subfield>
+    <subfield code="4">bezf</subfield>
+    <subfield code="v">Bruder</subfield>
+  </datafield>
+  <datafield tag="028R">
+    <subfield code="9">695004026</subfield>
+    <subfield code="a">Frey</subfield>
+    <subfield code="d">Agnes</subfield>
+    <subfield code="0">gnd/118869051</subfield>
+    <subfield code="4">bezf</subfield>
+    <subfield code="v">Ehefrau</subfield>
+  </datafield>
+  <datafield tag="032T">
+    <subfield code="a">m</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="9">106257307</subfield>
+    <subfield code="a">Künstler</subfield>
+    <subfield code="0">gnd/4033423-5</subfield>
+    <subfield code="4">berc</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="9">106238752</subfield>
+    <subfield code="a">Maler</subfield>
+    <subfield code="0">gnd/4037215-7</subfield>
+    <subfield code="4">beru</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="9">105174440</subfield>
+    <subfield code="a">Zeichner</subfield>
+    <subfield code="0">gnd/4200345-3</subfield>
+    <subfield code="4">beru</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="9">105742171</subfield>
+    <subfield code="a">Graphiker</subfield>
+    <subfield code="0">gnd/4125173-8</subfield>
+    <subfield code="4">beru</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="9">105434825</subfield>
+    <subfield code="a">Kupferstecher</subfield>
+    <subfield code="0">gnd/4166165-5</subfield>
+    <subfield code="4">beru</subfield>
+  </datafield>
+  <datafield tag="042A">
+    <subfield code="a">13.4p</subfield>
+    <subfield code="a">13.1bp</subfield>
+  </datafield>
+  <datafield tag="042B">
+    <subfield code="a">XA-DE</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Albrecht Dürer und Wilibald Pirkheimer. - 1828</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Diurnale seu liber precum. - 1514</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Elementorum geometricorum libri. - 1532</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Elementorum geometricorum libri. - 1606</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Holzschnitte. - s.a.</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Icones Sacrae. - 1604</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Institutiones geometricae. - 1535</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Opera. - 1604</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Unterweisung der Messung mit dem Zirkel und Richtscheit. - 1538</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Vier bücher von menschlicher Proportion. - 1528</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Dürer, Albrecht: Hjeriñ sind begriffen vier biicher von menschlicher Proportion durch Albrechten Duerer von ... 1528. (VD16 D 2859)</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Dürer, Albrecht: HJerinn sind begriffen vier Buecher von menschlicher Proportion durch Albrechten Duerer ... 1528. (VD16 ZV 23128)</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Apocalipsis cũ figuris [von Albrecht Dürer]. 1511. (VD16 B 5248)</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Schwalbe, Benedikt: Passio domini nostri Jesu. ex hieronymo Paduano. Dominico Mancino. Sedulio. et Baptista ... 1511. (VD16 S 4587)</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Schwalbe, Benedikt: EPITOME IN DIVAE PARTHENICES MARIAE HISTORIAM AB ALBERTO DVRERO NORICO PER FIGVRAS DIGES TAM ... 1511. (VD16 S 4585)</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Mā Shā Allāh al-Miṣrī: MESSAHALAH DE SCIENTIA MOTVS ORBIS ... [Ed. stud. (Ioann.Stabii ... )][Übers. v. Gerardus ... 1504. (VD16 M 1326)</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Birgitta &lt;aus Finst°a&gt;: Regula sancti salvatoris. 1517. (VD16 B 5594)</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Brant, Sebastian: Nauis stultifera a domino sebastiano Brant primũ edificata: \[et] lepidissimis teutonice lingue ... 1506. (VD16 B 7078)</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Dürer, Albrecht: Alberti Dureri clarissimi pictoris et Geometrae de Sym̃etria partium in rectis formis ... 1532. (VD16 D 2860)</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Maximilian I. &lt;Kaiser&gt;: Oratio ad suũ \[pro...]riũ angelũ. DEus \[pro...]itius esto mihi peccatori. Et sis mihi custos ... 1514. (VD16 M 1657)</subfield>
+  </datafield>
+  <datafield tag="050C">
+    <subfield code="a">12</subfield>
+  </datafield>
+  <datafield tag="050C">
+    <subfield code="a">7</subfield>
+  </datafield>
+  <datafield tag="050C">
+    <subfield code="a">384</subfield>
+  </datafield>
+  <datafield tag="050C">
+    <subfield code="a">DBSM</subfield>
+  </datafield>
+  <datafield tag="050C">
+    <subfield code="a">VD-16</subfield>
+  </datafield>
+  <datafield tag="050C">
+    <subfield code="a">VD-17</subfield>
+  </datafield>
+  <datafield tag="050E">
+    <subfield code="a">M; B 1986; LCAuth; LMA,III,1473</subfield>
+  </datafield>
+  <datafield tag="050G">
+    <subfield code="b">Kunstschriftsteller</subfield>
+  </datafield>
+  <datafield tag="060R">
+    <subfield code="a">1471</subfield>
+    <subfield code="b">1528</subfield>
+    <subfield code="4">datl</subfield>
+  </datafield>
+  <datafield tag="060R">
+    <subfield code="a">21.05.1471</subfield>
+    <subfield code="b">06.04.1528</subfield>
+    <subfield code="4">datx</subfield>
+  </datafield>
+  <datafield tag="065R">
+    <subfield code="9">106212834</subfield>
+    <subfield code="a">Nürnberg</subfield>
+    <subfield code="0">gnd/4042742-0</subfield>
+    <subfield code="4">ortg</subfield>
+  </datafield>
+  <datafield tag="065R">
+    <subfield code="9">106212834</subfield>
+    <subfield code="a">Nürnberg</subfield>
+    <subfield code="0">gnd/4042742-0</subfield>
+    <subfield code="4">orts</subfield>
+  </datafield>
+</record>
