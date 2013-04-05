@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="info:srw/schema/5/picaXML-v1.0">
+  <datafield tag="001A">
+    <subfield code="0">2012:19-04-12</subfield>
+  </datafield>
+  <datafield tag="001B">
+    <subfield code="0">2012:20-07-12</subfield>
+    <subfield code="t">21:07:03.000</subfield>
+  </datafield>
+  <datafield tag="001D">
+    <subfield code="0">2012:14-09-02</subfield>
+  </datafield>
+  <datafield tag="001U">
+    <subfield code="0">utf8</subfield>
+  </datafield>
+  <datafield tag="001X">
+    <subfield code="0">0</subfield>
+  </datafield>
+  <datafield tag="002@">
+    <subfield code="0">Tpv1</subfield>
+  </datafield>
+  <datafield tag="003@">
+    <subfield code="0">079987125</subfield>
+  </datafield>
+  <datafield tag="003D">
+    <subfield code="0">181268647</subfield>
+  </datafield>
+  <datafield tag="003U">
+    <subfield code="a">http://d-nb.info/gnd/119189941</subfield>
+  </datafield>
+  <datafield tag="004B">
+    <subfield code="a">piz</subfield>
+  </datafield>
+  <datafield tag="007K">
+    <subfield code="a">gnd</subfield>
+    <subfield code="0">119189941</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">pnd</subfield>
+    <subfield code="0">119189941</subfield>
+    <subfield code="v">zg</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">swd</subfield>
+    <subfield code="0">4355644-9</subfield>
+    <subfield code="v">zg</subfield>
+  </datafield>
+  <datafield tag="008A">
+    <subfield code="a">s</subfield>
+    <subfield code="a">m</subfield>
+    <subfield code="a">f</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Stanley</subfield>
+    <subfield code="a">Getz</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Stanley</subfield>
+    <subfield code="a">Gayetzsky</subfield>
+  </datafield>
+  <datafield tag="028A">
+    <subfield code="d">Stan</subfield>
+    <subfield code="a">Getz</subfield>
+  </datafield>
+  <datafield tag="028P">
+    <subfield code="d">Stan</subfield>
+    <subfield code="a">Getz</subfield>
+    <subfield code="D">DLC</subfield>
+    <subfield code="0">n 81018141</subfield>
+    <subfield code="2">naf</subfield>
+    <subfield code="v">1927-1991</subfield>
+  </datafield>
+  <datafield tag="029R">
+    <subfield code="9">603286739</subfield>
+    <subfield code="a">Dizzy Gillespie Stan Getz Sextet</subfield>
+    <subfield code="0">gnd/10341340-6</subfield>
+    <subfield code="4">affi</subfield>
+  </datafield>
+  <datafield tag="029R">
+    <subfield code="9">603222153</subfield>
+    <subfield code="a">Cal Tjader Stan Getz Sextet</subfield>
+    <subfield code="0">gnd/10334048-8</subfield>
+    <subfield code="4">affi</subfield>
+  </datafield>
+  <datafield tag="029R">
+    <subfield code="9">602993628</subfield>
+    <subfield code="a">Stan Getz Orchestra</subfield>
+    <subfield code="0">gnd/10308075-2</subfield>
+    <subfield code="4">affi</subfield>
+  </datafield>
+  <datafield tag="029R">
+    <subfield code="9">712505288</subfield>
+    <subfield code="4">affi</subfield>
+  </datafield>
+  <datafield tag="029R">
+    <subfield code="9">602877652</subfield>
+    <subfield code="a">New Stan Getz Quartet</subfield>
+    <subfield code="0">gnd/10294738-7</subfield>
+    <subfield code="4">affi</subfield>
+  </datafield>
+  <datafield tag="029R">
+    <subfield code="9">602819644</subfield>
+    <subfield code="a">Stan Getz Quintet</subfield>
+    <subfield code="0">gnd/10287760-9</subfield>
+    <subfield code="4">affi</subfield>
+  </datafield>
+  <datafield tag="029R">
+    <subfield code="9">121210235</subfield>
+    <subfield code="a">Stan Getz Quartet</subfield>
+    <subfield code="0">gnd/5066762-2</subfield>
+    <subfield code="4">affi</subfield>
+  </datafield>
+  <datafield tag="032T">
+    <subfield code="a">m</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="9">106221396</subfield>
+    <subfield code="a">Musiker</subfield>
+    <subfield code="0">gnd/4040841-3</subfield>
+    <subfield code="4">berc</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="9">10533507X</subfield>
+    <subfield code="a">Saxophonist</subfield>
+    <subfield code="0">gnd/4179251-8</subfield>
+    <subfield code="4">beru</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="a">i</subfield>
+    <subfield code="4">funk</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="a">as</subfield>
+    <subfield code="4">istr</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="a">bs</subfield>
+    <subfield code="4">istr</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="a">ld</subfield>
+    <subfield code="4">istr</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="a">sax</subfield>
+    <subfield code="4">istr</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="a">ts</subfield>
+    <subfield code="4">istr</subfield>
+  </datafield>
+  <datafield tag="042A">
+    <subfield code="a">14.4p</subfield>
+  </datafield>
+  <datafield tag="042B">
+    <subfield code="a">XD-US</subfield>
+  </datafield>
+  <datafield tag="050E">
+    <subfield code="a">B 1986; LCAuth</subfield>
+  </datafield>
+  <datafield tag="050G">
+    <subfield code="b">Amerikan. Jazzmusiker</subfield>
+  </datafield>
+  <datafield tag="060R">
+    <subfield code="a">1927</subfield>
+    <subfield code="b">1991</subfield>
+    <subfield code="4">datl</subfield>
+  </datafield>
+  <datafield tag="060R">
+    <subfield code="a">02.02.1927</subfield>
+    <subfield code="b">06.06.1991</subfield>
+    <subfield code="4">datx</subfield>
+  </datafield>
+  <datafield tag="065R">
+    <subfield code="9">105912204</subfield>
+    <subfield code="a">Philadelphia, Pa.</subfield>
+    <subfield code="0">gnd/4103331-0</subfield>
+    <subfield code="4">ortg</subfield>
+  </datafield>
+  <datafield tag="065R">
+    <subfield code="9">105695777</subfield>
+    <subfield code="a">Malibu Beach, Calif.</subfield>
+    <subfield code="0">gnd/4131338-0</subfield>
+    <subfield code="4">orts</subfield>
+  </datafield>
+</record>

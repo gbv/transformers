@@ -103,7 +103,7 @@
         </xsl:if>
     </xsl:template>
 
-    <xsl:template match="p:datafield[@tag='041R']" mode="Person">
+    <xsl:template match="p:datafield[@tag='041R'][p:subfield[@code='0']]" mode="Person">
         <professionOrOccupation>
             <xsl:call-template name="gnduriattr"/>
             <xsl:value-of select="p:subfield[@code='a']"/>
