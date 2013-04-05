@@ -77,18 +77,30 @@
     </xsl:template>
 
     <xsl:template match="p:subfield[@code='d']" mode="name">
-        <forename><xsl:value-of select="."/></forename>
+        <xsl:if test="normalize-space(.) != '...'">
+            <forename><xsl:value-of select="."/></forename>
+        </xsl:if>
     </xsl:template>
 
     <xsl:template match="p:subfield[@code='a']" mode="name">
-        <surname><xsl:value-of select="."/></surname>
+        <xsl:if test="normalize-space(.) != '...'">
+            <surname><xsl:value-of select="."/></surname>
+        </xsl:if>
     </xsl:template>
 
     <xsl:template match="p:subfield[@code='c']" mode="name">
         <prefix><xsl:value-of select="."/></prefix>
     </xsl:template>
 
-    <!-- TODO: counting, etc. -->
+    <xsl:template match="p:subfield[@code='l']" mode="name">
+        <epithetGenericNameTitleOrTerritory><xsl:value-of select="."/></epithetGenericNameTitleOrTerritory>
+    </xsl:template>
+
+    <xsl:template match="p:subfield[@code='P']" mode="name">
+        <personalName><xsl:value-of select="."/></personalName>
+    </xsl:template>
+
+    <!-- TODO: name counting, addition -->
 
     <xsl:template match="*|text()" mode="name"/>
 
