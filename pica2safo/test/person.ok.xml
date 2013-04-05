@@ -103,6 +103,7 @@
   <professionOrOccupation uri="http://d-nb.info/gnd/4200345-3">Zeichner</professionOrOccupation>
   <professionOrOccupation uri="http://d-nb.info/gnd/4125173-8">Graphiker</professionOrOccupation>
   <professionOrOccupation uri="http://d-nb.info/gnd/4166165-5">Kupferstecher</professionOrOccupation>
+  <biographicalOrHistoricalInformation>Kunstschriftsteller</biographicalOrHistoricalInformation>
   <dateOfBirth>1471</dateOfBirth>
   <dateOfDeath>1528</dateOfDeath>
   <placeOfBirth uri="http://d-nb.info/gnd/4042742-0">Nürnberg</placeOfBirth>

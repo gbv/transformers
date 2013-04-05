@@ -88,7 +88,9 @@
         <prefix><xsl:value-of select="."/></prefix>
     </xsl:template>
 
-    <xsl:template match="p:subfield" mode="name"/>
+    <!-- TODO: counting, etc. -->
+
+    <xsl:template match="*|text()" mode="name"/>
 
     <xsl:template match="p:datafield[@tag='065R']" mode="Person">
         <xsl:variable name="element">
@@ -125,6 +127,12 @@
         <xsl:if test="$gender='m' or $gender='w'">
             <gender><xsl:value-of select="$gender"/></gender>
         </xsl:if>
+    </xsl:template>
+
+    <xsl:template match="p:datafield[@tag='050G'][p:subfield[@code='b']]" mode="Person">
+        <biographicalOrHistoricalInformation>
+            <xsl:value-of select="p:subfield[@code='b']"/>
+        </biographicalOrHistoricalInformation>
     </xsl:template>
 
     <!-- SubjectHeading ............................................ -->
@@ -170,14 +178,14 @@
     </xsl:template>
 
     <!-- ignore everything else -->
-    <xsl:template match="*"/>
-    <xsl:template match="*" mode="ConferenceOrEvent"/>
-    <xsl:template match="*" mode="CorporateBody"/>
-    <xsl:template match="*" mode="Family"/>
-    <xsl:template match="*" mode="Person"/>
-    <xsl:template match="*" mode="PlaceOrGeographicName"/>
-    <xsl:template match="*" mode="SubjectHeading"/>
-    <xsl:template match="*" mode="Work"/>
+    <xsl:template match="*|text()"/>
+    <xsl:template match="*|text()" mode="ConferenceOrEvent"/>
+    <xsl:template match="*|text()" mode="CorporateBody"/>
+    <xsl:template match="*|text()" mode="Family"/>
+    <xsl:template match="*|text()" mode="Person"/>
+    <xsl:template match="*|text()" mode="PlaceOrGeographicName"/>
+    <xsl:template match="*|text()" mode="SubjectHeading"/>
+    <xsl:template match="*|text()" mode="Work"/>
 
     <!-- useful to select PICA+ fields and subfields -->
     <xsl:key name="field" match="p:datafield" use="concat( @tag ,

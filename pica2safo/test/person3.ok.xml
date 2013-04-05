@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Person xmlns="http://d-nb.info/standards/elementset/gnd#" uri="http://d-nb.info/gnd/118890468" ppn="079666973">
+  <variantName>
+    <forename>Ieoh Ming</forename>
+    <surname>Pei</surname>
+  </variantName>
+  <variantName>
+    <forename>Ieoh</forename>
+    <surname>Pei</surname>
+  </variantName>
+  <variantName>
+    <forename>Yü-ming</forename>
+    <surname>Pei</surname>
+  </variantName>
+  <variantName>
+    <forename>I. M</forename>
+    <surname>Pei</surname>
+  </variantName>
+  <preferredName>
+    <forename>Ieoh M.</forename>
+    <surname>Pei</surname>
+  </preferredName>
+  <variantName>
+    <forename>I. M.</forename>
+    <surname>Pei</surname>
+  </variantName>
+  <biographicalOrHistoricalInformation>Amerikan. Architekt, chines. Herkunft</biographicalOrHistoricalInformation>
+  <dateOfBirth>1917</dateOfBirth>
+</Person>
