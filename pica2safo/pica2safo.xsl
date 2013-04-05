@@ -65,11 +65,30 @@
     <!-- Person .................................................... -->
 
     <xsl:template match="p:datafield[@tag='028A']" mode="Person">
-        <Name>
-            <forename><xsl:value-of select="p:subfield[@code='d']"/></forename>
-            <surname><xsl:value-of select="p:subfield[@code='a']"/></surname>
-        </Name>
+        <preferredName>
+            <xsl:apply-templates mode="name"/>
+        </preferredName>
     </xsl:template>
+
+    <xsl:template match="p:datafield[@tag='028@' or @tag='028E']" mode="Person">
+        <variantName>
+            <xsl:apply-templates mode="name"/>
+        </variantName>
+    </xsl:template>
+
+    <xsl:template match="p:subfield[@code='d']" mode="name">
+        <forename><xsl:value-of select="."/></forename>
+    </xsl:template>
+
+    <xsl:template match="p:subfield[@code='a']" mode="name">
+        <surname><xsl:value-of select="."/></surname>
+    </xsl:template>
+
+    <xsl:template match="p:subfield[@code='c']" mode="name">
+        <prefix><xsl:value-of select="."/></prefix>
+    </xsl:template>
+
+    <xsl:template match="p:subfield" mode="name"/>
 
     <xsl:template match="p:datafield[@tag='065R']" mode="Person">
         <xsl:variable name="element">
@@ -81,6 +100,30 @@
                 <xsl:call-template name="gnduriattr"/>
                 <xsl:value-of select="p:subfield[@code='a']"/>
             </xsl:element>
+        </xsl:if>
+    </xsl:template>
+
+    <xsl:template match="p:datafield[@tag='041R']" mode="Person">
+        <professionOrOccupation>
+            <xsl:call-template name="gnduriattr"/>
+            <xsl:value-of select="p:subfield[@code='a']"/>
+        </professionOrOccupation>
+    </xsl:template>
+
+    <xsl:template match="p:datafield[@tag='060R'][p:subfield[@code='4']='datl']" mode="Person">
+        <xsl:if test="p:subfield[@code='a']">
+            <dateOfBirth><xsl:value-of select="p:subfield[@code='a']"/></dateOfBirth>
+        </xsl:if>
+        <xsl:if test="p:subfield[@code='b']">
+            <dateOfDeath><xsl:value-of select="p:subfield[@code='b']"/></dateOfDeath>
+        </xsl:if>
+    </xsl:template>
+
+    <xsl:template match="p:datafield[@tag='032T']" mode="Person">
+        <xsl:variable name="gender" select="p:subfield[@code='a']"/>
+        <!-- TODO: urge DNB to ontroduce transexual and more genders -->
+        <xsl:if test="$gender='m' or $gender='w'">
+            <gender><xsl:value-of select="$gender"/></gender>
         </xsl:if>
     </xsl:template>
 

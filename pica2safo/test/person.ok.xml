@@ -1,9 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Person xmlns="http://d-nb.info/standards/elementset/gnd#" uri="http://d-nb.info/gnd/11852786X" ppn="133817024">
-  <Name>
+  <variantName>
+    <forename>Albert</forename>
+    <surname>Dürer</surname>
+  </variantName>
+  <variantName>
+    <forename>Albert Albrecht</forename>
+    <surname>Dürer</surname>
+  </variantName>
+  <variantName>
+    <forename>Alberto</forename>
+    <surname>Dürer</surname>
+  </variantName>
+  <variantName>
+    <forename>...</forename>
+    <surname>Dürer</surname>
+  </variantName>
+  <variantName>
+    <forename>Albrecht</forename>
+    <surname>Duerer</surname>
+  </variantName>
+  <variantName>
+    <forename>Alberto</forename>
+    <surname>Dürero</surname>
+  </variantName>
+  <variantName>
+    <forename>Albert</forename>
+    <surname>Durer</surname>
+  </variantName>
+  <variantName>
+    <forename>Alberto</forename>
+    <surname>Durer</surname>
+  </variantName>
+  <variantName>
+    <forename>Albertus</forename>
+    <surname>Durer</surname>
+  </variantName>
+  <variantName>
+    <forename>Albrecht</forename>
+    <surname>Durer</surname>
+  </variantName>
+  <variantName>
+    <forename>...</forename>
+    <surname>Durer</surname>
+  </variantName>
+  <variantName>
+    <forename>Alberto</forename>
+    <surname>Durero</surname>
+  </variantName>
+  <variantName>
+    <forename>...</forename>
+    <surname>Durero</surname>
+  </variantName>
+  <variantName>
+    <forename>Albertus</forename>
+    <surname>Durerus</surname>
+  </variantName>
+  <variantName>
+    <forename>Albreht</forename>
+    <surname>Direr</surname>
+  </variantName>
+  <variantName>
+    <forename>Albrehts</forename>
+    <surname>Dīrers</surname>
+  </variantName>
+  <variantName>
+    <forename>Albrecht</forename>
+    <surname>Djurer</surname>
+  </variantName>
+  <variantName>
+    <forename>A.</forename>
+    <surname>Djurer</surname>
+  </variantName>
+  <variantName>
+    <forename>Alb.</forename>
+    <surname>Dürrer</surname>
+  </variantName>
+  <variantName>
+    <forename>...</forename>
+    <surname>Dyûrâ</surname>
+  </variantName>
+  <preferredName>
     <forename>Albrecht</forename>
     <surname>Dürer</surname>
-  </Name>
+  </preferredName>
+  <variantName>
+    <forename>Albertus</forename>
+    <surname>Dürer</surname>
+  </variantName>
+  <variantName>
+    <forename>Albrecht</forename>
+    <prefix>von</prefix>
+    <surname>Duerer</surname>
+  </variantName>
+  <variantName>
+    <forename>Albert</forename>
+    <surname>Duerer</surname>
+  </variantName>
+  <gender>m</gender>
+  <professionOrOccupation uri="http://d-nb.info/gnd/4033423-5">Künstler</professionOrOccupation>
+  <professionOrOccupation uri="http://d-nb.info/gnd/4037215-7">Maler</professionOrOccupation>
+  <professionOrOccupation uri="http://d-nb.info/gnd/4200345-3">Zeichner</professionOrOccupation>
+  <professionOrOccupation uri="http://d-nb.info/gnd/4125173-8">Graphiker</professionOrOccupation>
+  <professionOrOccupation uri="http://d-nb.info/gnd/4166165-5">Kupferstecher</professionOrOccupation>
+  <dateOfBirth>1471</dateOfBirth>
+  <dateOfDeath>1528</dateOfDeath>
   <placeOfBirth uri="http://d-nb.info/gnd/4042742-0">Nürnberg</placeOfBirth>
   <placeOfDeath uri="http://d-nb.info/gnd/4042742-0">Nürnberg</placeOfDeath>
 </Person>
