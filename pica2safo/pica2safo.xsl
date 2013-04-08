@@ -129,10 +129,14 @@
 
     <xsl:template match="p:datafield[@tag='060R'][p:subfield[@code='4']='datl']" mode="Person">
         <xsl:if test="p:subfield[@code='a']">
-            <dateOfBirth><xsl:value-of select="p:subfield[@code='a']"/></dateOfBirth>
+            <dateOfBirth>
+                <xsl:value-of select="p:subfield[@code='a']"/>
+            </dateOfBirth>
         </xsl:if>
         <xsl:if test="p:subfield[@code='b']">
-            <dateOfDeath><xsl:value-of select="p:subfield[@code='b']"/></dateOfDeath>
+            <dateOfDeath>
+                <xsl:value-of select="p:subfield[@code='b']"/>
+            </dateOfDeath>
         </xsl:if>
         <!-- TODO: check whether some records contain subfield $c and $d -->
     </xsl:template>
@@ -162,11 +166,7 @@
     <xsl:template match="p:datafield[@tag='041@']" mode="SubjectHeading">
         <variantName>
             <xsl:value-of select="p:subfield[@code='a']"/>
-            <xsl:if test="p:subfield[@code='g']">
-                <xsl:text> &lt;</xsl:text>
-                <xsl:value-of select="p:subfield[@code='g']"/>
-                <xsl:text>&gt;</xsl:text>
-            </xsl:if>
+            <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
         </variantName>
     </xsl:template>
 
@@ -177,30 +177,67 @@
     </xsl:template>
 
     <xsl:template match="p:datafield[@tag='041R']" mode="SubjectHeading">
-        <xsl:variable name="rel" select="p:subfield[@code='4']"/>
-        <xsl:if test="$rel='obal' or $rel='obge' or $rel='obin' or $rel = 'obpa'">
-            <broaderTerm>
-                <xsl:call-template name="gnduriattr"/>
-                <xsl:value-of select="p:subfield[@code='a']"/>
-            </broaderTerm>
-        </xsl:if>
+        <xsl:call-template name="broader"/>
     </xsl:template>
 
     <!-- CorporateBody ............................................. -->
 
-    <xsl:template match="p:datafield[@tag='041A']" mode="ConferenceOrEvent">
+    <xsl:template match="p:datafield[@tag='029A']" mode="CorporateBody">
         <preferredName>
             <xsl:value-of select="p:subfield[@code='a']"/>
+            <xsl:if test="p:subfield[@code='b']">
+                <xsl:text> / </xsl:text>
+                <xsl:value-of select="p:subfield[@code='b']"/>
+            </xsl:if>
+            <!-- TODO: weitere Teile? -->
         </preferredName>
     </xsl:template>
 
+    <xsl:template match="p:datafield[@tag='029@']" mode="CorporateBody">
+        <variantName>
+            <xsl:value-of select="p:subfield[@code='a']"/>
+            <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
+        </variantName>
+    </xsl:template>
+
+    <xsl:template match="p:datafield[@tag='041R']" mode="CorporateBody">
+        <xsl:call-template name="broader"/>
+    </xsl:template>
+
+    <xsl:template match="p:datafield[@tag='065R'][p:subfield[@code='4']='orta']" mode="CorporateBody">
+        <placeOfBusiness>
+            <xsl:call-template name="gnduriattr"/>
+            <xsl:value-of select="p:subfield[@code='a']"/>
+        </placeOfBusiness>
+    </xsl:template>
+
+    <xsl:template match="p:datafield[@tag='065R'][p:subfield[@code='4']='adue']" mode="CorporateBody">
+        <xsl:call-template name="broader"/>
+    </xsl:template>
+
+        <!-- TODO: dateOfEstablishment, dateOfEstablishmentAndTermination, dateOfTermination (?) -->
+        <!-- TODO: Vorgänger (?)-->
+
     <!-- ConferenceOrEvent ......................................... -->
+
+    <!-- TODO -->
+
+        <!-- dateOfConferenceOrEvent -->
 
     <!-- PlaceOrGeographicName ..................................... -->
 
+    <!-- TODO -->
+
     <!-- Family..................................................... -->
 
+    <!-- TODO -->
+
     <!-- Work ...................................................... -->
+
+    <!-- TODO: date = dateOfPublication -->
+    <!-- dateOfDiscovery ? -->
+
+    <!-- TODO -->
 
     <!-- Error ..................................................... -->
 
@@ -230,6 +267,22 @@
                 <xsl:value-of select="substring(.,5)"/>
             </xsl:attribute>
         </xsl:for-each>
+    </xsl:template>
+
+    <xsl:template match="p:subfield[@code='g']" mode="addition">
+        <xsl:text> &lt;</xsl:text>
+        <xsl:value-of select="."/>
+        <xsl:text>&gt;</xsl:text>
+    </xsl:template>
+
+    <xsl:template name="broader">
+        <xsl:variable name="rel" select="p:subfield[@code='4']"/>
+        <xsl:if test="$rel='obal' or $rel='obge' or $rel='obin' or $rel = 'obpa' or $rel='adue'">
+            <broaderTerm>
+                <xsl:call-template name="gnduriattr"/>
+                <xsl:value-of select="p:subfield[@code='a']"/>
+            </broaderTerm>
+        </xsl:if>
     </xsl:template>
 
     <!-- ignore everything else -->
