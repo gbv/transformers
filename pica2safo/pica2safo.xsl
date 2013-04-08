@@ -19,29 +19,28 @@
     <xsl:variable name="TYPE" select="substring(key('sf','002@$0'),1,2)"/>
 
     <xsl:template match="/p:record">
-        <xsl:variable name="mode">Person</xsl:variable>
         <xsl:choose>
             <xsl:when test="$TYPE='Tp' and $GNDURI">
                 <Person uri="{$GNDURI}" ppn="{key('sf','003@$0')}">
                     <xsl:apply-templates select="p:datafield" mode="Person"/>
                 </Person>
             </xsl:when>
-            <xsl:when test="$TYPE='?' and $GNDURI">
+            <xsl:when test="$TYPE='Ts' and $GNDURI">
                <SubjectHeading uri="{$GNDURI}" ppn="{key('sf','003@$0')}">
                     <xsl:apply-templates select="p:datafield" mode="SubjectHeading"/>
                 </SubjectHeading>
             </xsl:when>
-            <xsl:when test="$TYPE='?' and $GNDURI">
+            <xsl:when test="$TYPE='Tg' and $GNDURI">
                <PlaceOrGeographicName uri="{$GNDURI}" ppn="{key('sf','003@$0')}">
                     <xsl:apply-templates select="p:datafield" mode="PlaceOrGeographicName"/>
                 </PlaceOrGeographicName>
             </xsl:when>
-            <xsl:when test="$TYPE='?' and $GNDURI">
+            <xsl:when test="$TYPE='Tb' and $GNDURI">
                <CorporateBody uri="{$GNDURI}" ppn="{key('sf','003@$0')}">
                     <xsl:apply-templates select="p:datafield" mode="CorporateBody"/>
                 </CorporateBody>
             </xsl:when>
-            <xsl:when test="$TYPE='?' and $GNDURI">
+            <xsl:when test="$TYPE='Tf' and $GNDURI">
                <ConferenceOrEvent uri="{$GNDURI}" ppn="{key('sf','003@$0')}">
                     <xsl:apply-templates select="p:datafield" mode="ConferenceOrEvent"/>
                 </ConferenceOrEvent>
@@ -51,7 +50,7 @@
                     <xsl:apply-templates select="p:datafield" mode="Family"/>
                 </Family>
             </xsl:when>
-            <xsl:when test="$TYPE='?' and $GNDURI">
+            <xsl:when test="$TYPE='Tu' and $GNDURI">
                <Work uri="{$GNDURI}" ppn="{key('sf','003@$0')}">
                     <xsl:apply-templates select="p:datafield" mode="Work"/>
                 </Work>
@@ -154,9 +153,48 @@
 
     <!-- SubjectHeading ............................................ -->
 
-    <!-- ConferenceOrEvent ......................................... -->
+    <xsl:template match="p:datafield[@tag='041A']" mode="SubjectHeading">
+        <preferredName>
+            <xsl:value-of select="p:subfield[@code='a']"/>
+        </preferredName>
+    </xsl:template>
+
+    <xsl:template match="p:datafield[@tag='041@']" mode="SubjectHeading">
+        <variantName>
+            <xsl:value-of select="p:subfield[@code='a']"/>
+            <xsl:if test="p:subfield[@code='g']">
+                <xsl:text> &lt;</xsl:text>
+                <xsl:value-of select="p:subfield[@code='g']"/>
+                <xsl:text>&gt;</xsl:text>
+            </xsl:if>
+        </variantName>
+    </xsl:template>
+
+    <xsl:template match="p:datafield[@tag='050H']" mode="SubjectHeading">
+        <definition>
+            <xsl:value-of select="p:subfield[@code='a']"/>
+        </definition>
+    </xsl:template>
+
+    <xsl:template match="p:datafield[@tag='041R']" mode="SubjectHeading">
+        <xsl:variable name="rel" select="p:subfield[@code='4']"/>
+        <xsl:if test="$rel='obal' or $rel='obge' or $rel='obin' or $rel = 'obpa'">
+            <broaderTerm>
+                <xsl:call-template name="gnduriattr"/>
+                <xsl:value-of select="p:subfield[@code='a']"/>
+            </broaderTerm>
+        </xsl:if>
+    </xsl:template>
 
     <!-- CorporateBody ............................................. -->
+
+    <xsl:template match="p:datafield[@tag='041A']" mode="ConferenceOrEvent">
+        <preferredName>
+            <xsl:value-of select="p:subfield[@code='a']"/>
+        </preferredName>
+    </xsl:template>
+
+    <!-- ConferenceOrEvent ......................................... -->
 
     <!-- PlaceOrGeographicName ..................................... -->
 
