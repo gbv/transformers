@@ -14,8 +14,8 @@ test:
 			if diff $$OUTFILE $$OKFILE > /dev/null; then \
 				echo ok $$N - $$INFILE =\> $$OKFILE; \
 			else \
-				echo ok $$N - $$OUTFILE \!= $$OKFILE; \
-				diff $$OUTFILE $$OKFILE;\
+				echo not ok $$N - $$OUTFILE \!= $$OKFILE; \
+				diff $$OUTFILE $$OKFILE | awk '{print "#",$$0}'; \
 			fi; \
 		else \
 			echo not ok - missing file $$OKFILE; \
