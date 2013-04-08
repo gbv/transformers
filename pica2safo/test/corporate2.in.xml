@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="info:srw/schema/5/picaXML-v1.0">
+  <datafield tag="001A">
+    <subfield code="0">2012:18-04-12</subfield>
+  </datafield>
+  <datafield tag="001B">
+    <subfield code="0">2012:05-05-12</subfield>
+    <subfield code="t">07:59:14.000</subfield>
+  </datafield>
+  <datafield tag="001D">
+    <subfield code="0">2012:28-12-92</subfield>
+  </datafield>
+  <datafield tag="001U">
+    <subfield code="0">utf8</subfield>
+  </datafield>
+  <datafield tag="001X">
+    <subfield code="0">0</subfield>
+  </datafield>
+  <datafield tag="002@">
+    <subfield code="0">Tbv1</subfield>
+  </datafield>
+  <datafield tag="003@">
+    <subfield code="0">106097857</subfield>
+  </datafield>
+  <datafield tag="003U">
+    <subfield code="a">http://d-nb.info/gnd/4071390-8</subfield>
+  </datafield>
+  <datafield tag="004B">
+    <subfield code="a">kio</subfield>
+  </datafield>
+  <datafield tag="007K">
+    <subfield code="a">gnd</subfield>
+    <subfield code="0">4071390-8</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">swd</subfield>
+    <subfield code="0">4071390-8</subfield>
+    <subfield code="v">zg</subfield>
+  </datafield>
+  <datafield tag="008A">
+    <subfield code="a">s</subfield>
+  </datafield>
+  <datafield tag="029A">
+    <subfield code="a">Deutschland</subfield>
+    <subfield code="b">Reichspräsident</subfield>
+  </datafield>
+  <datafield tag="041@">
+    <subfield code="a">Weimarer Republik</subfield>
+    <subfield code="x">Reichspräsident</subfield>
+  </datafield>
+  <datafield tag="042A">
+    <subfield code="a">16.5</subfield>
+  </datafield>
+  <datafield tag="042B">
+    <subfield code="a">XA-DE</subfield>
+  </datafield>
+  <datafield tag="050D">
+    <subfield code="a">Benutzt für die Körperschaft und die Personengruppe.</subfield>
+  </datafield>
+  <datafield tag="050E">
+    <subfield code="a">B 1996</subfield>
+  </datafield>
+  <datafield tag="050H">
+    <subfield code="a">1919-1934 Staatsoberhaupt des Deutschen Reiches</subfield>
+  </datafield>
+  <datafield tag="060R">
+    <subfield code="a">1919</subfield>
+    <subfield code="b">1934</subfield>
+    <subfield code="4">datb</subfield>
+  </datafield>
+  <datafield tag="065R">
+    <subfield code="9">104704861</subfield>
+    <subfield code="a">Deutschland</subfield>
+    <subfield code="0">gnd/4011882-4</subfield>
+    <subfield code="4">adue</subfield>
+  </datafield>
+</record>
