@@ -15,7 +15,7 @@ Each script is in one subdirectory named by input and output formats.
 Für den GBV angepasste Version des XSL-Stylesheets der LOC für die
 Transformation von MARCXML nach MODS3.4
 
-## pica2safo (to be renamed to pica2gndlx)
+## pica2gndlx
 
 Developer version of transformation from GND authority records in PICAXML to
 GND Light XML.

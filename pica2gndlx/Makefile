@@ -1,7 +1,7 @@
 # This Makefile processes all test cases in directory test/
 
 XSLTPROC=xsltproc
-XSLTFILE=pica2safo.xsl
+XSLTFILE=pica2gndlx.xsl
 
 test:
 	@N=0; \
