@@ -100,7 +100,11 @@
         <personalName><xsl:value-of select="."/></personalName>
     </xsl:template>
 
-    <!-- TODO: name counting, addition -->
+    <xsl:template match="p:subfield[@code='n']" mode="name">
+        <counting><xsl:value-of select="."/></counting>
+    </xsl:template>
+
+    <!-- name additions (subfield $v = MARC21 100 $9) are ignored  -->
 
     <xsl:template match="*|text()" mode="name"/>
 
@@ -131,6 +135,7 @@
         <xsl:if test="p:subfield[@code='b']">
             <dateOfDeath><xsl:value-of select="p:subfield[@code='b']"/></dateOfDeath>
         </xsl:if>
+        <!-- TODO: check whether some records contain subfield $c and $d -->
     </xsl:template>
 
     <xsl:template match="p:datafield[@tag='032T']" mode="Person">

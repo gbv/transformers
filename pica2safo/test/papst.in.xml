@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="info:srw/schema/5/picaXML-v1.0">
+  <datafield tag="001A">
+    <subfield code="0">2012:19-04-12</subfield>
+  </datafield>
+  <datafield tag="001B">
+    <subfield code="0">2012:15-12-12</subfield>
+    <subfield code="t">01:14:58.000</subfield>
+  </datafield>
+  <datafield tag="001D">
+    <subfield code="0">2012:19-08-02</subfield>
+  </datafield>
+  <datafield tag="001U">
+    <subfield code="0">utf8</subfield>
+  </datafield>
+  <datafield tag="001X">
+    <subfield code="0">0</subfield>
+  </datafield>
+  <datafield tag="002@">
+    <subfield code="0">Tpv1</subfield>
+  </datafield>
+  <datafield tag="003@">
+    <subfield code="0">035255234</subfield>
+  </datafield>
+  <datafield tag="003U">
+    <subfield code="a">http://d-nb.info/gnd/118558064</subfield>
+  </datafield>
+  <datafield tag="004B">
+    <subfield code="a">piz</subfield>
+  </datafield>
+  <datafield tag="007K">
+    <subfield code="a">gnd</subfield>
+    <subfield code="0">118558064</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">pnd</subfield>
+    <subfield code="0">118558064</subfield>
+    <subfield code="v">zg</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">swd</subfield>
+    <subfield code="0">4028696-4</subfield>
+    <subfield code="v">zg</subfield>
+  </datafield>
+  <datafield tag="008A">
+    <subfield code="a">s</subfield>
+    <subfield code="a">f</subfield>
+    <subfield code="a">e</subfield>
+    <subfield code="a">m</subfield>
+    <subfield code="a">t</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Giovanni Paolo</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Papa</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Ioann Pavel</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Papa</subfield>
+    <subfield code="v">Sowj. Enz.</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Ioannes Paulus</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Papa</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Ioannis Paulus</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Pope</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Ivan Pavao</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Papa</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Ivan Pavlo</subfield>
+    <subfield code="n">II.</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Jan Pavel Druhý</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Ján Pavol</subfield>
+    <subfield code="n">II.</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Jan Paweł</subfield>
+    <subfield code="n">II.</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Jan Paweł</subfield>
+    <subfield code="n">II</subfield>
+    <subfield code="l">Papież</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Jan Paweł</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Papa</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Janez Pavel</subfield>
+    <subfield code="n">II.</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Jānis Pāvils</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Pāvests</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">János Pál</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Pápa</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Andrzej</subfield>
+    <subfield code="a">Jawień</subfield>
+    <subfield code="4">pseu</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Jean Paul</subfield>
+    <subfield code="n">II.</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Jean-Paul</subfield>
+    <subfield code="n">II.</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Jean Paul</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Papa</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Jean-Paul</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Papa</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Jean Paul</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Pape</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Jean-Paul</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Pape</subfield>
+    <subfield code="v">RAMEAU</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Joannes Paulus</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Papa</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Johannes Paul</subfield>
+    <subfield code="n">II.</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Johannes Paul</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Papa</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Johannes Paulus</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Papst</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Johannes Paulus</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Paus</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Johano Paŭlo la Dua</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">John Paul</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Papa</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">John Paul</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Pope</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">JP II</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Juan Pablo</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Papa</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Stanisław A.</subfield>
+    <subfield code="a">Gruda</subfield>
+    <subfield code="4">pseu</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Piotr</subfield>
+    <subfield code="a">Jasień</subfield>
+    <subfield code="4">pseu</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Karol</subfield>
+    <subfield code="a">Vojtyla</subfield>
+    <subfield code="4">nafr</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Carlo</subfield>
+    <subfield code="a">Wojtyla</subfield>
+    <subfield code="4">nafr</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Karol Józef</subfield>
+    <subfield code="a">Wojtyła</subfield>
+    <subfield code="4">navo</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Karol</subfield>
+    <subfield code="a">Wojtyła</subfield>
+    <subfield code="4">nafr</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">Karol</subfield>
+    <subfield code="a">Wojtyla</subfield>
+    <subfield code="4">nafr</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Yuḥannā Būlus</subfield>
+    <subfield code="l">al-Bābā, II</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Yuhạnnā Būlus</subfield>
+    <subfield code="l">al-Bābā, II</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">al-Bābā</subfield>
+    <subfield code="a">Yuḥannā-Būlus at-Tānī</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">al-Bābā</subfield>
+    <subfield code="a">Yuhạnnā-Būlus at-Tanī</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">al-Bābā</subfield>
+    <subfield code="a">Yūhạnnā Būlus at-Tanī</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="d">al-Bābā</subfield>
+    <subfield code="a">Yūḥannā Būlus at-Tānī</subfield>
+  </datafield>
+  <datafield tag="028@">
+    <subfield code="P">Johannes Paulus</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Papa</subfield>
+  </datafield>
+  <datafield tag="028A">
+    <subfield code="P">Johannes Paul</subfield>
+    <subfield code="n">II.</subfield>
+    <subfield code="l">Papst</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="P">Jan Paweł</subfield>
+    <subfield code="l">Papież, II.</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="d">Karol</subfield>
+    <subfield code="a">Vojtila</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="P">Ioannes Paulos</subfield>
+    <subfield code="l">Papa, II.</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="d">Karol J.</subfield>
+    <subfield code="a">Wojtyła</subfield>
+    <subfield code="B">Früherer Name</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="a">Johano Paŭlo</subfield>
+    <subfield code="l">II.</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="P">Giovanni Paolo II.</subfield>
+    <subfield code="4">prov</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="P">Johannes Paul II</subfield>
+    <subfield code="4">prov</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="P">Johannes Paul II. Papa</subfield>
+    <subfield code="4">prov</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="P">Johannes Paul II.</subfield>
+    <subfield code="4">prov</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="P">Johannes Paulus II. Papa</subfield>
+    <subfield code="4">prov</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="P">Johannes Paulus II.</subfield>
+    <subfield code="4">prov</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="P">Johannes Paulus</subfield>
+    <subfield code="l">Papa, II</subfield>
+    <subfield code="4">prov</subfield>
+    <subfield code="v">war 100</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="P">John Paul II Pontifex maximus</subfield>
+    <subfield code="4">prov</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="P">John Paul II. Pope</subfield>
+    <subfield code="4">prov</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="P">John Paul II.</subfield>
+    <subfield code="4">prov</subfield>
+  </datafield>
+  <datafield tag="028E">
+    <subfield code="P">Joannes Paulus</subfield>
+    <subfield code="l">Papst, II.</subfield>
+    <subfield code="4">prov</subfield>
+  </datafield>
+  <datafield tag="028P">
+    <subfield code="P">John Paul</subfield>
+    <subfield code="D">DLC</subfield>
+    <subfield code="0">n 78078345</subfield>
+    <subfield code="2">naf</subfield>
+    <subfield code="v">II, ;Pope, ;1920-</subfield>
+  </datafield>
+  <datafield tag="028R">
+    <subfield code="9">731438809</subfield>
+    <subfield code="a">Kaczorowska</subfield>
+    <subfield code="d">Emilia</subfield>
+    <subfield code="0">gnd/1028640587</subfield>
+    <subfield code="4">bezf</subfield>
+    <subfield code="v">Mutter</subfield>
+  </datafield>
+  <datafield tag="032T">
+    <subfield code="a">m</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="9">10450157X</subfield>
+    <subfield code="a">Papst</subfield>
+    <subfield code="0">gnd/4044561-6</subfield>
+    <subfield code="4">berc</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="9">106162667</subfield>
+    <subfield code="a">Seliger</subfield>
+    <subfield code="0">gnd/4054456-4</subfield>
+    <subfield code="4">beru</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="a">s</subfield>
+    <subfield code="4">funk</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="a">i</subfield>
+    <subfield code="4">funk</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="a">Gsg.</subfield>
+    <subfield code="4">funk</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="a">Text</subfield>
+    <subfield code="4">funk</subfield>
+  </datafield>
+  <datafield tag="042A">
+    <subfield code="a">3.6p</subfield>
+    <subfield code="a">16.5p</subfield>
+  </datafield>
+  <datafield tag="042B">
+    <subfield code="a">XA-VA</subfield>
+    <subfield code="a">XA-PL</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Johannes Paulus &lt;Papa, II.&gt;: Przed sklepem jubilera. - 1960</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Johannes Paulus &lt;Papa, II.&gt;: Jan Paweł II w krajach Beneluksu 11 V 1985 - 21 V 1985 i w Lichtensteinie 8 IX 1985. - 1987</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Johannes Paulus &lt;Papa, II.&gt;: Stanisław. - 1987</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Johannes Paulus &lt;Papa, II.&gt;: Odwagi! Ja jestem, nie bójcie sie̜. - 1987</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Johannes Paulus &lt;Papa, II.&gt;: Kościół. - 1988</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Johannes Paulus &lt;Papa, II.&gt;: U podstaw odnowy. - 1988</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Johannes Paulus &lt;Papa, II.&gt;: Jan Paweł II w Polsce. - 1989</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Johannes Paulus &lt;Papa, II.&gt;: Wybór kazań nowohuckich oraz homilie Jana Pawła II w Krakowie - Nowej Hucie. - 1989</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Johannes Paulus &lt;Papa, II.&gt;: Jan Paweł II w Indiach. - 1990</subfield>
+  </datafield>
+  <datafield tag="046G">
+    <subfield code="a">Johannes Paulus &lt;Papa, II.&gt;: Ducha nie gaście. - 1991</subfield>
+  </datafield>
+  <datafield tag="047A" occurrence="10">
+    <subfield code="a">oe</subfield>
+  </datafield>
+  <datafield tag="047A" occurrence="50">
+    <subfield code="a">Bitte überprüfen: 305 |b|18.5.1920-</subfield>
+  </datafield>
+  <datafield tag="047A" occurrence="50">
+    <subfield code="a">Bitte überprüfen: 310 |u|Papst seit 16.10.1978</subfield>
+  </datafield>
+  <datafield tag="047A" occurrence="50">
+    <subfield code="a">Bitte überprüfen: 811 XA-PL; XA-VA</subfield>
+  </datafield>
+  <datafield tag="050C">
+    <subfield code="a">12</subfield>
+  </datafield>
+  <datafield tag="050C">
+    <subfield code="a">OENAK</subfield>
+  </datafield>
+  <datafield tag="050C">
+    <subfield code="a">RetroII-Musik-DNB-L</subfield>
+  </datafield>
+  <datafield tag="050E">
+    <subfield code="a">PND</subfield>
+  </datafield>
+  <datafield tag="050E">
+    <subfield code="a">M, B 1986</subfield>
+  </datafield>
+  <datafield tag="060R">
+    <subfield code="a">1920</subfield>
+    <subfield code="b">2005</subfield>
+    <subfield code="4">datl</subfield>
+  </datafield>
+  <datafield tag="060R">
+    <subfield code="a">18.05.1920</subfield>
+    <subfield code="b">02.04.2005</subfield>
+    <subfield code="4">datx</subfield>
+  </datafield>
+  <datafield tag="065R">
+    <subfield code="9">133220680</subfield>
+    <subfield code="a">Wadowice</subfield>
+    <subfield code="0">gnd/4330857-0</subfield>
+    <subfield code="4">ortg</subfield>
+  </datafield>
+  <datafield tag="065R">
+    <subfield code="9">106181963</subfield>
+    <subfield code="a">Rom</subfield>
+    <subfield code="0">gnd/4050471-2</subfield>
+    <subfield code="4">orts</subfield>
+  </datafield>
+</record>
