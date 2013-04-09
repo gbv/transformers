@@ -1,0 +1,69 @@
+#!/bin/bash
+#
+# Bash functions to run test and print result in Test Anything Protocol (TAP)
+#
+
+function error {
+    echo $1 1>&2
+    exit 1
+}
+
+function start_testing {
+    TEST_COUNTER=0
+}
+
+function done_testing {
+    echo 1..$TEST_COUNTER
+}
+
+function ok {
+    TEST_COUNTER=$(($TEST_COUNTER+1))
+    echo ok $TEST_COUNTER - $1
+}
+
+function not_ok {
+    TEST_COUNTER=$(($TEST_COUNTER+1))
+    echo not ok $TEST_COUNTER - $1
+}
+
+function diag {
+    awk '{print "#",$0}'
+}
+
+function xslt_tests {
+    if [ ! `which xsltproc` ]; then
+        error "missing xsltproc"
+    fi
+
+    XSLTSCRIPT=$1
+    shift
+
+    if [ ! -f $XSLTSCRIPT ]; then
+        error "missing XSLT script $XSLTSCRIPT"
+    fi
+
+    for INFILE in $@
+    do
+        if [ ! -f $INFILE ]; then
+            error "missing input file $INFILE"
+        fi
+        TESTDIR=`dirname $INFILE`
+        OUTFILE=$TESTDIR/`basename $INFILE .in.xml`.out.xml
+        OKFILE=$TESTDIR/`basename $INFILE .in.xml`.ok.xml
+        xsltproc $XSLTSCRIPT $INFILE > $OUTFILE
+        if [ -f $OKFILE ]
+        then
+            if diff $OUTFILE $OKFILE > /dev/null
+            then
+                ok "$INFILE =\> $OUTFILE"
+            else
+                not_ok "$OUTFILE \!= $OKFILE"
+                diff $OUTFILE $OKFILE | diag
+            fi
+        else
+            not_ok "missing file $OKFILE"
+        fi
+    done
+}
+
+start_testing

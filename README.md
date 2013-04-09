@@ -28,6 +28,10 @@ Experimental transformation from MODS to RDF/XML
 
 Experimental transformation from GNDLX to MADS
 
+# Additional files
+
+* `testrunner` includes bash functions to run tests
+
 # Related work
 
 This repository does not contain specific tools for (mass) conversion of records
