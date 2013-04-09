@@ -14,7 +14,7 @@ Unit tests can be added in subdirectory `test`. There must be a script called
 `runtest.sh` to actually exectute the tests. Test should print output in Tests
 Anything Protocol (TAP) format.
 
-[![Build Status](https://travis-ci.org/gbv/transformers.png)](https://travis-ci.org/gbv//transformers)
+[![Build Status](https://travis-ci.org/gbv/transformers.png)](https://travis-ci.org/gbv/transformers)
 
 See `testrunner` for useful bash functions to run tests
 
