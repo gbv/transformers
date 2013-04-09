@@ -8,6 +8,16 @@ möglich*).
 
 Each script is in one subdirectory named by input and output formats.
 
+## Unit tests
+
+Unit tests can be added in subdirectory `test`. There must be a script called
+`runtest.sh` to actually exectute the tests. Test should print output in Tests
+Anything Protocol (TAP) format.
+
+[![Build Status](https://travis-ci.org/gbv/transformers.png)](https://travis-ci.org/gbv//transformers)
+
+See `testrunner` for useful bash functions to run tests
+
 # List of transformers
 
 ## marcxml2mods
@@ -27,10 +37,6 @@ Experimental transformation from MODS to RDF/XML
 ## gndlx2mads
 
 Experimental transformation from GNDLX to MADS
-
-# Additional files
-
-* `testrunner` includes bash functions to run tests
 
 # Related work
 

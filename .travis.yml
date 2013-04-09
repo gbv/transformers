@@ -1,4 +1,5 @@
 before_install:
+    sudo apt-get update
     sudo apt-get install xsltproc
 
 script: "./testall.sh"
