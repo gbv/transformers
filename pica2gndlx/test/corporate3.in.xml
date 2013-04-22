@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="info:srw/schema/5/picaXML-v1.0">
+  <datafield tag="001A">
+    <subfield code="0">2012:18-04-12</subfield>
+  </datafield>
+  <datafield tag="001B">
+    <subfield code="0">2012:04-05-12</subfield>
+    <subfield code="t">16:40:45.000</subfield>
+  </datafield>
+  <datafield tag="001D">
+    <subfield code="0">2012:18-03-98</subfield>
+  </datafield>
+  <datafield tag="001U">
+    <subfield code="0">utf8</subfield>
+  </datafield>
+  <datafield tag="001X">
+    <subfield code="0">0</subfield>
+  </datafield>
+  <datafield tag="002@">
+    <subfield code="0">Tbv1</subfield>
+  </datafield>
+  <datafield tag="003@">
+    <subfield code="0">10026767X</subfield>
+  </datafield>
+  <datafield tag="003U">
+    <subfield code="a">http://d-nb.info/gnd/9043-8</subfield>
+  </datafield>
+  <datafield tag="004B">
+    <subfield code="a">kiz</subfield>
+  </datafield>
+  <datafield tag="006Y">
+    <subfield code="0">SPKK00000653</subfield>
+  </datafield>
+  <datafield tag="007K">
+    <subfield code="a">gnd</subfield>
+    <subfield code="0">9043-8</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">gkd</subfield>
+    <subfield code="0">9043-8</subfield>
+    <subfield code="v">zg</subfield>
+  </datafield>
+  <datafield tag="008A">
+    <subfield code="a">f</subfield>
+  </datafield>
+  <datafield tag="029@">
+    <subfield code="a">Anton-Ulrich-Museum</subfield>
+    <subfield code="g">Braunschweig</subfield>
+  </datafield>
+  <datafield tag="029@">
+    <subfield code="a">Kunstmuseum des Landes Niedersachsen</subfield>
+    <subfield code="g">Braunschweig</subfield>
+  </datafield>
+  <datafield tag="029@">
+    <subfield code="a">HAUM</subfield>
+    <subfield code="4">abku</subfield>
+  </datafield>
+  <datafield tag="029@">
+    <subfield code="a">Herzog Anton Ulrich-Museum Braunschweig</subfield>
+    <subfield code="4">nauv</subfield>
+  </datafield>
+  <datafield tag="029A">
+    <subfield code="a">Herzog-Anton-Ulrich-Museum</subfield>
+    <subfield code="g">Braunschweig</subfield>
+  </datafield>
+  <datafield tag="029R">
+    <subfield code="9">610415662</subfield>
+    <subfield code="a">Landesmuseum</subfield>
+    <subfield code="g">Braunschweig</subfield>
+    <subfield code="0">gnd/16024508-4</subfield>
+    <subfield code="4">vorg</subfield>
+  </datafield>
+  <datafield tag="042B">
+    <subfield code="a">XA-DE</subfield>
+  </datafield>
+  <datafield tag="050E">
+    <subfield code="a">telM</subfield>
+  </datafield>
+  <datafield tag="060R">
+    <subfield code="a">1928</subfield>
+    <subfield code="4">datb</subfield>
+  </datafield>
+  <datafield tag="065R">
+    <subfield code="9">106370030</subfield>
+    <subfield code="a">Braunschweig</subfield>
+    <subfield code="0">gnd/4008065-1</subfield>
+    <subfield code="4">orta</subfield>
+    <subfield code="X">1</subfield>
+  </datafield>
+</record>
