@@ -215,9 +215,27 @@
         <xsl:call-template name="broader"/>
     </xsl:template>
 
-        <!-- TODO: dateOfEstablishment, dateOfEstablishmentAndTermination, dateOfTermination (?) -->
-        <!-- TODO: Vorgänger (?)-->
+    <xsl:template match="p:datafield[@tag='060R']" mode="CorporateBody">
+        <xsl:if test="p:subfield[@code='a'] != ''">
+            <dateOfEstablishment>
+                <xsl:value-of select="p:subfield[@code='a']"/>   
+            </dateOfEstablishment>        
+        </xsl:if>             
+        <xsl:if test="p:subfield[@code='b'] != ''">
+            <dateOfTermination>
+                <xsl:value-of select="p:subfield[@code='b']"/>   
+            </dateOfTermination>        
+        </xsl:if>  
+    </xsl:template>
 
+    <xsl:template match="p:datafield[@tag='029R'][p:subfield[@code='4']='vorg']" mode="CorporateBody">
+        <precedingCorporateBody>
+            <xsl:call-template name="gnduriattr"/>
+            <xsl:value-of select="p:subfield[@code='a']"/>
+            <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
+        </precedingCorporateBody>
+    </xsl:template>
+    
     <!-- ConferenceOrEvent ......................................... -->
 
     <!-- TODO -->
