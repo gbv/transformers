@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SubjectHeading xmlns="http://d-nb.info/standards/elementset/gnd#" uri="http://d-nb.info/gnd/4791470-1" ppn="035031786">
+   <variantName>Rum / Herstellung</variantName>
+   <variantName>Rum / Getränkeherstellung</variantName>
+   <preferredName>Rumherstellung</preferredName>
+   <broaderTerm uri="http://d-nb.info/gnd/4236073-0">Getränkeherstellung</broaderTerm>
+</SubjectHeading>
