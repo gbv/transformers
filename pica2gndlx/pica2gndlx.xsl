@@ -168,6 +168,7 @@
             <xsl:value-of select="p:subfield[@code='a']"/>
             <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
             <xsl:apply-templates select="p:subfield[@code='x']" mode="additionslash"/>
+            <xsl:apply-templates select="p:subfield[@code='v']" mode="additionbrackets"/>
         </variantName>
     </xsl:template>
 
@@ -298,6 +299,11 @@
         <xsl:text> / </xsl:text>
         <xsl:value-of select="."/>
     </xsl:template>   
+    <xsl:template match="p:subfield[@code='v']" mode="additionbrackets">
+        <xsl:text> (</xsl:text>
+        <xsl:value-of select="."/>
+        <xsl:text>)</xsl:text>
+    </xsl:template>     
 
     <xsl:template name="broader">
         <xsl:variable name="rel" select="p:subfield[@code='4']"/>
