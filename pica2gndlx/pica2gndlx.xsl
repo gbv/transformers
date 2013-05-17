@@ -245,8 +245,39 @@
         <!-- dateOfConferenceOrEvent -->
 
     <!-- PlaceOrGeographicName ..................................... -->
-
-    <!-- TODO -->
+ 
+    <xsl:template match="p:datafield[@tag='042B']" mode="PlaceOrGeographicName">
+        <areacode>
+            <xsl:value-of select="."/>
+        </areacode>     
+    </xsl:template>      
+  
+    <xsl:template match="p:datafield[@tag='004B']" mode="PlaceOrGeographicName">
+        <type>
+            <xsl:value-of select="."/>
+        </type>     
+    </xsl:template>   
+    
+    <xsl:template match="p:datafield[@tag='029@']" mode="PlaceOrGeographicName">
+        <variantName>
+            <xsl:value-of select="p:subfield[@code='a']"/>
+            <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
+            <xsl:apply-templates select="p:subfield[@code='b']" mode="additionslash"/>
+        </variantName>
+    </xsl:template>   
+    
+    <xsl:template match="p:datafield[@tag='065@']" mode="PlaceOrGeographicName">
+        <variantName>
+            <xsl:value-of select="p:subfield[@code='a']"/>
+            <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
+        </variantName>
+    </xsl:template>  
+    
+    <xsl:template match="p:datafield[@tag='065A']" mode="PlaceOrGeographicName">
+        <preferredName>
+            <xsl:value-of select="."/>
+        </preferredName>     
+    </xsl:template>   
 
     <!-- Family..................................................... -->
 
@@ -295,10 +326,11 @@
         <xsl:text>&gt;</xsl:text>
     </xsl:template>
     
-    <xsl:template match="p:subfield[@code='x']" mode="additionslash">
+    <xsl:template match="p:subfield[@code='x'] | p:subfield[@code='b']" mode="additionslash">
         <xsl:text> / </xsl:text>
         <xsl:value-of select="."/>
     </xsl:template>   
+    
     <xsl:template match="p:subfield[@code='v']" mode="additionbrackets">
         <xsl:text> (</xsl:text>
         <xsl:value-of select="."/>

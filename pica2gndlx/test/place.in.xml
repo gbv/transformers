@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="info:srw/schema/5/picaXML-v1.0">
+  <datafield tag="001A">
+    <subfield code="0">2012:18-04-12</subfield>
+  </datafield>
+  <datafield tag="001B">
+    <subfield code="0">2012:16-05-13</subfield>
+    <subfield code="t">17:22:03.000</subfield>
+  </datafield>
+  <datafield tag="001D">
+    <subfield code="0">2012:23-08-99</subfield>
+  </datafield>
+  <datafield tag="001U">
+    <subfield code="0">utf8</subfield>
+  </datafield>
+  <datafield tag="001X">
+    <subfield code="0">0</subfield>
+  </datafield>
+  <datafield tag="002@">
+    <subfield code="0">Tgv1</subfield>
+  </datafield>
+  <datafield tag="003@">
+    <subfield code="0">106313819</subfield>
+  </datafield>
+  <datafield tag="003U">
+    <subfield code="a">http://d-nb.info/gnd/4021477-1</subfield>
+  </datafield>
+  <datafield tag="004B">
+    <subfield code="a">gik</subfield>
+  </datafield>
+  <datafield tag="006Y">
+    <subfield code="0">ZBWK00005700</subfield>
+  </datafield>
+  <datafield tag="006Y">
+    <subfield code="0">SPKK00000947</subfield>
+  </datafield>
+  <datafield tag="007K">
+    <subfield code="a">gnd</subfield>
+    <subfield code="0">4021477-1</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">gnd</subfield>
+    <subfield code="0">8214-4</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">gkd</subfield>
+    <subfield code="0">8214-4</subfield>
+    <subfield code="v">zg</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">swd</subfield>
+    <subfield code="0">4021477-1</subfield>
+    <subfield code="v">zg</subfield>
+  </datafield>
+  <datafield tag="008A">
+    <subfield code="a">s</subfield>
+    <subfield code="a">f</subfield>
+  </datafield>
+  <datafield tag="029@">
+    <subfield code="a">Göttingen</subfield>
+    <subfield code="b">Oberstadtdirektor</subfield>
+    <subfield code="4">spio</subfield>
+  </datafield>
+  <datafield tag="029@">
+    <subfield code="a">Oberstadtdirektor</subfield>
+    <subfield code="g">Göttingen</subfield>
+    <subfield code="4">spio</subfield>
+  </datafield>
+  <datafield tag="029@">
+    <subfield code="a">Göttingen</subfield>
+    <subfield code="b">Stadtverwaltung</subfield>
+    <subfield code="4">spio</subfield>
+  </datafield>
+  <datafield tag="029@">
+    <subfield code="a">Stadtverwaltung</subfield>
+    <subfield code="g">Göttingen</subfield>
+    <subfield code="4">spio</subfield>
+  </datafield>
+  <datafield tag="037G">
+    <subfield code="c">T2--435972</subfield>
+    <subfield code="t">2007-01-01</subfield>
+  </datafield>
+  <datafield tag="042B">
+    <subfield code="a">XA-DE-NI</subfield>
+  </datafield>
+  <datafield tag="050C">
+    <subfield code="a">MMm</subfield>
+  </datafield>
+  <datafield tag="050E">
+    <subfield code="a">Orts-Mü.</subfield>
+  </datafield>
+  <datafield tag="065@">
+    <subfield code="a">Gettingen</subfield>
+  </datafield>
+  <datafield tag="065@">
+    <subfield code="a">Gotingē</subfield>
+  </datafield>
+  <datafield tag="065@">
+    <subfield code="a">Stadt Göttingen</subfield>
+  </datafield>
+  <datafield tag="065@">
+    <subfield code="a">Gottingen</subfield>
+  </datafield>
+  <datafield tag="065A">
+    <subfield code="a">Göttingen</subfield>
+  </datafield>
+</record>

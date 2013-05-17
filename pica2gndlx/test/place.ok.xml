@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlaceOrGeographicName xmlns="http://d-nb.info/standards/elementset/gnd#" uri="http://d-nb.info/gnd/4021477-1" ppn="106313819">
+   <type>
+    gik
+  </type>
+   <variantName>Göttingen / Oberstadtdirektor</variantName>
+   <variantName>Oberstadtdirektor &lt;Göttingen&gt;</variantName>
+   <variantName>Göttingen / Stadtverwaltung</variantName>
+   <variantName>Stadtverwaltung &lt;Göttingen&gt;</variantName>
+   <areacode>
+    XA-DE-NI
+  </areacode>
+   <variantName>Gettingen</variantName>
+   <variantName>Gotingē</variantName>
+   <variantName>Stadt Göttingen</variantName>
+   <variantName>Gottingen</variantName>
+   <preferredName>
+    Göttingen
+  </preferredName>
+</PlaceOrGeographicName>
