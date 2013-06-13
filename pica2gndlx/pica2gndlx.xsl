@@ -191,10 +191,7 @@
                 <xsl:text> / </xsl:text>
                 <xsl:value-of select="p:subfield[@code='b']"/>
             </xsl:if>
-            <xsl:if test="p:subfield[@code='g']">
-                <xsl:text> / </xsl:text>
-                <xsl:value-of select="p:subfield[@code='g']"/>
-            </xsl:if>            
+            <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>       
             <!-- TODO: weitere Teile? -->
         </preferredName>
     </xsl:template>
