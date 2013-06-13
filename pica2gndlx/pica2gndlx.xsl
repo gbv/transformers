@@ -191,16 +191,22 @@
                 <xsl:text> / </xsl:text>
                 <xsl:value-of select="p:subfield[@code='b']"/>
             </xsl:if>
+            <xsl:if test="p:subfield[@code='g']">
+                <xsl:text> / </xsl:text>
+                <xsl:value-of select="p:subfield[@code='g']"/>
+            </xsl:if>            
             <!-- TODO: weitere Teile? -->
         </preferredName>
     </xsl:template>
 
     <xsl:template match="p:datafield[@tag='029@']" mode="CorporateBody">
-        <variantName>
-            <xsl:value-of select="p:subfield[@code='a']"/>
-            <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
-            <xsl:apply-templates select="p:subfield[@code='b']" mode="additionslash"/>
-        </variantName>
+        <xsl:if test="p:subfield[@code='4'] != ''">
+            <variantName>
+                <xsl:value-of select="p:subfield[@code='a']"/>
+                <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
+                <xsl:apply-templates select="p:subfield[@code='b']" mode="additionslash"/>
+            </variantName>
+        </xsl:if>     
     </xsl:template>
 
     <xsl:template match="p:datafield[@tag='041R']" mode="CorporateBody">

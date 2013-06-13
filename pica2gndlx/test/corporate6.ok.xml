@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CorporateBody xmlns="http://d-nb.info/standards/elementset/gnd#" uri="http://d-nb.info/gnd/10000002-2" ppn="318899116">
+   <variantName>Evangelisch-Reformierte Kirche des Kantons Sankt Gallen</variantName>
+   <preferredName>Evangelisch-Reformierte Kirche des Kantons St. Gallen</preferredName>
+   <broaderTerm uri="http://d-nb.info/gnd/4048954-1">Reformierte Kirche</broaderTerm>
+   <placeOfBusiness uri="http://d-nb.info/gnd/4051594-1">Sankt Gallen</placeOfBusiness>
+</CorporateBody>

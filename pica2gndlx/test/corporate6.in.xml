@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="info:srw/schema/5/picaXML-v1.0">
+  <datafield tag="001A">
+    <subfield code="0">2012:18-04-12</subfield>
+  </datafield>
+  <datafield tag="001B">
+    <subfield code="0">2012:13-06-13</subfield>
+    <subfield code="t">01:24:18.000</subfield>
+  </datafield>
+  <datafield tag="001D">
+    <subfield code="0">2012:06-09-00</subfield>
+  </datafield>
+  <datafield tag="001U">
+    <subfield code="0">utf8</subfield>
+  </datafield>
+  <datafield tag="001X">
+    <subfield code="0">0</subfield>
+  </datafield>
+  <datafield tag="002@">
+    <subfield code="0">Tbv1</subfield>
+  </datafield>
+  <datafield tag="003@">
+    <subfield code="0">318899116</subfield>
+  </datafield>
+  <datafield tag="003U">
+    <subfield code="a">http://d-nb.info/gnd/10000002-2</subfield>
+  </datafield>
+  <datafield tag="004B">
+    <subfield code="a">kiz</subfield>
+  </datafield>
+  <datafield tag="007K">
+    <subfield code="a">gnd</subfield>
+    <subfield code="0">10000002-2</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">gnd</subfield>
+    <subfield code="0">4607792-3</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">swd</subfield>
+    <subfield code="0">4607792-3</subfield>
+    <subfield code="v">zg</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">gkd</subfield>
+    <subfield code="0">10000002-2</subfield>
+    <subfield code="v">zg</subfield>
+  </datafield>
+  <datafield tag="008A">
+    <subfield code="a">f</subfield>
+    <subfield code="a">s</subfield>
+  </datafield>
+  <datafield tag="029@">
+    <subfield code="a">Evangelisch-Reformierte Kirche des Kantons Sankt Gallen</subfield>
+  </datafield>
+  <datafield tag="029@">
+    <subfield code="a">Evangelisch-Reformierte Kirche des Kantons Sankt Gallen</subfield>
+    <subfield code="4">nswd</subfield>
+  </datafield>
+  <datafield tag="029A">
+    <subfield code="a">Evangelisch-Reformierte Kirche des Kantons St. Gallen</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="9">10618900X</subfield>
+    <subfield code="a">Reformierte Kirche</subfield>
+    <subfield code="0">gnd/4048954-1</subfield>
+    <subfield code="4">obin</subfield>
+  </datafield>
+  <datafield tag="042A">
+    <subfield code="a">3.6b</subfield>
+  </datafield>
+  <datafield tag="042B">
+    <subfield code="a">XA-CH-SG</subfield>
+  </datafield>
+  <datafield tag="050C">
+    <subfield code="a">MMm</subfield>
+  </datafield>
+  <datafield tag="050C">
+    <subfield code="a">VPe</subfield>
+  </datafield>
+  <datafield tag="050E">
+    <subfield code="a">Homepage</subfield>
+    <subfield code="b">Stand: 05.06.2013</subfield>
+    <subfield code="u">http://www.ref-sg.ch/</subfield>
+  </datafield>
+  <datafield tag="065R">
+    <subfield code="9">106176315</subfield>
+    <subfield code="a">Sankt Gallen</subfield>
+    <subfield code="0">gnd/4051594-1</subfield>
+    <subfield code="4">orta</subfield>
+  </datafield>
+  <datafield tag="065R">
+    <subfield code="9">106176307</subfield>
+    <subfield code="a">Kanton Sankt Gallen</subfield>
+    <subfield code="0">gnd/4051595-3</subfield>
+    <subfield code="4">geow</subfield>
+  </datafield>
+</record>

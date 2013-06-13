@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="info:srw/schema/5/picaXML-v1.0">
+  <datafield tag="001A">
+    <subfield code="0">2012:18-04-12</subfield>
+  </datafield>
+  <datafield tag="001B">
+    <subfield code="0">2012:19-04-13</subfield>
+    <subfield code="t">01:25:07.000</subfield>
+  </datafield>
+  <datafield tag="001D">
+    <subfield code="0">2012:03-01-01</subfield>
+  </datafield>
+  <datafield tag="001U">
+    <subfield code="0">utf8</subfield>
+  </datafield>
+  <datafield tag="001X">
+    <subfield code="0">0</subfield>
+  </datafield>
+  <datafield tag="002@">
+    <subfield code="0">Tbv1</subfield>
+  </datafield>
+  <datafield tag="003@">
+    <subfield code="0">323324347</subfield>
+  </datafield>
+  <datafield tag="003U">
+    <subfield code="a">http://d-nb.info/gnd/10014048-8</subfield>
+  </datafield>
+  <datafield tag="007K">
+    <subfield code="a">gnd</subfield>
+    <subfield code="0">10014048-8</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">gkd</subfield>
+    <subfield code="0">10014048-8</subfield>
+    <subfield code="v">zg</subfield>
+  </datafield>
+  <datafield tag="008A">
+    <subfield code="a">f</subfield>
+  </datafield>
+  <datafield tag="029A">
+    <subfield code="a">Feuerwehr</subfield>
+    <subfield code="g">Oldenburg (Oldenburg)</subfield>
+  </datafield>
+  <datafield tag="042B">
+    <subfield code="a">XA-DE</subfield>
+  </datafield>
+  <datafield tag="065R">
+    <subfield code="9">106209655</subfield>
+    <subfield code="a">Oldenburg (Oldenburg)</subfield>
+    <subfield code="0">gnd/4043457-6</subfield>
+    <subfield code="4">orta</subfield>
+    <subfield code="X">1</subfield>
+  </datafield>
+</record>
