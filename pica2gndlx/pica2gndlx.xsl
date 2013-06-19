@@ -70,9 +70,11 @@
     </xsl:template>
 
     <xsl:template match="p:datafield[@tag='028@' or @tag='028E']" mode="Person">
-        <variantName>
-            <xsl:apply-templates mode="name"/>
-        </variantName>
+        <xsl:if test="not(p:subfield[@code='4'])">
+            <variantName>
+                <xsl:apply-templates mode="name"/>
+            </variantName>
+        </xsl:if>
     </xsl:template>
 
     <xsl:template match="p:subfield[@code='d']" mode="name">
