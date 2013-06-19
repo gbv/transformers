@@ -160,6 +160,7 @@
     <xsl:template match="p:datafield[@tag='041A']" mode="SubjectHeading">
         <preferredName>
             <xsl:value-of select="p:subfield[@code='a']"/>
+            <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
         </preferredName>
     </xsl:template>
 

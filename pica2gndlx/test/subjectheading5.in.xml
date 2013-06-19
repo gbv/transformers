@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="info:srw/schema/5/picaXML-v1.0">
+  <datafield tag="001A">
+    <subfield code="0">2012:18-04-12</subfield>
+  </datafield>
+  <datafield tag="001B">
+    <subfield code="0">2012:12-04-13</subfield>
+    <subfield code="t">01:27:05.000</subfield>
+  </datafield>
+  <datafield tag="001D">
+    <subfield code="0">2012:05-12-95</subfield>
+  </datafield>
+  <datafield tag="001U">
+    <subfield code="0">utf8</subfield>
+  </datafield>
+  <datafield tag="001X">
+    <subfield code="0">0</subfield>
+  </datafield>
+  <datafield tag="002@">
+    <subfield code="0">Tsv1</subfield>
+  </datafield>
+  <datafield tag="003@">
+    <subfield code="0">190497300</subfield>
+  </datafield>
+  <datafield tag="003U">
+    <subfield code="a">http://d-nb.info/gnd/4393489-4</subfield>
+  </datafield>
+  <datafield tag="004B">
+    <subfield code="a">szz</subfield>
+  </datafield>
+  <datafield tag="007K">
+    <subfield code="a">gnd</subfield>
+    <subfield code="0">4393489-4</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">swd</subfield>
+    <subfield code="0">4393489-4</subfield>
+    <subfield code="v">zg</subfield>
+  </datafield>
+  <datafield tag="008A">
+    <subfield code="a">s</subfield>
+  </datafield>
+  <datafield tag="041A">
+    <subfield code="a">Autor</subfield>
+    <subfield code="g">Motiv</subfield>
+  </datafield>
+  <datafield tag="041R">
+    <subfield code="9">106223852</subfield>
+    <subfield code="a">Motiv</subfield>
+    <subfield code="0">gnd/4040360-9</subfield>
+    <subfield code="4">obin</subfield>
+  </datafield>
+  <datafield tag="042A">
+    <subfield code="a">12.4</subfield>
+    <subfield code="a">13.1c</subfield>
+  </datafield>
+  <datafield tag="050E">
+    <subfield code="a">analog</subfield>
+  </datafield>
+</record>
