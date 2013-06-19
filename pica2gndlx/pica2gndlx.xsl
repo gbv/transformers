@@ -70,17 +70,17 @@
     </xsl:template>
 
     <xsl:template match="p:datafield[@tag='028@' or @tag='028E']" mode="Person">
-        <xsl:if test="not(p:subfield[@code='4'])">
+        <!--<xsl:if test="not(p:subfield[@code='4'])">-->
             <variantName>
                 <xsl:apply-templates mode="name"/>
             </variantName>
-        </xsl:if>
+        <!--</xsl:if>-->
     </xsl:template>
 
     <xsl:template match="p:subfield[@code='d']" mode="name">
-        <xsl:if test="normalize-space(.) != '...'">
+       <!-- <xsl:if test="normalize-space(.) != '...'">-->
             <forename><xsl:value-of select="."/></forename>
-        </xsl:if>
+        <!--</xsl:if>-->
     </xsl:template>
 
     <xsl:template match="p:subfield[@code='a']" mode="name">
