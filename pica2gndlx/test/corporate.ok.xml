@@ -11,7 +11,7 @@
   <variantName>Koeniglich-Groß-Brittanische Neue Universität &lt;Göttingen&gt;</variantName>
   <variantName>Koenigl. Groß-Brittanische Neue Universität &lt;Göttingen&gt;</variantName>
   <variantName>University &lt;Göttingen&gt;</variantName>
-  <variantName>Universität Göttingen</variantName>
+  <variantName>Universität Göttingen / Meldestelle</variantName>
   <variantName>Meldestelle der Albertus-Universität &lt;Göttingen&gt;</variantName>
   <variantName>Königl. Georg-Augusts-Universität &lt;Göttingen&gt;</variantName>
   <variantName>Universidad &lt;Göttingen&gt;</variantName>
@@ -22,5 +22,6 @@
   <variantName>Georgia Augusta</variantName>
   <preferredName>Universität Göttingen</preferredName>
   <broaderTerm uri="http://d-nb.info/gnd/4061778-6">Universität</broaderTerm>
+  <dateOfEstablishment>1737</dateOfEstablishment>
   <placeOfBusiness uri="http://d-nb.info/gnd/4021477-1">Göttingen</placeOfBusiness>
 </CorporateBody>

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CorporateBody xmlns="http://d-nb.info/standards/elementset/gnd#" uri="http://d-nb.info/gnd/10014056-7" ppn="323324428">
-   <variantName>Universität Wien / Institut für Geographie und Regionalforschung</variantName>
-   <variantName>Universität Wien / Fakultät für Geowissenschaften, Geographie und Astronomie / Institut für Geographie und Regionalforschung</variantName>
-   <variantName>Universität Wien / Department of Geography and Regional Research</variantName>
-   <variantName>Universität Wien / Fakultät für Geowissenschaften, Geographie und Astronomie / Department of Geography and Regional Research</variantName>
-   <variantName>IFGR</variantName>
-   <preferredName>Institut für Geographie und Regionalforschung</preferredName>
-   <precedingCorporateBody uri="http://d-nb.info/gnd/1055168-2">Institut für Geographie &lt;Wien&gt;</precedingCorporateBody>
-   <placeOfBusiness uri="http://d-nb.info/gnd/4066009-6">Wien</placeOfBusiness>
+  <variantName>Universität Wien / Institut für Geographie und Regionalforschung</variantName>
+  <variantName>Universität Wien / Fakultät für Geowissenschaften, Geographie und Astronomie / Institut für Geographie und Regionalforschung</variantName>
+  <variantName>Universität Wien / Department of Geography and Regional Research</variantName>
+  <variantName>Universität Wien / Fakultät für Geowissenschaften, Geographie und Astronomie / Department of Geography and Regional Research</variantName>
+  <preferredName>Institut für Geographie und Regionalforschung &lt;Wien&gt;</preferredName>
+  <precedingCorporateBody uri="http://d-nb.info/gnd/1055168-2">Institut für Geographie &lt;Wien&gt;</precedingCorporateBody>
+  <placeOfBusiness uri="http://d-nb.info/gnd/4066009-6">Wien</placeOfBusiness>
 </CorporateBody>

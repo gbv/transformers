@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SubjectHeading xmlns="http://d-nb.info/standards/elementset/gnd#" uri="http://d-nb.info/gnd/4393489-4" ppn="190497300">
-   <preferredName>Autor &lt;Motiv&gt;</preferredName>
-   <broaderTerm uri="http://d-nb.info/gnd/4040360-9">Motiv</broaderTerm>
+  <preferredName>Autor &lt;Motiv&gt;</preferredName>
+  <broaderTerm uri="http://d-nb.info/gnd/4040360-9">Motiv</broaderTerm>
 </SubjectHeading>

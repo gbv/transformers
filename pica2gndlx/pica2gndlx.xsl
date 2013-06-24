@@ -200,7 +200,7 @@
     </xsl:template>
 
     <xsl:template match="p:datafield[@tag='029@']" mode="CorporateBody">
-        <xsl:if test="p:subfield[@code='4'] != ''">
+        <xsl:if test="not(p:subfield[@code='4'])">
             <variantName>
                 <xsl:value-of select="p:subfield[@code='a']"/>
                 <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>

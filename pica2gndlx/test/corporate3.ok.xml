@@ -2,8 +2,8 @@
 <CorporateBody xmlns="http://d-nb.info/standards/elementset/gnd#" uri="http://d-nb.info/gnd/9043-8" ppn="10026767X">
   <variantName>Anton-Ulrich-Museum &lt;Braunschweig&gt;</variantName>
   <variantName>Kunstmuseum des Landes Niedersachsen &lt;Braunschweig&gt;</variantName>
-  <variantName>HAUM</variantName>
-  <variantName>Herzog Anton Ulrich-Museum Braunschweig</variantName>
-  <preferredName>Herzog-Anton-Ulrich-Museum</preferredName>
+  <preferredName>Herzog-Anton-Ulrich-Museum &lt;Braunschweig&gt;</preferredName>
+  <precedingCorporateBody uri="http://d-nb.info/gnd/16024508-4">Landesmuseum &lt;Braunschweig&gt;</precedingCorporateBody>
+  <dateOfEstablishment>1928</dateOfEstablishment>
   <placeOfBusiness uri="http://d-nb.info/gnd/4008065-1">Braunschweig</placeOfBusiness>
 </CorporateBody>

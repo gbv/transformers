@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PlaceOrGeographicName xmlns="http://d-nb.info/standards/elementset/gnd#" uri="http://d-nb.info/gnd/4393505-9" ppn="190497440">
-   <type>
+  <type>
     gib
   </type>
-   <areacode>
+  <areacode>
     XA-DE-NI
   </areacode>
-   <preferredName>
+  <preferredName>
     Auditoriengebäude Göttingen
   </preferredName>
 </PlaceOrGeographicName>

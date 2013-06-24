@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Person xmlns="http://d-nb.info/standards/elementset/gnd#" uri="http://d-nb.info/gnd/118594893" ppn="134399323">
   <variantName>
+    <forename>...</forename>
     <surname>Plato</surname>
   </variantName>
   <variantName>
