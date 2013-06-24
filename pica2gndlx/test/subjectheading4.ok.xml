@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SubjectHeading xmlns="http://d-nb.info/standards/elementset/gnd#" uri="http://d-nb.info/gnd/4129750-7" ppn="104196831">
-   <variantName>Schichtenspezifische Sprache (Quasisynonym)</variantName>
-   <variantName>Schichtenspezifischer Code (Quasisynonym)</variantName>
-   <variantName>Soziale Schichtung / Sprache</variantName>
-   <variantName>Sprache / Schicht</variantName>
-   <variantName>Schichtspezifische Sprache</variantName>
-   <variantName>Schichtenspezifischer Code</variantName>
-   <variantName>Sprachschicht</variantName>
-   <preferredName>Sprachschichtung</preferredName>
-   <broaderTerm uri="http://d-nb.info/gnd/4281104-1">Code-Theorie</broaderTerm>
+  <variantName>Schichtenspezifische Sprache (Quasisynonym)</variantName>
+  <variantName>Schichtenspezifischer Code (Quasisynonym)</variantName>
+  <variantName>Soziale Schichtung / Sprache</variantName>
+  <variantName>Sprache / Schicht</variantName>
+  <variantName>Schichtspezifische Sprache</variantName>
+  <variantName>Schichtenspezifischer Code</variantName>
+  <variantName>Sprachschicht</variantName>
+  <preferredName>Sprachschichtung</preferredName>
+  <broaderTerm uri="http://d-nb.info/gnd/4281104-1">Code-Theorie</broaderTerm>
 </SubjectHeading>

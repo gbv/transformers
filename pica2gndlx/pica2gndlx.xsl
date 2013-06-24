@@ -14,6 +14,7 @@
     -->
 
     <xsl:output encoding="UTF-8" indent="yes" method="xml"/>
+    <xsl:strip-space elements="*"/>
     
     <xsl:variable name="GNDURI" select="key('sf','003U$a')"/>
     <xsl:variable name="TYPE" select="substring(key('sf','002@$0'),1,2)"/>

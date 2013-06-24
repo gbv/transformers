@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Person xmlns="http://d-nb.info/standards/elementset/gnd#" uri="http://d-nb.info/gnd/100002188" ppn="157120589">
-   <variantName>
-      <personalName>Ugtvogt</personalName>
-   </variantName>
-   <variantName>
-      <forename>Ludwig</forename>
-      <surname>Beausobre</surname>
-   </variantName>
-   <variantName>
-      <forename>...</forename>
-      <surname>Ugtvogt</surname>
-      <epithetGenericNameTitleOrTerritory>le Docteur</epithetGenericNameTitleOrTerritory>
-   </variantName>
-   <variantName>
-      <forename>...</forename>
-      <surname>Ugtvogt</surname>
-   </variantName>
-   <variantName>
-      <personalName>D...</personalName>
-      <epithetGenericNameTitleOrTerritory>le Chevalier</epithetGenericNameTitleOrTerritory>
-   </variantName>
-   <variantName>
-      <forename>Ludwig</forename>
-      <prefix>von</prefix>
-      <surname>Beaussobre</surname>
-   </variantName>
-   <preferredName>
-      <forename>Louis</forename>
-      <prefix>de</prefix>
-      <surname>Beausobre</surname>
-   </preferredName>
-   <variantName>
-      <forename>Ludovicus</forename>
-      <prefix>de</prefix>
-      <surname>Beausobre</surname>
-   </variantName>
-   <variantName>
-      <forename>...</forename>
-      <surname>D</surname>
-   </variantName>
-   <gender>m</gender>
-   <professionOrOccupation uri="http://d-nb.info/gnd/4045790-4">Philosoph</professionOrOccupation>
-   <professionOrOccupation uri="http://d-nb.info/gnd/4053309-8">Schriftsteller</professionOrOccupation>
-   <biographicalOrHistoricalInformation>Philosoph und Nationalökonom, stammte aus alter franz. protestant. Familie, geb. in Berlin; Berlin, Frankfurt/Oder (Wirkungsorte)</biographicalOrHistoricalInformation>
-   <dateOfBirth>1730</dateOfBirth>
-   <dateOfDeath>1783</dateOfDeath>
+  <variantName>
+    <personalName>Ugtvogt</personalName>
+  </variantName>
+  <variantName>
+    <forename>Ludwig</forename>
+    <surname>Beausobre</surname>
+  </variantName>
+  <variantName>
+    <forename>...</forename>
+    <surname>Ugtvogt</surname>
+    <epithetGenericNameTitleOrTerritory>le Docteur</epithetGenericNameTitleOrTerritory>
+  </variantName>
+  <variantName>
+    <forename>...</forename>
+    <surname>Ugtvogt</surname>
+  </variantName>
+  <variantName>
+    <personalName>D...</personalName>
+    <epithetGenericNameTitleOrTerritory>le Chevalier</epithetGenericNameTitleOrTerritory>
+  </variantName>
+  <variantName>
+    <forename>Ludwig</forename>
+    <prefix>von</prefix>
+    <surname>Beaussobre</surname>
+  </variantName>
+  <preferredName>
+    <forename>Louis</forename>
+    <prefix>de</prefix>
+    <surname>Beausobre</surname>
+  </preferredName>
+  <variantName>
+    <forename>Ludovicus</forename>
+    <prefix>de</prefix>
+    <surname>Beausobre</surname>
+  </variantName>
+  <variantName>
+    <forename>...</forename>
+    <surname>D</surname>
+  </variantName>
+  <gender>m</gender>
+  <professionOrOccupation uri="http://d-nb.info/gnd/4045790-4">Philosoph</professionOrOccupation>
+  <professionOrOccupation uri="http://d-nb.info/gnd/4053309-8">Schriftsteller</professionOrOccupation>
+  <biographicalOrHistoricalInformation>Philosoph und Nationalökonom, stammte aus alter franz. protestant. Familie, geb. in Berlin; Berlin, Frankfurt/Oder (Wirkungsorte)</biographicalOrHistoricalInformation>
+  <dateOfBirth>1730</dateOfBirth>
+  <dateOfDeath>1783</dateOfDeath>
 </Person>
