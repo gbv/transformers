@@ -116,7 +116,7 @@
             <xsl:if test="p:subfield[@code='4']='orts'">placeOfDeath</xsl:if>
         </xsl:variable>
         <xsl:if test="$element">
-            <xsl:element name="{$element}">
+            <xsl:element name="{$element}" namespace="http://d-nb.info/standards/elementset/gnd#">
                 <xsl:call-template name="gnduriattr"/>
                 <xsl:value-of select="p:subfield[@code='a']"/>
             </xsl:element>
