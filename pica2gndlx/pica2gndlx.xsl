@@ -71,11 +71,11 @@
     </xsl:template>
 
     <xsl:template match="p:datafield[@tag='028@' or @tag='028E']" mode="Person">
-        <!--<xsl:if test="not(p:subfield[@code='4'])">-->
+        <xsl:if test="not(p:subfield[@code='v']) and not(p:subfield[@code='x'])">
             <variantName>
                 <xsl:apply-templates mode="name"/>
             </variantName>
-        <!--</xsl:if>-->
+        </xsl:if>
     </xsl:template>
 
     <xsl:template match="p:subfield[@code='d']" mode="name">
@@ -191,20 +191,18 @@
     <xsl:template match="p:datafield[@tag='029A']" mode="CorporateBody">
         <preferredName>
             <xsl:value-of select="p:subfield[@code='a']"/>
-            <xsl:if test="p:subfield[@code='b']">
-                <xsl:text> / </xsl:text>
-                <xsl:value-of select="p:subfield[@code='b']"/>
-            </xsl:if>
             <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>       
+            <xsl:apply-templates select="p:subfield[@code='b']" mode="additionslash"/>
             <!-- TODO: weitere Teile? -->
         </preferredName>
     </xsl:template>
 
     <xsl:template match="p:datafield[@tag='029@']" mode="CorporateBody">
-        <xsl:if test="not(p:subfield[@code='4'])">
+        <xsl:if test="not(p:subfield[@code='x']) and not(p:subfield[@code='v'])">
             <variantName>
                 <xsl:value-of select="p:subfield[@code='a']"/>
                 <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
+                <xsl:apply-templates select="p:subfield[@code='n']" mode="addition"/>
                 <xsl:apply-templates select="p:subfield[@code='b']" mode="additionslash"/>
             </variantName>
         </xsl:if>     
