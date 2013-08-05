@@ -18,12 +18,23 @@
     
     <xsl:variable name="GNDURI" select="key('sf','003U$a')"/>
     <xsl:variable name="TYPE" select="substring(key('sf','002@$0'),1,2)"/>
-
+    
+    <!-- a concatination of all strings in the subfields of a person, uses &lt;|&gt;<position>&lt;|&gt; as delimiter
+         It is used to filter duplicate variant names
+    -->
+    
     <xsl:template match="/p:record">
+        <xsl:variable name="person_all_variant_forms">
+            <xsl:text>&lt;|&gt;</xsl:text>
+            <xsl:apply-templates select="p:datafield" mode="concat_all" />    
+        </xsl:variable>
+        
         <xsl:choose>
             <xsl:when test="$TYPE='Tp' and $GNDURI">
                 <Person uri="{$GNDURI}" ppn="{key('sf','003@$0')}">
-                    <xsl:apply-templates select="p:datafield" mode="Person"/>
+                    <xsl:apply-templates select="p:datafield" mode="Person">
+                        <xsl:with-param name="person_all_variant_forms" select="$person_all_variant_forms" />
+                    </xsl:apply-templates>
                 </Person>
             </xsl:when>
             <xsl:when test="$TYPE='Ts' and $GNDURI">
@@ -71,7 +82,12 @@
     </xsl:template>
 
     <xsl:template match="p:datafield[@tag='028@' or @tag='028E']" mode="Person">
-        <xsl:if test="not(p:subfield[@code='v']) and not(p:subfield[@code='x'])">
+        <xsl:param name="person_all_variant_forms" />
+        <xsl:variable name="this_variant_form">
+            <xsl:apply-templates select="." mode="concat_this" />
+        </xsl:variable>
+        <!-- ignore variant names with subfield v or x and filter dublicates -->
+        <xsl:if test="not(p:subfield[@code='v']) and not(p:subfield[@code='x']) and not(contains(substring-before($person_all_variant_forms, concat($this_variant_form, position(),'&lt;|&gt;')), $this_variant_form))">
             <variantName>
                 <xsl:apply-templates mode="name"/>
             </variantName>
@@ -198,12 +214,14 @@
     </xsl:template>
 
     <xsl:template match="p:datafield[@tag='029@']" mode="CorporateBody">
+        <!-- do not include variant names with subfields x and v -->
         <xsl:if test="not(p:subfield[@code='x']) and not(p:subfield[@code='v'])">
             <variantName>
                 <xsl:value-of select="p:subfield[@code='a']"/>
                 <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
                 <xsl:apply-templates select="p:subfield[@code='n']" mode="addition"/>
                 <xsl:apply-templates select="p:subfield[@code='b']" mode="additionslash"/>
+                <xsl:apply-templates select="p:subfield[@code='4']" mode="additionbrackets"/>
             </variantName>
         </xsl:if>     
     </xsl:template>
@@ -341,7 +359,38 @@
         <xsl:text> (</xsl:text>
         <xsl:value-of select="."/>
         <xsl:text>)</xsl:text>
-    </xsl:template>     
+    </xsl:template>
+    
+    <xsl:template match="p:subfield[@code='4']" mode="additionbrackets">
+        <xsl:text> (</xsl:text>
+        <xsl:choose>
+            <xsl:when test=". = 'abku'">
+                <xsl:text>Abkürzung</xsl:text>
+            </xsl:when>
+            <xsl:when test=". = 'nafr'">
+                <xsl:text>Name, früherer</xsl:text>
+            </xsl:when>
+            <xsl:when test=". = 'nasp'">
+                <xsl:text>Name, späterer</xsl:text>
+            </xsl:when>
+            <xsl:when test=". = 'nauv'">
+                <xsl:text>Name in unveränderter Form</xsl:text>
+            </xsl:when>
+            <xsl:when test=". = 'nazw'">
+                <xsl:text>Name, zeitweise</xsl:text>
+            </xsl:when>
+            <xsl:when test=". = 'ngkd'">
+                <xsl:text>Name, alt aus GKD</xsl:text>
+            </xsl:when>
+            <xsl:when test=". = 'nswd'">
+                <xsl:text>Name, alt aus SWD</xsl:text>
+            </xsl:when>
+            <xsl:when test=". = 'spio'">
+                <xsl:text>Spitzenorgan</xsl:text>
+            </xsl:when>
+        </xsl:choose>
+        <xsl:text>)</xsl:text>
+    </xsl:template>
 
     <xsl:template name="broader">
         <xsl:variable name="rel" select="p:subfield[@code='4']"/>
@@ -382,6 +431,34 @@
       ),
       '$',@code
     )"/>
+    
+    
+    <!-- concat the text of all relevant subfields of a person (with position and without) -->
+    <xsl:template match="p:datafield[@tag='028@' or @tag='028E']" mode="concat_all">
+        <xsl:value-of select="concat(
+            p:subfield[@code='a'],
+            p:subfield[@code='d'],
+            p:subfield[@code='P'],
+            p:subfield[@code='c'],
+            p:subfield[@code='l'],
+            p:subfield[@code='n'],
+            p:subfield[@code='4'],
+            '&lt;|&gt;', position(), '',
+            '&lt;|&gt;'
+            )"/>
+    </xsl:template>
+    <xsl:template match="p:datafield[@tag='028@' or @tag='028E']" mode="concat_this">
+        <xsl:value-of select="concat(
+            p:subfield[@code='a'],
+            p:subfield[@code='d'],
+            p:subfield[@code='P'],
+            p:subfield[@code='c'],
+            p:subfield[@code='l'],
+            p:subfield[@code='n'],
+            p:subfield[@code='4'],
+            '&lt;|&gt;'
+            )"/>
+    </xsl:template>
 
 </xsl:stylesheet>
 

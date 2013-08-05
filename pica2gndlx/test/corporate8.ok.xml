@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CorporateBody xmlns="http://d-nb.info/standards/elementset/gnd#" uri="http://d-nb.info/gnd/10000110-5" ppn="318900203">
-   <variantName>Maison de la Chasse &amp; de la Nature</variantName>
-   <variantName>Fondation de la Maison de la Chasse et de la Nature / Musée de la Chasse et de la Nature</variantName>
-   <variantName>Maison de la Chasse et de la Nature</variantName>
-   <variantName>Musée de la Chasse et de la Nature</variantName>
-   <preferredName>Musée de la Chasse et de la Nature</preferredName>
-   <broaderTerm uri="http://d-nb.info/gnd/4609649-8">Jagdmuseum</broaderTerm>
-   <placeOfBusiness uri="http://d-nb.info/gnd/4044660-8">Paris</placeOfBusiness>
+  <variantName>Maison de la Chasse &amp; de la Nature</variantName>
+  <variantName>Fondation de la Maison de la Chasse et de la Nature / Musée de la Chasse et de la Nature</variantName>
+  <variantName>Maison de la Chasse et de la Nature</variantName>
+  <variantName>Musée de la Chasse et de la Nature (Name, alt aus SWD)</variantName>
+  <preferredName>Musée de la Chasse et de la Nature</preferredName>
+  <broaderTerm uri="http://d-nb.info/gnd/4609649-8">Jagdmuseum</broaderTerm>
+  <placeOfBusiness uri="http://d-nb.info/gnd/4044660-8">Paris</placeOfBusiness>
 </CorporateBody>
