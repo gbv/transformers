@@ -24,13 +24,13 @@
     -->
     
     <xsl:template match="/p:record">
-        <xsl:variable name="person_all_variant_forms">
-            <xsl:text>&lt;|&gt;</xsl:text>
-            <xsl:apply-templates select="p:datafield" mode="concat_all" />    
-        </xsl:variable>
         
         <xsl:choose>
             <xsl:when test="$TYPE='Tp' and $GNDURI">
+                <xsl:variable name="person_all_variant_forms">
+                    <xsl:text>&lt;|&gt;</xsl:text>
+                    <xsl:apply-templates select="p:datafield" mode="concat_all_person" />    
+                </xsl:variable>
                 <Person uri="{$GNDURI}" ppn="{key('sf','003@$0')}">
                     <xsl:apply-templates select="p:datafield" mode="Person">
                         <xsl:with-param name="person_all_variant_forms" select="$person_all_variant_forms" />
@@ -48,8 +48,14 @@
                 </PlaceOrGeographicName>
             </xsl:when>
             <xsl:when test="$TYPE='Tb' and $GNDURI">
+                <xsl:variable name="corporatebody_all_variant_forms">
+                    <xsl:text>&lt;|&gt;</xsl:text>
+                    <xsl:apply-templates select="p:datafield" mode="concat_all_corporatebody" />    
+                </xsl:variable>
                <CorporateBody uri="{$GNDURI}" ppn="{key('sf','003@$0')}">
-                    <xsl:apply-templates select="p:datafield" mode="CorporateBody"/>
+                    <xsl:apply-templates select="p:datafield" mode="CorporateBody">
+                        <xsl:with-param name="corporatebody_all_variant_forms" select="$corporatebody_all_variant_forms" />
+                    </xsl:apply-templates>
                 </CorporateBody>
             </xsl:when>
             <xsl:when test="$TYPE='Tf' and $GNDURI">
@@ -84,7 +90,8 @@
     <xsl:template match="p:datafield[@tag='028@' or @tag='028E']" mode="Person">
         <xsl:param name="person_all_variant_forms" />
         <xsl:variable name="this_variant_form">
-            <xsl:apply-templates select="." mode="concat_this" />
+            <xsl:text>&lt;|&gt;</xsl:text>
+            <xsl:apply-templates select="." mode="concat_this_person" />
         </xsl:variable>
         <!-- ignore variant names with subfield v or x and filter dublicates -->
         <xsl:if test="not(p:subfield[@code='v']) and not(p:subfield[@code='x']) and not(contains(substring-before($person_all_variant_forms, concat($this_variant_form, position(),'&lt;|&gt;')), $this_variant_form))">
@@ -214,8 +221,13 @@
     </xsl:template>
 
     <xsl:template match="p:datafield[@tag='029@']" mode="CorporateBody">
+        <xsl:param name="corporatebody_all_variant_forms" />
+        <xsl:variable name="this_variant_form">
+            <xsl:text>&lt;|&gt;</xsl:text>
+            <xsl:apply-templates select="." mode="concat_this_corporatebody" />
+        </xsl:variable>
         <!-- do not include variant names with subfields x and v -->
-        <xsl:if test="not(p:subfield[@code='x']) and not(p:subfield[@code='v'])">
+        <xsl:if test="not(p:subfield[@code='x']) and not(p:subfield[@code='v']) and not(contains(substring-before($corporatebody_all_variant_forms, concat($this_variant_form, position(),'&lt;|&gt;')), $this_variant_form))">
             <variantName>
                 <xsl:value-of select="p:subfield[@code='a']"/>
                 <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
@@ -434,7 +446,7 @@
     
     
     <!-- concat the text of all relevant subfields of a person (with position and without) -->
-    <xsl:template match="p:datafield[@tag='028@' or @tag='028E']" mode="concat_all">
+    <xsl:template match="p:datafield[@tag='028@' or @tag='028E']" mode="concat_all_person">
         <xsl:value-of select="concat(
             p:subfield[@code='a'],
             p:subfield[@code='d'],
@@ -442,18 +454,39 @@
             p:subfield[@code='c'],
             p:subfield[@code='l'],
             p:subfield[@code='n'],
-            p:subfield[@code='4'],
             '&lt;|&gt;', position(), '',
             '&lt;|&gt;'
             )"/>
     </xsl:template>
-    <xsl:template match="p:datafield[@tag='028@' or @tag='028E']" mode="concat_this">
+    <xsl:template match="p:datafield[@tag='028@' or @tag='028E']" mode="concat_this_person">
         <xsl:value-of select="concat(
             p:subfield[@code='a'],
             p:subfield[@code='d'],
             p:subfield[@code='P'],
             p:subfield[@code='c'],
             p:subfield[@code='l'],
+            p:subfield[@code='n'],
+            '&lt;|&gt;'
+            )"/>
+    </xsl:template>
+    
+    <!-- concat the text of all relevant subfields of a CorporateBody (with position and without) -->
+    <xsl:template match="p:datafield[@tag='029@']" mode="concat_all_corporatebody">
+        <xsl:value-of select="concat(
+            p:subfield[@code='a'],
+            p:subfield[@code='b'],
+            p:subfield[@code='g'],
+            p:subfield[@code='n'],
+            p:subfield[@code='4'],
+            '&lt;|&gt;', position(), '',
+            '&lt;|&gt;'
+            )"/>
+    </xsl:template>
+    <xsl:template match="p:datafield[@tag='029@']" mode="concat_this_corporatebody">
+        <xsl:value-of select="concat(
+            p:subfield[@code='a'],
+            p:subfield[@code='b'],
+            p:subfield[@code='g'],
             p:subfield[@code='n'],
             p:subfield[@code='4'],
             '&lt;|&gt;'
