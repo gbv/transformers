@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CorporateBody xmlns="http://d-nb.info/standards/elementset/gnd#" uri="http://d-nb.info/gnd/6130369-0" ppn="062074253">
+   <variantName>International Trust and Investment Corporation &lt;Peking&gt;</variantName>
+   <variantName>China International Trust and Investment Corporation &lt;Peking&gt;</variantName>
+   <variantName>CITIC (Abkürzung)</variantName>
+   <preferredName>China International Trust and Investment Corporation &lt;Peking&gt;</preferredName>
+   <dateOfEstablishment>1979</dateOfEstablishment>
+   <placeOfBusiness uri="http://d-nb.info/gnd/4075971-4">Peking</placeOfBusiness>
+</CorporateBody>
