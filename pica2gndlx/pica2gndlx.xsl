@@ -458,6 +458,7 @@
             '&lt;|&gt;'
             )"/>
     </xsl:template>
+    <xsl:template match="text()" mode="concat_all_person" />
     <xsl:template match="p:datafield[@tag='028@' or @tag='028E']" mode="concat_this_person">
         <xsl:value-of select="concat(
             p:subfield[@code='a'],
@@ -482,6 +483,7 @@
             '&lt;|&gt;'
             )"/>
     </xsl:template>
+    <xsl:template match="text()" mode="concat_all_corporatebody" />
     <xsl:template match="p:datafield[@tag='029@']" mode="concat_this_corporatebody">
         <xsl:value-of select="concat(
             p:subfield[@code='a'],
@@ -492,6 +494,5 @@
             '&lt;|&gt;'
             )"/>
     </xsl:template>
-
 </xsl:stylesheet>
 
