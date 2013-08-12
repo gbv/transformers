@@ -356,7 +356,7 @@
         </xsl:for-each>
     </xsl:template>
 
-    <xsl:template match="p:subfield[@code='g']" mode="addition">
+    <xsl:template match="p:subfield[@code='g'] | p:subfield[@code='n']" mode="addition">
         <xsl:text> &lt;</xsl:text>
         <xsl:value-of select="."/>
         <xsl:text>&gt;</xsl:text>
@@ -473,26 +473,24 @@
     
     <!-- concat the text of all relevant subfields of a CorporateBody (with position and without) -->
     <xsl:template match="p:datafield[@tag='029@']" mode="concat_all_corporatebody">
+        <xsl:value-of select="p:subfield[@code='a']"/>
+        <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
+        <xsl:apply-templates select="p:subfield[@code='n']" mode="addition"/>
+        <xsl:apply-templates select="p:subfield[@code='b']" mode="additionslash"/>
+        <xsl:apply-templates select="p:subfield[@code='4']" mode="additionbrackets"/>
         <xsl:value-of select="concat(
-            p:subfield[@code='a'],
-            p:subfield[@code='b'],
-            p:subfield[@code='g'],
-            p:subfield[@code='n'],
-            p:subfield[@code='4'],
             '&lt;|&gt;', position(), '',
             '&lt;|&gt;'
             )"/>
     </xsl:template>
     <xsl:template match="text()" mode="concat_all_corporatebody" />
     <xsl:template match="p:datafield[@tag='029@']" mode="concat_this_corporatebody">
-        <xsl:value-of select="concat(
-            p:subfield[@code='a'],
-            p:subfield[@code='b'],
-            p:subfield[@code='g'],
-            p:subfield[@code='n'],
-            p:subfield[@code='4'],
-            '&lt;|&gt;'
-            )"/>
+        <xsl:value-of select="p:subfield[@code='a']"/>
+        <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
+        <xsl:apply-templates select="p:subfield[@code='n']" mode="addition"/>
+        <xsl:apply-templates select="p:subfield[@code='b']" mode="additionslash"/>
+        <xsl:apply-templates select="p:subfield[@code='4']" mode="additionbrackets"/>
+        <xsl:text>&lt;|&gt;</xsl:text>
     </xsl:template>
 </xsl:stylesheet>
 
