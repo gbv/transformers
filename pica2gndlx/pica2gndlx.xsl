@@ -93,7 +93,7 @@
             <xsl:text>&lt;|&gt;</xsl:text>
             <xsl:apply-templates select="." mode="concat_this_person" />
         </xsl:variable>
-        <!-- ignore variant names with subfield v or x and filter dublicates -->
+        <!-- ignore variant names with subfield v or x and filter duplicates -->
         <xsl:if test="not(p:subfield[@code='v']) and not(p:subfield[@code='x']) and not(contains(substring-before($person_all_variant_forms, concat($this_variant_form, position(),'&lt;|&gt;')), $this_variant_form))">
             <variantName>
                 <xsl:apply-templates mode="name"/>
@@ -147,10 +147,14 @@
     </xsl:template>
 
     <xsl:template match="p:datafield[@tag='041R'][p:subfield[@code='0']]" mode="Person">
-        <professionOrOccupation>
-            <xsl:call-template name="gnduriattr"/>
-            <xsl:value-of select="p:subfield[@code='a']"/>
-        </professionOrOccupation>
+        <!-- filter duplicate entries (pica supports a relation type so theere can be multiple relations with the same GND-URI) -->
+        <xsl:variable name="gnd_id" select="p:subfield[@code='0']" />
+            <xsl:if test="not(./preceding-sibling::p:datafield[@tag='041R'][p:subfield[@code='0'][text() = $gnd_id]])">
+            <professionOrOccupation>
+                <xsl:call-template name="gnduriattr"/>
+                <xsl:value-of select="p:subfield[@code='a']"/>
+            </professionOrOccupation>
+        </xsl:if>
     </xsl:template>
 
     <xsl:template match="p:datafield[@tag='060R'][p:subfield[@code='4']='datl']" mode="Person">
