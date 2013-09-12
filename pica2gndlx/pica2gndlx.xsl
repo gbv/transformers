@@ -292,11 +292,15 @@
         </areacode>     
     </xsl:template>      
   
+    
     <xsl:template match="p:datafield[@tag='004B']" mode="PlaceOrGeographicName">
+        <xsl:for-each select="./p:subfield[@code='a']">     
         <type>
             <xsl:value-of select="."/>
         </type>     
+        </xsl:for-each>   
     </xsl:template>   
+    
     
     <xsl:template match="p:datafield[@tag='029@']" mode="PlaceOrGeographicName">
         <variantName>
