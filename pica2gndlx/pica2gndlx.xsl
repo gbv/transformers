@@ -287,9 +287,11 @@
     <!-- PlaceOrGeographicName ..................................... -->
  
     <xsl:template match="p:datafield[@tag='042B']" mode="PlaceOrGeographicName">
-        <areacode>
-            <xsl:value-of select="."/>
-        </areacode>     
+        <xsl:for-each select="./p:subfield[@code='a']">
+            <areacode>
+                <xsl:value-of select="."/>
+            </areacode>    
+        </xsl:for-each>   
     </xsl:template>      
   
     

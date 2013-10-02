@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="info:srw/schema/5/picaXML-v1.0">
+  <datafield tag="001A">
+    <subfield code="0">2012:18-04-12</subfield>
+  </datafield>
+  <datafield tag="001B">
+    <subfield code="0">2012:04-05-12</subfield>
+    <subfield code="t">06:12:45.000</subfield>
+  </datafield>
+  <datafield tag="001D">
+    <subfield code="0">2012:01-10-95</subfield>
+  </datafield>
+  <datafield tag="001U">
+    <subfield code="0">utf8</subfield>
+  </datafield>
+  <datafield tag="001X">
+    <subfield code="0">0</subfield>
+  </datafield>
+  <datafield tag="002@">
+    <subfield code="0">Tgv1</subfield>
+  </datafield>
+  <datafield tag="003@">
+    <subfield code="0">101069529</subfield>
+  </datafield>
+  <datafield tag="003U">
+    <subfield code="a">http://d-nb.info/gnd/1217004-5</subfield>
+  </datafield>
+  <datafield tag="004B">
+    <subfield code="a">gik</subfield>
+  </datafield>
+  <datafield tag="007K">
+    <subfield code="a">gnd</subfield>
+    <subfield code="0">1217004-5</subfield>
+  </datafield>
+  <datafield tag="007N">
+    <subfield code="a">gkd</subfield>
+    <subfield code="0">1217004-5</subfield>
+    <subfield code="v">zg</subfield>
+  </datafield>
+  <datafield tag="008A">
+    <subfield code="a">f</subfield>
+  </datafield>
+  <datafield tag="042B">
+    <subfield code="a">XA-DXDE</subfield>
+    <subfield code="a">XA-DE</subfield>
+  </datafield>
+  <datafield tag="050C">
+    <subfield code="a">Maschinelle Ergänzung der SWD-Nummer</subfield>
+  </datafield>
+  <datafield tag="050E">
+    <subfield code="a">Orts-Mü.</subfield>
+  </datafield>
+  <datafield tag="060R">
+    <subfield code="a">1.7.1913</subfield>
+    <subfield code="4">datb</subfield>
+  </datafield>
+  <datafield tag="065@">
+    <subfield code="a">Berg</subfield>
+    <subfield code="g">München</subfield>
+  </datafield>
+  <datafield tag="065@">
+    <subfield code="a">München</subfield>
+    <subfield code="x">Stadtbezirk</subfield>
+    <subfield code="g">14</subfield>
+    <subfield code="4">spio</subfield>
+  </datafield>
+  <datafield tag="065@">
+    <subfield code="a">München- Berg am Laim</subfield>
+    <subfield code="4">nauv</subfield>
+  </datafield>
+  <datafield tag="065A">
+    <subfield code="a">München-Berg</subfield>
+  </datafield>
+  <datafield tag="065R">
+    <subfield code="9">101069480</subfield>
+    <subfield code="a">Berg</subfield>
+    <subfield code="g">Laim</subfield>
+    <subfield code="0">gnd/1217003-3</subfield>
+    <subfield code="4">vorg</subfield>
+  </datafield>
+</record>
