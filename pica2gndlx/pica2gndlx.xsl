@@ -323,6 +323,7 @@
         <preferredName>
             <xsl:value-of select="p:subfield[@code='a']"/>
             <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
+            <xsl:apply-templates select="p:subfield[@code='z']" mode="addition"/>
         </preferredName>     
     </xsl:template>   
 
@@ -367,7 +368,7 @@
         </xsl:for-each>
     </xsl:template>
 
-    <xsl:template match="p:subfield[@code='g'] | p:subfield[@code='n']" mode="addition">
+    <xsl:template match="p:subfield[@code='g'] | p:subfield[@code='n'] | p:subfield[@code='z']" mode="addition">
         <xsl:text> &lt;</xsl:text>
         <xsl:value-of select="."/>
         <xsl:text>&gt;</xsl:text>
