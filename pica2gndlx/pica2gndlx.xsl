@@ -293,7 +293,6 @@
             </areacode>    
         </xsl:for-each>   
     </xsl:template>      
-  
     
     <xsl:template match="p:datafield[@tag='004B']" mode="PlaceOrGeographicName">
         <xsl:for-each select="./p:subfield[@code='a']">     
@@ -303,12 +302,12 @@
         </xsl:for-each>   
     </xsl:template>   
     
-    
     <xsl:template match="p:datafield[@tag='029@']" mode="PlaceOrGeographicName">
         <variantName>
             <xsl:value-of select="p:subfield[@code='a']"/>
             <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
             <xsl:apply-templates select="p:subfield[@code='b']" mode="additionslash"/>
+            <xsl:apply-templates select="p:subfield[@code='x']" mode="additionslash"/>
         </variantName>
     </xsl:template>   
     
@@ -316,8 +315,9 @@
         <variantName>
             <xsl:value-of select="p:subfield[@code='a']"/>
             <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
+            <xsl:apply-templates select="p:subfield[@code='x']" mode="additionslash"/>
         </variantName>
-    </xsl:template>  
+    </xsl:template>
     
     <xsl:template match="p:datafield[@tag='065A']" mode="PlaceOrGeographicName">
         <preferredName>
