@@ -324,6 +324,7 @@
             <xsl:value-of select="p:subfield[@code='a']"/>
             <xsl:apply-templates select="p:subfield[@code='g']" mode="addition"/>
             <xsl:apply-templates select="p:subfield[@code='z']" mode="addition"/>
+            <xsl:apply-templates select="p:subfield[@code='x']" mode="additionslash"/>
         </preferredName>     
     </xsl:template>   
 
