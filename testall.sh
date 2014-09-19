@@ -10,12 +10,13 @@ do
     cd $DIR
     if [ -f "runtest.sh" ]
     then
-        echo \# $DIR
+        echo
+        echo "### $DIR"
         ls
         prove -v runtest.sh
         RESULT=$((RESULT+$?))
     else
-        echo \# $DIR - no tests
+        echo "### $DIR - no tests"
     fi
     cd ..
 done 

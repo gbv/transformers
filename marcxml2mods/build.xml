@@ -17,13 +17,13 @@
 
     <target name="test">
         <for param="marcfile">
-            <fileset dir="tests/">
-                <filename name="*.marc.xml"/>
+            <fileset dir="test/">
+                <filename name="*.in.xml"/>
             </fileset>
             <sequential>
                 <propertyregex override="yes"
                     property="modsfile"  input="@{marcfile}"
-                    regexp="(.+)\.marc\.xml" replace="\1.mods.xml"/>
+                    regexp="(.+)\.in\.xml" replace="\1.mods.xml"/>
 
                 <echo>Transforming @{marcfile} to ${modsfile}</echo>
                 <xslt in="@{marcfile}" out="${modsfile}" style="${script}"/>
@@ -33,7 +33,7 @@
 
                 <propertyregex override="yes"
                     property="schematronfile"  input="@{marcfile}"
-                    regexp="(.+)\.marc\.xml" replace="\1.schematron.xml"/>
+                    regexp="(.+)\.in\.xml" replace="\1.schematron.xml"/>
                 <if>
                     <available file="${schematronfile}"/>
                     <then>
@@ -51,9 +51,9 @@
     </target>
 
     <target name="clean">
-        <echo>Removing tests/*.mods.xml</echo>
+        <echo>Removing test/*.mods.xml</echo>
         <delete file="result.xml">
-            <fileset dir="tests" includes="*.mods.xml" />
+            <fileset dir="test" includes="*.mods.xml" />
         </delete>
     </target>
 

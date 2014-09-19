@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3" version="3.4" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+  <titleInfo>
+    <title>Content-Management-Systeme der nächsten Generation</title>
+  </titleInfo>
+  <name type="personal" authority="gnd" authorityURI="http://d-nb.info/gnd/" valueURI="http://d-nb.info/gnd/135799082">
+    <namePart type="family">Krebs</namePart>
+    <namePart type="given">Kathleen.</namePart>
+  </name>
+  <name type="personal" authority="gnd" authorityURI="http://d-nb.info/gnd/" valueURI="http://d-nb.info/gnd/136993451">
+    <namePart type="family">Wagner</namePart>
+    <namePart type="given">Frank.</namePart>
+  </name>
+  <typeOfResource>text</typeOfResource>
+  <originInfo>
+    <dateIssued encoding="marc">2008</dateIssued>
+    <issuance>monographic</issuance>
+  </originInfo>
+  <language>
+    <languageTerm authority="iso639-2b" type="code">ger</languageTerm>
+  </language>
+  <physicalDescription>
+    <form authority="marcform">print</form>
+    <extent>graph. Darst.</extent>
+  </physicalDescription>
+  <subject authority="stw">
+    <topic>Content Management</topic>
+  </subject>
+  <subject authority="stw">
+    <topic>Elektronisches Archiv</topic>
+  </subject>
+  <subject authority="stw">
+    <topic>Rechnerarchitektur</topic>
+  </subject>
+  <relatedItem type="host" displayLabel="In: ">
+    <titleInfo>
+      <title>Wissens- und Informationsmanagement</title>
+    </titleInfo>
+    <originInfo>
+      <publisher>Wiesbaden : Gabler</publisher>
+    </originInfo>
+    <identifier type="local">(DE-601)575197366</identifier>
+    <part>
+      <text>(2009), p. 539-567</text>
+    </part>
+  </relatedItem>
+  <recordInfo>
+    <descriptionStandard>rakwb</descriptionStandard>
+    <recordContentSource authority="marcorg">GyGoGBV</recordContentSource>
+    <recordCreationDate encoding="marc">081229</recordCreationDate>
+    <recordChangeDate encoding="iso8601">20090731130327.0</recordChangeDate>
+    <recordIdentifier source="DE-601">588514489</recordIdentifier>
+    <recordOrigin>Converted from MARCXML to MODS version 3.4 using MARC21slim2MODS3-4.xsl
+				(Revision 1.74gbv3)</recordOrigin>
+    <languageOfCataloging>
+      <languageTerm authority="iso639-2b" type="code">ger</languageTerm>
+    </languageOfCataloging>
+  </recordInfo>
+</mods>
