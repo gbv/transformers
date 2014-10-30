@@ -7,21 +7,50 @@
 
     <xsl:output encoding="UTF-8" indent="yes" method="xml"/>
     <xsl:strip-space elements="*"/>
-    
-    <xsl:variable name="GNDURI" select="key('sf','003U$a')"/>
-    <xsl:variable name="TYPE" select="substring(key('sf','002@$0'),1,2)"/>
-   
+  
     <xsl:template match="/p:record">
         <p:record>
             <xsl:apply-templates select="p:datafield"/> 
         </p:record>
     </xsl:template>
 
-    <xsl:template match="p:datafield[@tag='003@' or 
-        @tag='101@' or @tag='209A' or @tag='201@' or @tag='237A']">
+    <!-- 002@ und 003@ -->
+    <xsl:template match="p:datafield[@tag='002@' or @tag='003@']">
+        <xsl:copy-of select="."/>
+    </xsl:template>
+
+    <!-- 009P und 209R -->
+    <xsl:template match="p:datafield[@tag='009P' or @tag='209R']">
+        <xsl:copy-of select="."/>
+    </xsl:template>
+
+    <!-- 101@ $a -->
+    <xsl:template match="p:datafield[@tag='101@']">
+        <p:datafield tag="{@tag}">
+            <xsl:copy-of select="p:subfield[@code='a']"/>
+        </p:datafield>
+    </xsl:template>
+
+    <!-- 209A $adfce -->
+    <xsl:template match="p:datafield[@tag='209A']">
+        <p:datafield tag="{@tag}">
+            <xsl:copy-of select="p:subfield[contains('adfce',@code)]"/>
+        </p:datafield>
+    </xsl:template>
+
+    <!-- 201@ $lbn -->
+    <xsl:template match="p:datafield[@tag='201@']">
+        <p:datafield tag="{@tag}">
+            <xsl:copy-of select="p:subfield[contains('lbn',@code)]"/>
+        </p:datafield>
+    </xsl:template>
+
+    <!-- 237A (Exemplarbezogener Kommentar) -->
+    <xsl:template match="p:datafield[@tag='237A']">
         <xsl:copy-of select="."/>
     </xsl:template>
 
     <xsl:template match="*"/>
+
 </xsl:stylesheet>
 
