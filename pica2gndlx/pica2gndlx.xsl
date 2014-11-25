@@ -136,9 +136,9 @@
     <xsl:template match="p:datafield[@tag='065R']" mode="Person">
         <xsl:variable name="element">
             <xsl:if test="p:subfield[@code='4']='ortg'">placeOfBirth</xsl:if>
-            <xsl:if test="p:subfield[@code='4']='orts'">placeOfDeath</xsl:if>
+            <xsl:if test="p:subfield[@code='4']='orts'">placeOfDeath</xsl:if>           
         </xsl:variable>
-        <xsl:if test="$element">
+        <xsl:if test="string-length($element) &gt; 0">
             <xsl:element name="{$element}" namespace="http://d-nb.info/standards/elementset/gnd#">
                 <xsl:call-template name="gnduriattr"/>
                 <xsl:value-of select="p:subfield[@code='a']"/>
