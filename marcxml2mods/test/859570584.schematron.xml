@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://purl.oclc.org/dsdl/schematron">
+    <ns prefix="m" uri="http://www.loc.gov/mods/v3" />
+    <pattern>
+        <!-- TODO: add rules here -->
+        <!-- rule context="m:name[@type='personal']">
+            <assert test="@authority='gnd'">@authority</assert>
+            <assert test="@authorityURI">http://d-nb.info/gnd/</assert>
+            <assert test="substring-after(@valueURI,'http://d-nb.info/gnd/') != ''">
+                person must have a valueURI with PND!
+            </assert>
+        </rule -->
+    </pattern>
+</schema>

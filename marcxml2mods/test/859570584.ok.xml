@@ -93,19 +93,8 @@
    </physicalDescription>
    <note type="statement of responsibility" altRepGroup="00">Bertrand Matthäus, Hans-Jochen Fiebig, Kirsten Schiekiera, Markus Semmler</note>
    <classification authority="ddc">640</classification>
-   <classification authority="ddc">640</classification>
-   <relatedItem>
-      <physicalDescription>
-         <internetMediaType>text/html</internetMediaType>
-      </physicalDescription>
-   </relatedItem>
    <identifier type="isbn">3868514406</identifier>
    <identifier type="isbn">9783868514407</identifier>
-   <relatedItem>
-      <location>
-         <url displayLabel="Inhaltstext">http://deposit.d-nb.de/cgi-bin/dokserv?id=f5259b456bf84399818f954a2a2df32b&amp;prov=M&amp;dok_var=1&amp;dok_ext=htm</url>
-      </location>
-   </relatedItem>
    <recordInfo>
       <descriptionStandard>rda</descriptionStandard>
       <recordContentSource authority="marcorg"/>
