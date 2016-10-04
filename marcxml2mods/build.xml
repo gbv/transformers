@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="marcxml2mods">
-  
+
     <property name="script" value="marcxml2mods.xsl"/>
-    <property name="schema" value="schemas/mods-3-4.xsd"/>
+    <property name="schema" value="schemas/mods-3-6.xsd"/>
 
     <!-- additional tasks from ant-contrib and ant-schematron -->
     <taskdef resource="net/sf/antcontrib/antlib.xml">
@@ -11,8 +11,8 @@
         </classpath>
     </taskdef>
     <!-- Schematron requires Saxon. FIXME! -->
-    <taskdef name="schematron" 
-        classname="com.schematron.ant.SchematronTask"  
+    <taskdef name="schematron"
+        classname="com.schematron.ant.SchematronTask"
         classpath="lib/ant-schematron.jar;lib/saxon9-dom.jar;lib/saxon9.jar;lib/saxon-jdom.jar" />
 
     <target name="test">

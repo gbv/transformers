@@ -25,7 +25,7 @@ See `testrunner` for useful bash functions to write tests.
 ## marcxml2mods
 
 Für den GBV angepasste Version des XSL-Stylesheets der LOC für die
-Transformation von MARCXML nach MODS3.4
+Transformation von MARCXML nach MODS3.6
 
 ## pica2gndlx
 

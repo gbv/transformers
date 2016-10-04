@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="http://www.loc.gov/MARC21/slim">
+  <leader>xxxxxnam a22yyyyy c 4500</leader>
+  <controlfield tag="001">859570584</controlfield>
+  <controlfield tag="003">DE-601</controlfield>
+  <controlfield tag="005">20160926141852.0</controlfield>
+  <controlfield tag="008">160519s2016    gw            000 0 ger d</controlfield>
+  <datafield tag="015" ind1=" " ind2=" ">
+    <subfield code="a">16N20</subfield>
+    <subfield code="2">dnb</subfield>
+  </datafield>
+  <datafield tag="016" ind1="7" ind2=" ">
+    <subfield code="a">1100182136</subfield>
+    <subfield code="2">DE-101</subfield>
+  </datafield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">3868514406</subfield>
+    <subfield code="c">EUR 20.50 (AT), sfr 24.00 (freier Preis), EUR 19.90 (DE)</subfield>
+    <subfield code="9">3-86851-440-6</subfield>
+  </datafield>
+  <datafield tag="020" ind1=" " ind2=" ">
+    <subfield code="a">9783868514407</subfield>
+    <subfield code="c">EUR 20.50 (AT), sfr 24.00 (freier Preis), EUR 19.90 (DE)</subfield>
+    <subfield code="9">978-3-86851-440-7</subfield>
+  </datafield>
+  <datafield tag="024" ind1="3" ind2=" ">
+    <subfield code="a">9783868514407</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(DE-101)1100182136</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(DE-599)DNB1100182136</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="b">ger</subfield>
+    <subfield code="c">DE-601</subfield>
+    <subfield code="e">rda</subfield>
+  </datafield>
+  <datafield tag="041" ind1="0" ind2=" ">
+    <subfield code="a">ger</subfield>
+  </datafield>
+  <datafield tag="082" ind1="0" ind2="0">
+    <subfield code="a">640</subfield>
+  </datafield>
+  <datafield tag="082" ind1="0" ind2="9">
+    <subfield code="a">640</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Matthäus, Bertrand</subfield>
+    <subfield code="e">VerfasserIn</subfield>
+    <subfield code="4">aut</subfield>
+    <subfield code="0">(DE-601)691182264</subfield>
+    <subfield code="0">(DE-588)113399677</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="0">
+    <subfield code="a">test-Warenkunde: Öl</subfield>
+    <subfield code="c">Bertrand Matthäus, Hans-Jochen Fiebig, Kirsten Schiekiera, Markus Semmler</subfield>
+  </datafield>
+  <datafield tag="260" ind1="3" ind2=" ">
+    <subfield code="a">Berlin</subfield>
+    <subfield code="b">Stiftung Warentest</subfield>
+    <subfield code="c">2016</subfield>
+  </datafield>
+  <datafield tag="264" ind1="3" ind2="1">
+    <subfield code="a">Berlin</subfield>
+    <subfield code="b">Stiftung Warentest</subfield>
+    <subfield code="c">2016</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">208 Seiten</subfield>
+    <subfield code="c">22 cm x 16.8 cm</subfield>
+  </datafield>
+  <datafield tag="336" ind1=" " ind2=" ">
+    <subfield code="a">Text</subfield>
+    <subfield code="b">txt</subfield>
+    <subfield code="2">rdacontent</subfield>
+  </datafield>
+  <datafield tag="337" ind1=" " ind2=" ">
+    <subfield code="a">ohne Hilfsmittel zu benutzen</subfield>
+    <subfield code="b">n</subfield>
+    <subfield code="2">rdamedia</subfield>
+  </datafield>
+  <datafield tag="338" ind1=" " ind2=" ">
+    <subfield code="a">Band</subfield>
+    <subfield code="b">nc</subfield>
+    <subfield code="2">rdacarrier</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Fiebig, Hans-Jochen</subfield>
+    <subfield code="e">VerfasserIn</subfield>
+    <subfield code="4">aut</subfield>
+    <subfield code="0">(DE-601)770109861</subfield>
+    <subfield code="0">(DE-588)1043083200</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Schiekiera, Kirsten</subfield>
+    <subfield code="e">VerfasserIn</subfield>
+    <subfield code="4">aut</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Semmler, Markus</subfield>
+    <subfield code="e">VerfasserIn</subfield>
+    <subfield code="4">aut</subfield>
+  </datafield>
+  <datafield tag="710" ind1="2" ind2=" ">
+    <subfield code="a">Stiftung Warentest</subfield>
+    <subfield code="e">Verlag</subfield>
+    <subfield code="4">pbl</subfield>
+    <subfield code="0">(DE-601)100992595</subfield>
+    <subfield code="0">(DE-588)43323-8</subfield>
+  </datafield>
+  <datafield tag="856" ind1="4" ind2="2">
+    <subfield code="u">http://deposit.d-nb.de/cgi-bin/dokserv?id=f5259b456bf84399818f954a2a2df32b&amp;prov=M&amp;dok_var=1&amp;dok_ext=htm</subfield>
+    <subfield code="m">X:MVB</subfield>
+    <subfield code="q">text/html</subfield>
+    <subfield code="3">Inhaltstext</subfield>
+  </datafield>
+  <datafield tag="900" ind1=" " ind2=" ">
+    <subfield code="a">GBV</subfield>
+    <subfield code="b">Ressortbibliotheken des BMEL</subfield>
+    <subfield code="d">!Det2! A 3749</subfield>
+    <subfield code="x">L</subfield>
+    <subfield code="z">C</subfield>
+    <subfield code="s">4252/131</subfield>
+  </datafield>
+  <datafield tag="954" ind1=" " ind2=" ">
+    <subfield code="0">Ressortbibliotheken des BMEL</subfield>
+    <subfield code="a">252</subfield>
+    <subfield code="b">1638533938</subfield>
+    <subfield code="c">01</subfield>
+    <subfield code="f">Det2</subfield>
+    <subfield code="d">A 3749</subfield>
+    <subfield code="e">s</subfield>
+    <subfield code="x">4252/131</subfield>
+  </datafield>
+</record>
