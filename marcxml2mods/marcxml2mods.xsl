@@ -4,9 +4,13 @@
     <xsl:strip-space elements="*"/>
 
     <!-- Maintenance note: For each revision, change the content of <recordInfo><recordOrigin> to reflect the new revision number.
-  MARC21slim2MODS3-5 (Revision 1.116) 20160315
+  MARC21slim2MODS3-5 (Revision 1.116gbv4) 20161006
 
   MODS 3.6
+  Revision 1.116gbv4 - Removed 856q 2016/10/06 - mbue
+  Revision 1.116gbv3 - Fixed use all nameIdentifier 2016/10/06 - mbue
+  Revision 1.116gbv2 - Added <part> for 830v and 490v 2016/10/06 - mbue
+  Revision 1.116gbv - Fixed only use 830 if it has a title 2016/10/06 - mbue
   Revision 1.116 - Added nameIdentifier to 700/710/711/100/110/111 $0 RE: MODS 3.6 - 2016/3/15 ws
   Revision 1.115 - Added @otherType for 7xx RE: MODS 3.6 - 2016/3/15 ws
   Revision 1.114 - Added <itemIdentifier> for 852$p and <itemIdentifier > with type="copy number" for 852$t RE: MODS 3.6 - 2016/3/15 ws
@@ -53,6 +57,10 @@
   Revision 1.77 - Fixed 008-06 when value = 's' - 2012/04/19 tmee
   Revision 1.76 - Fixed 242 - 2012/02/01 tmee
   Revision 1.75 - Fixed 653 - 2012/01/31 tmee
+  Revision 1.74gbv4 - Added Holding information (from GBV MARC field 954) 92013/03/01 - voss
+  Revision 1.74gbv3 - Fixed GND authority and added GND subject field 689 2013/01/16 - voss
+  Revision 1.74gbv2 - Modified issuance to catch all c-Level PICA records 2013/01/15 - voss
+  Revision 1.74gbv - Added splitting of names in given and family name and added GND authority 2011/05/18 - voss/kkrebs
   Revision 1.74 - Fixed 510 note - 2011/07/15 tmee
   Revision 1.73 - Fixed 506 540 - 2011/07/11 tmee
   Revision 1.72 - Fixed frequency error - 2011/07/07 and 2011/07/14 tmee
@@ -2520,6 +2528,8 @@
                 <xsl:call-template name="relatedForm"/>
             </relatedItem>
         </xsl:for-each>
+
+        <!-- mbue 1.116gbv fixed only use 830 if it has a title 20161006-->
         <xsl:for-each select="marc:datafield[@tag='830']">
             <xsl:if test="marc:subfield[@code='a']">
                 <relatedItem type="series">
@@ -2780,6 +2790,27 @@
     </xsl:for-each>
     -->
 
+        <!-- GBV-specific holding field, most of it to be mapped via DAIA -->
+        <!--
+            FIXME: Das GBV-eigene MARC-Feld 954 wird wie mit der DNB besprochen durch das MARC-Feld 924 ersetzt.
+        -->
+        <xsl:for-each select="marc:datafield[@tag='954']/marc:subfield[@code='g']|marc:datafield[@tag='924']/marc:subfield[@code='z']">
+            <location>
+                <holdingSimple>
+                    <copyInformation>
+                        <enumerationAndChronology>
+                            <xsl:choose>
+                                <!-- Temporärer Hack wegen Feld 954 -->
+                                <xsl:when test="substring-after(.,'Bestand: ')">
+                                    <xsl:value-of select="substring-after(.,'Bestand: ')"/>
+                                </xsl:when>
+                                <xsl:otherwise><xsl:value-of select="."/></xsl:otherwise>
+                            </xsl:choose>
+                        </enumerationAndChronology>
+                    </copyInformation>
+                </holdingSimple>
+            </location>
+        </xsl:for-each>
 
         <xsl:for-each select="marc:datafield[@tag=856][@ind2=2][marc:subfield[@code='u']]">
             <relatedItem>
@@ -2951,6 +2982,7 @@
             </xsl:for-each>
         </xsl:if>
     </xsl:template>
+    <!-- mbue 1.116gbv2 added <part> for 830v and 490v 20161006-->
     <xsl:template name="relatedPartVolume">
             <xsl:for-each select="marc:subfield[@code='v']">
                 <part>
@@ -3197,6 +3229,7 @@
     </xsl:template>
 
     <!-- 1.116 -->
+    <!-- mbue 1.116gbv3 fixed use all nameIdentifier 20161006-->
     <xsl:template name="nameIdentifier">
         <xsl:for-each select="marc:subfield[@code='0']">
             <nameIdentifier>
