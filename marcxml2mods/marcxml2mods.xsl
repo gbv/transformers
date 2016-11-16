@@ -4,9 +4,10 @@
     <xsl:strip-space elements="*"/>
 
     <!-- Maintenance note: For each revision, change the content of <recordInfo><recordOrigin> to reflect the new revision number.
-  MARC21slim2MODS3-5 (Revision 1.116gbv4) 20161006
+  MARC21slim2MODS3-5 (Revision 1.116gbv5) 20161116
 
   MODS 3.6
+  Revision 1.116gbv5 - changed extent @unit from page to pages 2016/11/16 - mbue
   Revision 1.116gbv4 - Removed 856q 2016/10/06 - mbue
   Revision 1.116gbv3 - Fixed use all nameIdentifier 2016/10/06 - mbue
   Revision 1.116gbv2 - Added <part> for 830v and 490v 2016/10/06 - mbue
@@ -3643,7 +3644,7 @@
             </detail>
         </xsl:if>
         <xsl:if test="$page">
-            <extent unit="page">
+            <extent unit="pages">
                 <start>
                     <xsl:value-of select="$page"/>
                 </start>
