@@ -4,9 +4,10 @@
     <xsl:strip-space elements="*"/>
 
     <!-- Maintenance note: For each revision, change the content of <recordInfo><recordOrigin> to reflect the new revision number.
-  MARC21slim2MODS3-5 (Revision 1.116gbv5) 20161116
+  MARC21slim2MODS3-5 (Revision 1.116gbv6) 20170126
 
   MODS 3.6
+  Revision 1.116gbv6 - changed put field 689 into topic 2017/01/26 - mbue
   Revision 1.116gbv5 - changed extent @unit from page to pages 2016/11/16 - mbue
   Revision 1.116gbv4 - Removed 856q 2016/10/06 - mbue
   Revision 1.116gbv3 - Fixed use all nameIdentifier 2016/10/06 - mbue
@@ -5797,12 +5798,12 @@
             starts-with(.,'(DE-588)') or starts-with(.,'(DE-588a)') or starts-with(.,'(DE-588b)') or starts-with(.,'(DE-588c)')
         )]">
             <subject>
-                <xsl:call-template name="gndAuthorityURI"/>
-                <xsl:for-each select="marc:subfield[@code='a']">
-                    <xsl:attribute name="displayLabel">
-                        <xsl:value-of select="."/>
-                    </xsl:attribute>
-                </xsl:for-each>
+                <topic>
+                    <xsl:call-template name="gndAuthorityURI"/>
+                    <xsl:for-each select="marc:subfield[@code='a']">
+                            <xsl:value-of select="."/>
+                    </xsl:for-each>
+                </topic>
             </subject>
         </xsl:if>
     </xsl:template>
