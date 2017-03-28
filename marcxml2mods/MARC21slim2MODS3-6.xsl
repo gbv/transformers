@@ -4,9 +4,10 @@
 	<xsl:strip-space elements="*"/>
 
 	<!-- Maintenance note: For each revision, change the content of <recordInfo><recordOrigin> to reflect the new revision number.
-	MARC21slim2MODS3-5 (Revision 1.116) 20160315
+	MARC21slim2MODS3-6 (Revision 1.117) 20170214
 	
 	MODS 3.6
+	Revision 1.117 - Fixed name typef="corporate" RE: MODS 3.6 - 2017/2/14 ntra
 	Revision 1.116 - Added nameIdentifier to 700/710/711/100/110/111 $0 RE: MODS 3.6 - 2016/3/15 ws
 	Revision 1.115 - Added @otherType for 7xx RE: MODS 3.6 - 2016/3/15 ws
 	Revision 1.114 - Added <itemIdentifier> for 852$p and <itemIdentifier > with type="copy number" for 852$t RE: MODS 3.6 - 2016/3/15 ws
@@ -2825,7 +2826,7 @@
 			</xsl:for-each>
 
 			<recordOrigin>Converted from MARCXML to MODS version 3.6 using MARC21slim2MODS3-6.xsl
-				(Revision 1.116 2016/3/15)</recordOrigin>
+				(Revision 1.117 2017/02/14)</recordOrigin>
 
 			<xsl:for-each select="marc:datafield[@tag=040]/marc:subfield[@code='b']">
 				<languageOfCataloging>
@@ -4517,7 +4518,8 @@
 	</xsl:template>
 
 	<xsl:template name="createNameFrom710">
-		<name typef="corporate">
+	<!-- 1.117 -->
+		<name type="corporate">
 			<xsl:call-template name="xxx880"/>
 			<xsl:call-template name="nameABCDN"/>
 			<xsl:call-template name="role"/>
@@ -5702,4 +5704,8 @@
 		</xsl:copy>
 	</xsl:template>
 
-</xsl:stylesheet>
+</xsl:stylesheet><!-- Stylus Studio meta-information - (c) 2004-2005. Progress Software Corporation. All rights reserved.
+<metaInformation>
+<scenarios/><MapperMetaTag><MapperInfo srcSchemaPathIsRelative="yes" srcSchemaInterpretAsXML="no" destSchemaPath="" destSchemaRoot="" destSchemaPathIsRelative="yes" destSchemaInterpretAsXML="no"/><MapperBlockPosition></MapperBlockPosition><TemplateContext></TemplateContext></MapperMetaTag>
+</metaInformation>
+-->

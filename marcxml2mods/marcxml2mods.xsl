@@ -4,9 +4,11 @@
     <xsl:strip-space elements="*"/>
 
     <!-- Maintenance note: For each revision, change the content of <recordInfo><recordOrigin> to reflect the new revision number.
-  MARC21slim2MODS3-5 (Revision 1.116gbv6) 20170126
+    MARC21slim2MODS3-6 (Revision 1.117gbv) 20170214
 
   MODS 3.6
+  Revision 1.117gbv - merged current version from loc - 2017/03/28 kkrebs
+  Revision 1.117 - Fixed name typef="corporate" RE: MODS 3.6 - 2017/2/14 ntra
   Revision 1.116gbv6 - changed put field 689 into topic 2017/01/26 - mbue
   Revision 1.116gbv5 - changed extent @unit from page to pages 2016/11/16 - mbue
   Revision 1.116gbv4 - Removed 856q 2016/10/06 - mbue
@@ -2876,7 +2878,7 @@
             </xsl:for-each>
 
             <recordOrigin>Converted from MARCXML to MODS version 3.6 using MARC21slim2MODS3-6.xsl
-                (Revision 1.116 2016/3/15)
+                (Revision 1.117gbv 2017/02/14)
             </recordOrigin>
 
             <xsl:for-each select="marc:datafield[@tag=040]/marc:subfield[@code='b']">
@@ -4620,6 +4622,7 @@
     </xsl:template>
 
     <xsl:template name="createNameFrom710">
+        <!-- 1.117 -->
         <name type="corporate">
             <xsl:call-template name="xxx880"/>
             <xsl:call-template name="nameABCDN"/>

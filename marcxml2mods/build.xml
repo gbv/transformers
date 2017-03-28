@@ -57,4 +57,9 @@
         </delete>
     </target>
 
+  <target name="mergeIncludes">
+      <echo>merging xsl files to one</echo>
+      <xslt in="marcxml2mods.xsl" out="marcxml2mods.generated.xsl" style="mergeIncludes.xsl"/>
+  </target>
+
 </project>
