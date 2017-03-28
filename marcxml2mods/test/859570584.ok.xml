@@ -1,26 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xmlns="http://www.loc.gov/mods/v3"
-      version="3.6"
-      xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.6" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
    <titleInfo>
-      <title>test-Warenkunde: Öl</title>
+      <title>Warenkunde Öl</title>
    </titleInfo>
    <name type="personal" usage="primary">
-      <namePart type="family">Matthäus</namePart>
-      <namePart type="given">Bertrand</namePart>
-      <role>
-         <roleTerm type="text">VerfasserIn</roleTerm>
-      </role>
-      <role>
-         <roleTerm authority="marcrelator" type="code">aut</roleTerm>
-      </role>
-      <nameIdentifier>(DE-601)691182264 (DE-588)113399677</nameIdentifier>
-   </name>
-   <name type="personal"
-         authority="gnd"
-         authorityURI="http://d-nb.info/gnd/"
-         valueURI="http://d-nb.info/gnd/1043083200">
       <namePart type="family">Fiebig</namePart>
       <namePart type="given">Hans-Jochen</namePart>
       <role>
@@ -29,7 +12,20 @@
       <role>
          <roleTerm authority="marcrelator" type="code">aut</roleTerm>
       </role>
-      <nameIdentifier>(DE-601)770109861 (DE-588)1043083200</nameIdentifier>
+      <nameIdentifier>(DE-601)770109861</nameIdentifier>
+      <nameIdentifier>(DE-588)1043083200</nameIdentifier>
+   </name>
+   <name type="personal" authority="gnd" authorityURI="http://d-nb.info/gnd/" valueURI="http://d-nb.info/gnd/113399677">
+      <namePart type="family">Matthäus</namePart>
+      <namePart type="given">Bertrand</namePart>
+      <role>
+         <roleTerm type="text">VerfasserIn</roleTerm>
+      </role>
+      <role>
+         <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+      </role>
+      <nameIdentifier>(DE-601)691182264</nameIdentifier>
+      <nameIdentifier>(DE-588)113399677</nameIdentifier>
    </name>
    <name type="personal">
       <namePart type="family">Schiekiera</namePart>
@@ -59,7 +55,8 @@
       <role>
          <roleTerm authority="marcrelator" type="code">pbl</roleTerm>
       </role>
-      <nameIdentifier>(DE-601)100992595 (DE-588)43323-8</nameIdentifier>
+      <nameIdentifier>(DE-601)100992595</nameIdentifier>
+      <nameIdentifier>(DE-588)43323-8</nameIdentifier>
    </name>
    <typeOfResource>text</typeOfResource>
    <genre authority="rdacontent">Text</genre>
@@ -87,22 +84,39 @@
    <physicalDescription>
       <form authority="marcform">print</form>
       <internetMediaType>text/html</internetMediaType>
-      <extent>208 Seiten 22 cm x 16.8 cm</extent>
+      <extent>223 Seiten Illustrationen 22 cm x 16.8 cm</extent>
       <form type="media" authority="rdamedia">ohne Hilfsmittel zu benutzen</form>
       <form type="carrier" authority="rdacarrier">Band</form>
    </physicalDescription>
-   <note type="statement of responsibility" altRepGroup="00">Bertrand Matthäus, Hans-Jochen Fiebig, Kirsten Schiekiera, Markus Semmler</note>
+   <note type="statement of responsibility" altRepGroup="00">Hans-Jochen Fiebig, Bertrand Matthäus, Kirsten Schiekiera ; Rezepte von Markus Semmler</note>
+   <note type="bibliography">Verbraucherinformation zur Bedeutung der verschiedenen Speiseöle in der Ernährung, ihrer Herstellung und Verwendung in der Küche mit 25 Rezepten vom Berliner Sternekoch Markus Semmler.</note>
    <classification authority="ddc">640</classification>
+   <classification authority="ddc">640</classification>
+   <classification authority="asb">Xeo 10</classification>
+   <classification authority="ssd">WTP</classification>
+   <classification authority="sfb">HW 275</classification>
+   <classification authority="kab">X 200</classification>
+   <relatedItem type="series">
+      <titleInfo>
+         <title>Test</title>
+      </titleInfo>
+   </relatedItem>
    <identifier type="isbn">3868514406</identifier>
    <identifier type="isbn">9783868514407</identifier>
+   <relatedItem>
+      <location>
+         <url displayLabel="Inhaltstext">http://deposit.d-nb.de/cgi-bin/dokserv?id=f5259b456bf84399818f954a2a2df32b&amp;prov=M&amp;dok_var=1&amp;dok_ext=htm</url>
+      </location>
+   </relatedItem>
    <recordInfo>
       <descriptionStandard>rda</descriptionStandard>
       <recordContentSource authority="marcorg"/>
       <recordCreationDate encoding="marc">160519</recordCreationDate>
-      <recordChangeDate encoding="iso8601">20160926141852.0</recordChangeDate>
+      <recordChangeDate encoding="iso8601">20161129034510.0</recordChangeDate>
       <recordIdentifier source="DE-601">859570584</recordIdentifier>
       <recordOrigin>Converted from MARCXML to MODS version 3.6 using MARC21slim2MODS3-6.xsl
-        (Revision 1.116 2016/3/15)</recordOrigin>
+                (Revision 1.117gbv 2017/02/14)
+            </recordOrigin>
       <languageOfCataloging>
          <languageTerm authority="iso639-2b" type="code">ger</languageTerm>
       </languageOfCataloging>

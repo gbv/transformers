@@ -3,7 +3,7 @@
   <leader>xxxxxnam a22yyyyy c 4500</leader>
   <controlfield tag="001">859570584</controlfield>
   <controlfield tag="003">DE-601</controlfield>
-  <controlfield tag="005">20160926141852.0</controlfield>
+  <controlfield tag="005">20161129034510.0</controlfield>
   <controlfield tag="008">160519s2016    gw            000 0 ger d</controlfield>
   <datafield tag="015" ind1=" " ind2=" ">
     <subfield code="a">16N20</subfield>
@@ -30,11 +30,14 @@
     <subfield code="a">(DE-101)1100182136</subfield>
   </datafield>
   <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">4776802</subfield>
+  </datafield>
+  <datafield tag="035" ind1=" " ind2=" ">
     <subfield code="a">(DE-599)DNB1100182136</subfield>
   </datafield>
   <datafield tag="040" ind1=" " ind2=" ">
     <subfield code="b">ger</subfield>
-    <subfield code="c">DE-601</subfield>
+    <subfield code="c">GBVCP</subfield>
     <subfield code="e">rda</subfield>
   </datafield>
   <datafield tag="041" ind1="0" ind2=" ">
@@ -46,16 +49,32 @@
   <datafield tag="082" ind1="0" ind2="9">
     <subfield code="a">640</subfield>
   </datafield>
+  <datafield tag="084" ind1=" " ind2=" ">
+    <subfield code="a">Xeo 10</subfield>
+    <subfield code="2">asb</subfield>
+  </datafield>
+  <datafield tag="084" ind1=" " ind2=" ">
+    <subfield code="a">WTP</subfield>
+    <subfield code="2">ssd</subfield>
+  </datafield>
+  <datafield tag="084" ind1=" " ind2=" ">
+    <subfield code="a">HW 275</subfield>
+    <subfield code="2">sfb</subfield>
+  </datafield>
+  <datafield tag="084" ind1=" " ind2=" ">
+    <subfield code="a">X 200</subfield>
+    <subfield code="2">kab</subfield>
+  </datafield>
   <datafield tag="100" ind1="1" ind2=" ">
-    <subfield code="a">Matthäus, Bertrand</subfield>
+    <subfield code="a">Fiebig, Hans-Jochen</subfield>
     <subfield code="e">VerfasserIn</subfield>
     <subfield code="4">aut</subfield>
-    <subfield code="0">(DE-601)691182264</subfield>
-    <subfield code="0">(DE-588)113399677</subfield>
+    <subfield code="0">(DE-601)770109861</subfield>
+    <subfield code="0">(DE-588)1043083200</subfield>
   </datafield>
   <datafield tag="245" ind1="1" ind2="0">
-    <subfield code="a">test-Warenkunde: Öl</subfield>
-    <subfield code="c">Bertrand Matthäus, Hans-Jochen Fiebig, Kirsten Schiekiera, Markus Semmler</subfield>
+    <subfield code="a">Warenkunde Öl</subfield>
+    <subfield code="c">Hans-Jochen Fiebig, Bertrand Matthäus, Kirsten Schiekiera ; Rezepte von Markus Semmler</subfield>
   </datafield>
   <datafield tag="260" ind1="3" ind2=" ">
     <subfield code="a">Berlin</subfield>
@@ -68,7 +87,8 @@
     <subfield code="c">2016</subfield>
   </datafield>
   <datafield tag="300" ind1=" " ind2=" ">
-    <subfield code="a">208 Seiten</subfield>
+    <subfield code="a">223 Seiten</subfield>
+    <subfield code="b">Illustrationen</subfield>
     <subfield code="c">22 cm x 16.8 cm</subfield>
   </datafield>
   <datafield tag="336" ind1=" " ind2=" ">
@@ -86,12 +106,18 @@
     <subfield code="b">nc</subfield>
     <subfield code="2">rdacarrier</subfield>
   </datafield>
+  <datafield tag="490" ind1="0" ind2=" ">
+    <subfield code="a">Test</subfield>
+  </datafield>
+  <datafield tag="504" ind1=" " ind2=" ">
+    <subfield code="a">Verbraucherinformation zur Bedeutung der verschiedenen Speiseöle in der Ernährung, ihrer Herstellung und Verwendung in der Küche mit 25 Rezepten vom Berliner Sternekoch Markus Semmler.</subfield>
+  </datafield>
   <datafield tag="700" ind1="1" ind2=" ">
-    <subfield code="a">Fiebig, Hans-Jochen</subfield>
+    <subfield code="a">Matthäus, Bertrand</subfield>
     <subfield code="e">VerfasserIn</subfield>
     <subfield code="4">aut</subfield>
-    <subfield code="0">(DE-601)770109861</subfield>
-    <subfield code="0">(DE-588)1043083200</subfield>
+    <subfield code="0">(DE-601)691182264</subfield>
+    <subfield code="0">(DE-588)113399677</subfield>
   </datafield>
   <datafield tag="700" ind1="1" ind2=" ">
     <subfield code="a">Schiekiera, Kirsten</subfield>
@@ -118,11 +144,31 @@
   </datafield>
   <datafield tag="900" ind1=" " ind2=" ">
     <subfield code="a">GBV</subfield>
+    <subfield code="b">StB Braunschweig &lt;56&gt;</subfield>
+    <subfield code="x">N</subfield>
+    <subfield code="z">N</subfield>
+  </datafield>
+  <datafield tag="900" ind1=" " ind2=" ">
+    <subfield code="a">GBV</subfield>
     <subfield code="b">Ressortbibliotheken des BMEL</subfield>
     <subfield code="d">!Det2! A 3749</subfield>
     <subfield code="x">L</subfield>
     <subfield code="z">C</subfield>
     <subfield code="s">4252/131</subfield>
+  </datafield>
+  <datafield tag="900" ind1=" " ind2=" ">
+    <subfield code="a">GBV</subfield>
+    <subfield code="b">StB Bremen &lt;478&gt;</subfield>
+    <subfield code="d">HW 275 F</subfield>
+    <subfield code="x">N</subfield>
+    <subfield code="z">N</subfield>
+  </datafield>
+  <datafield tag="954" ind1=" " ind2=" ">
+    <subfield code="0">StB Braunschweig &lt;56&gt;</subfield>
+    <subfield code="a">227</subfield>
+    <subfield code="b">1637938152</subfield>
+    <subfield code="c">01</subfield>
+    <subfield code="x">0056</subfield>
   </datafield>
   <datafield tag="954" ind1=" " ind2=" ">
     <subfield code="0">Ressortbibliotheken des BMEL</subfield>
@@ -133,5 +179,14 @@
     <subfield code="d">A 3749</subfield>
     <subfield code="e">s</subfield>
     <subfield code="x">4252/131</subfield>
+  </datafield>
+  <datafield tag="954" ind1=" " ind2=" ">
+    <subfield code="0">StB Bremen &lt;478&gt;</subfield>
+    <subfield code="a">274</subfield>
+    <subfield code="b">1659483468</subfield>
+    <subfield code="c">01</subfield>
+    <subfield code="d">HW 275 F</subfield>
+    <subfield code="e">c</subfield>
+    <subfield code="x">0478</subfield>
   </datafield>
 </record>

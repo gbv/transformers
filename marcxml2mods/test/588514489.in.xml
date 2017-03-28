@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record xmlns="http://www.loc.gov/MARC21/slim">
-  <leader>xxxxxnaa a22yyyyy i 4500</leader>
+  <leader>xxxxxnaa a22yyyyy c 4500</leader>
   <controlfield tag="001">588514489</controlfield>
   <controlfield tag="003">DE-601</controlfield>
-  <controlfield tag="005">20090731130327.0</controlfield>
+  <controlfield tag="005">20120424184133.0</controlfield>
   <controlfield tag="008">081229s2008                  000 0 ger d</controlfield>
   <datafield tag="035" ind1=" " ind2=" ">
     <subfield code="a">(DE-599)GBV588514489</subfield>
   </datafield>
   <datafield tag="040" ind1=" " ind2=" ">
-    <subfield code="a">GyGoGBV</subfield>
     <subfield code="b">ger</subfield>
-    <subfield code="e">rakwb</subfield>
+    <subfield code="c">GBVCP</subfield>
   </datafield>
   <datafield tag="041" ind1="0" ind2=" ">
     <subfield code="a">ger</subfield>
   </datafield>
   <datafield tag="245" ind1="0" ind2="0">
-    <subfield code="a">Content-Management-Systeme der nächsten Generation /</subfield>
-    <subfield code="c">Cataldo Mega; Kathleen Krebs; Frank Wagner; Norbert Ritter; Bernhard Mitschang.</subfield>
+    <subfield code="a">Content-Management-Systeme der nächsten Generation</subfield>
+    <subfield code="c">Cataldo Mega; Kathleen Krebs; Frank Wagner; Norbert Ritter; Bernhard Mitschang</subfield>
   </datafield>
   <datafield tag="300" ind1=" " ind2=" ">
     <subfield code="b">graph. Darst.</subfield>
@@ -27,49 +26,49 @@
     <subfield code="8">1.1\x</subfield>
     <subfield code="a">Content Management</subfield>
     <subfield code="0">(DE-601)09135420X</subfield>
-    <subfield code="0">(DE-STW)203414</subfield>
+    <subfield code="0">(DE-STW)20341-4</subfield>
     <subfield code="2">stw</subfield>
   </datafield>
   <datafield tag="650" ind1=" " ind2="7">
     <subfield code="8">1.2\x</subfield>
-    <subfield code="a">Elektronisches Archiv</subfield>
+    <subfield code="a">Elektronische Archivierung</subfield>
     <subfield code="0">(DE-601)091356784</subfield>
-    <subfield code="0">(DE-STW)189404</subfield>
+    <subfield code="0">(DE-STW)18940-4</subfield>
     <subfield code="2">stw</subfield>
   </datafield>
   <datafield tag="650" ind1=" " ind2="7">
     <subfield code="8">1.3\x</subfield>
-    <subfield code="a">Rechnerarchitektur</subfield>
-    <subfield code="0">(DE-601)091385490</subfield>
-    <subfield code="0">(DE-STW)186611</subfield>
+    <subfield code="a">Unternehmensarchitektur</subfield>
+    <subfield code="0">(DE-601)655157123</subfield>
+    <subfield code="0">(DE-STW)29237-3</subfield>
     <subfield code="2">stw</subfield>
   </datafield>
-  <!--datafield tag="700" ind1="1" ind2=" ">
-    <subfield code="a">Mega, Cataldo.</subfield>
-  </datafield-->
   <datafield tag="700" ind1="1" ind2=" ">
-    <subfield code="a">Krebs, Kathleen.</subfield>
+    <subfield code="a">Mega, Cataldo</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Neumann, Kathleen</subfield>
     <subfield code="0">(DE-601)571663702</subfield>
-    <subfield code="0">(DE-588a)135799082</subfield>
+    <subfield code="0">(DE-588)135799082</subfield>
   </datafield>
   <datafield tag="700" ind1="1" ind2=" ">
-    <subfield code="a">Wagner, Frank.</subfield>
+    <subfield code="a">Wagner, Frank</subfield>
     <subfield code="0">(DE-601)588514438</subfield>
-    <subfield code="0">(DE-588a)136993451</subfield>
-  </datafield>
-  <!--datafield tag="700" ind1="1" ind2=" ">
-    <subfield code="a">Ritter, Norbert.</subfield>
+    <subfield code="0">(DE-588)136993451</subfield>
   </datafield>
   <datafield tag="700" ind1="1" ind2=" ">
-    <subfield code="a">Mitschang, Bernhard.</subfield>
-  </datafield-->
+    <subfield code="a">Ritter, Norbert</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Mitschang, Bernhard</subfield>
+  </datafield>
   <datafield tag="773" ind1="0" ind2="8">
-    <subfield code="i">In: </subfield>
+    <subfield code="i">In</subfield>
     <subfield code="t">Wissens- und Informationsmanagement</subfield>
     <subfield code="d">Wiesbaden : Gabler</subfield>
     <subfield code="g">(2009), p. 539-567</subfield>
+    <subfield code="q">&lt;539-567</subfield>
     <subfield code="w">(DE-601)575197366</subfield>
-    <subfield code="z">978-3-8349-0937-4</subfield>
   </datafield>
   <datafield tag="900" ind1=" " ind2=" ">
     <subfield code="a">GBV</subfield>
@@ -81,7 +80,7 @@
   </datafield>
   <datafield tag="900" ind1=" " ind2=" ">
     <subfield code="a">GBV</subfield>
-    <subfield code="b">Ostfalia Wolfenbüttel &lt;916&gt;</subfield>
+    <subfield code="b">Ostfalia Wolfenbuettel &lt;916&gt;</subfield>
   </datafield>
   <datafield tag="900" ind1=" " ind2=" ">
     <subfield code="a">GBV</subfield>
@@ -89,43 +88,49 @@
   </datafield>
   <datafield tag="900" ind1=" " ind2=" ">
     <subfield code="a">GBV</subfield>
-    <subfield code="b">Leibniz Akademie Hannover</subfield>
+    <subfield code="b">Leibniz-FH Hannover &lt;Hv 137&gt;</subfield>
   </datafield>
-  <datafield tag="953" ind1=" " ind2=" ">
+  <datafield tag="952" ind1=" " ind2=" ">
     <subfield code="j">2009</subfield>
     <subfield code="h">539-567</subfield>
   </datafield>
   <datafield tag="954" ind1=" " ind2=" ">
+    <subfield code="0">ZBW Kiel &lt;206&gt;</subfield>
     <subfield code="a">26</subfield>
     <subfield code="b">915960818</subfield>
     <subfield code="c">01</subfield>
     <subfield code="x">0206</subfield>
   </datafield>
   <datafield tag="954" ind1=" " ind2=" ">
+    <subfield code="0">UB Weimar &lt;Wim 2&gt;</subfield>
     <subfield code="a">63</subfield>
     <subfield code="b">920434770</subfield>
     <subfield code="c">01</subfield>
     <subfield code="x">3401</subfield>
   </datafield>
   <datafield tag="954" ind1=" " ind2=" ">
+    <subfield code="0">Ostfalia Wolfenbuettel &lt;916&gt;</subfield>
     <subfield code="a">164</subfield>
     <subfield code="b">934485291</subfield>
     <subfield code="c">03</subfield>
     <subfield code="x">0916</subfield>
   </datafield>
   <datafield tag="954" ind1=" " ind2=" ">
+    <subfield code="0">Ostfalia Wolfenbuettel &lt;916&gt;</subfield>
     <subfield code="a">164</subfield>
     <subfield code="b">920338577</subfield>
     <subfield code="c">04</subfield>
     <subfield code="x">0916</subfield>
   </datafield>
   <datafield tag="954" ind1=" " ind2=" ">
+    <subfield code="0">HS Magdeburg-Stendal &lt;551&gt;</subfield>
     <subfield code="a">213</subfield>
     <subfield code="b">93609933X</subfield>
     <subfield code="c">01</subfield>
     <subfield code="x">0551</subfield>
   </datafield>
   <datafield tag="954" ind1=" " ind2=" ">
+    <subfield code="0">Leibniz-FH Hannover &lt;Hv 137&gt;</subfield>
     <subfield code="a">617</subfield>
     <subfield code="b">1163196312</subfield>
     <subfield code="c">01</subfield>
