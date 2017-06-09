@@ -1,10 +1,14 @@
-marcxml2mods.xsl is based on the official MODS Stylesheets from
+marcxml2mods-gbv.xsl is based on the official MODS Stylesheets from
 
 http://www.loc.gov/standards/mods/mods-conversions.html
 
-with local additions. Please check the official stylesheets and merge its
-updates before adding more changes. New revisions are announced at the MODS
-mailing list: 
+with local additions. The single-file version marcxml2mods.xsl must be
+generated from marcxml2mods-gbv.xsl and also committed to git:
+
+    ant merged
+
+Please check the official stylesheets and merge its updates before adding more
+changes. New revisions are announced at the MODS mailing list:
 
 http://listserv.loc.gov/listarch/mods.html
 

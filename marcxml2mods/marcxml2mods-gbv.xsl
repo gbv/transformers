@@ -1,150 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.loc.gov/mods/v3" xmlns:marc="http://www.loc.gov/MARC21/slim" xmlns:xlink="http://www.w3.org/1999/xlink" exclude-result-prefixes="xlink marc" version="1.0">
-    <xsl:variable name="ascii">
-		<xsl:text> !"#$%&amp;'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~</xsl:text>
-	</xsl:variable><xsl:variable name="latin1">
-		<xsl:text> ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ</xsl:text>
-	</xsl:variable><xsl:variable name="safe">
-		<xsl:text>!'()*-.0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz~</xsl:text>
-	</xsl:variable><xsl:variable name="hex">0123456789ABCDEF</xsl:variable><xsl:template name="datafield">
-		<xsl:param name="tag"/>
-		<xsl:param name="ind1">
-			<xsl:text> </xsl:text>
-		</xsl:param>
-		<xsl:param name="ind2">
-			<xsl:text> </xsl:text>
-		</xsl:param>
-		<xsl:param name="subfields"/>
-		<xsl:element name="marc:datafield">
-			<xsl:attribute name="tag">
-				<xsl:value-of select="$tag"/>
-			</xsl:attribute>
-			<xsl:attribute name="ind1">
-				<xsl:value-of select="$ind1"/>
-			</xsl:attribute>
-			<xsl:attribute name="ind2">
-				<xsl:value-of select="$ind2"/>
-			</xsl:attribute>
-			<xsl:copy-of select="$subfields"/>
-		</xsl:element>
-	</xsl:template><xsl:template name="subfieldSelect">
-		<xsl:param name="codes">abcdefghijklmnopqrstuvwxyz</xsl:param>
-		<xsl:param name="delimeter">
-			<xsl:text> </xsl:text>
-		</xsl:param>
-		<xsl:variable name="str">
-			<xsl:for-each select="marc:subfield">
-				<xsl:if test="contains($codes, @code)">
-					<xsl:value-of select="text()"/>
-					<xsl:value-of select="$delimeter"/>
-				</xsl:if>
-			</xsl:for-each>
-		</xsl:variable>
-		<xsl:value-of select="substring($str,1,string-length($str)-string-length($delimeter))"/>
-	</xsl:template><xsl:template name="buildSpaces">
-		<xsl:param name="spaces"/>
-		<xsl:param name="char">
-			<xsl:text> </xsl:text>
-		</xsl:param>
-		<xsl:if test="$spaces&gt;0">
-			<xsl:value-of select="$char"/>
-			<xsl:call-template name="buildSpaces">
-				<xsl:with-param name="spaces" select="$spaces - 1"/>
-				<xsl:with-param name="char" select="$char"/>
-			</xsl:call-template>
-		</xsl:if>
-	</xsl:template><xsl:template name="chopPunctuation">
-		<xsl:param name="chopString"/>
-		<xsl:param name="punctuation">
-			<xsl:text>.:,;/ </xsl:text>
-		</xsl:param>
-		<xsl:variable name="length" select="string-length($chopString)"/>
-		<xsl:choose>
-			<xsl:when test="$length=0"/>
-			<xsl:when test="contains($punctuation, substring($chopString,$length,1))">
-				<xsl:call-template name="chopPunctuation">
-					<xsl:with-param name="chopString" select="substring($chopString,1,$length - 1)"/>
-					<xsl:with-param name="punctuation" select="$punctuation"/>
-				</xsl:call-template>
-			</xsl:when>
-			<xsl:when test="not($chopString)"/>
-			<xsl:otherwise>
-				<xsl:value-of select="$chopString"/>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:template><xsl:template name="chopPunctuationFront">
-		<xsl:param name="chopString"/>
-		<xsl:variable name="length" select="string-length($chopString)"/>
-		<xsl:choose>
-			<xsl:when test="$length=0"/>
-			<xsl:when test="contains('.:,;/[ ', substring($chopString,1,1))">
-				<xsl:call-template name="chopPunctuationFront">
-					<xsl:with-param name="chopString" select="substring($chopString,2,$length - 1)"/>
-				</xsl:call-template>
-			</xsl:when>
-			<xsl:when test="not($chopString)"/>
-			<xsl:otherwise>
-				<xsl:value-of select="$chopString"/>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:template><xsl:template name="chopPunctuationBack">
-		<xsl:param name="chopString"/>
-		<xsl:param name="punctuation">
-			<xsl:text>.:,;/] </xsl:text>
-		</xsl:param>
-		<xsl:variable name="length" select="string-length($chopString)"/>
-		<xsl:choose>
-			<xsl:when test="$length=0"/>
-			<xsl:when test="contains($punctuation, substring($chopString,$length,1))">
-				<xsl:call-template name="chopPunctuation">
-					<xsl:with-param name="chopString" select="substring($chopString,1,$length - 1)"/>
-					<xsl:with-param name="punctuation" select="$punctuation"/>
-				</xsl:call-template>
-			</xsl:when>
-			<xsl:when test="not($chopString)"/>
-			<xsl:otherwise>
-				<xsl:value-of select="$chopString"/>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:template><xsl:template name="url-encode">
-
-		<xsl:param name="str"/>
-
-		<xsl:if test="$str">
-			<xsl:variable name="first-char" select="substring($str,1,1)"/>
-			<xsl:choose>
-				<xsl:when test="contains($safe,$first-char)">
-					<xsl:value-of select="$first-char"/>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:variable name="codepoint">
-						<xsl:choose>
-							<xsl:when test="contains($ascii,$first-char)">
-								<xsl:value-of select="string-length(substring-before($ascii,$first-char)) + 32"/>
-							</xsl:when>
-							<xsl:when test="contains($latin1,$first-char)">
-								<xsl:value-of select="string-length(substring-before($latin1,$first-char)) + 160"/>
-								<!-- was 160 -->
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:message terminate="no">Warning: string contains a character
-									that is out of range! Substituting "?".</xsl:message>
-								<xsl:text>63</xsl:text>
-							</xsl:otherwise>
-						</xsl:choose>
-					</xsl:variable>
-					<xsl:variable name="hex-digit1" select="substring($hex,floor($codepoint div 16) + 1,1)"/>
-					<xsl:variable name="hex-digit2" select="substring($hex,$codepoint mod 16 + 1,1)"/>
-					<!-- <xsl:value-of select="concat('%',$hex-digit2)"/> -->
-					<xsl:value-of select="concat('%',$hex-digit1,$hex-digit2)"/>
-				</xsl:otherwise>
-			</xsl:choose>
-			<xsl:if test="string-length($str) &gt; 1">
-				<xsl:call-template name="url-encode">
-					<xsl:with-param name="str" select="substring($str,2)"/>
-				</xsl:call-template>
-			</xsl:if>
-		</xsl:if>
-	</xsl:template>
+<xsl:stylesheet xmlns="http://www.loc.gov/mods/v3" xmlns:marc="http://www.loc.gov/MARC21/slim" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="xlink marc" version="1.0">
+    <xsl:include href="MARC21slimUtils.xsl"/>
     <xsl:output encoding="UTF-8" indent="yes" method="xml"/>
     <xsl:strip-space elements="*"/>
 
@@ -1221,7 +1076,8 @@
             <xsl:for-each select="marc:leader">
                 <issuance>
                     <xsl:choose>
-                        <xsl:when test="$leader19='a'">multipart monograph
+                        <xsl:when test="$leader19='a'"
+                        >multipart monograph
                         </xsl:when>
                         <!-- 1.106 20141218 -->
                         <xsl:when test="$leader7='m' and ($leader19=' ')">single unit</xsl:when>
@@ -1358,14 +1214,17 @@
 
         <xsl:for-each select="marc:datafield[@tag=880]">
             <xsl:variable name="related_datafield" select="substring-before(marc:subfield[@code='6'],'-')"/>
-            <xsl:variable name="occurence_number" select="substring( substring-after(marc:subfield[@code='6'],'-') , 1 , 2 )"/>
-            <xsl:variable name="hit" select="../marc:datafield[@tag=$related_datafield and contains(marc:subfield[@code='6'] , concat('880-' , $occurence_number))]/@tag"/>
+            <xsl:variable name="occurence_number"
+                          select="substring( substring-after(marc:subfield[@code='6'],'-') , 1 , 2 )"/>
+            <xsl:variable name="hit"
+                          select="../marc:datafield[@tag=$related_datafield and contains(marc:subfield[@code='6'] , concat('880-' , $occurence_number))]/@tag"/>
 
             <xsl:choose>
                 <xsl:when test="$hit='260'">
                     <originInfo>
                         <xsl:call-template name="scriptCode"/>
-                        <xsl:for-each select="../marc:datafield[@tag=260 and marc:subfield[@code='a' or code='b' or @code='c' or code='g']]">
+                        <xsl:for-each
+                                select="../marc:datafield[@tag=260 and marc:subfield[@code='a' or code='b' or @code='c' or code='g']]">
                             <xsl:call-template name="z2xx880"/>
                         </xsl:for-each>
                         <xsl:if test="marc:subfield[@code='a']">
@@ -1390,7 +1249,8 @@
                                 <xsl:value-of select="marc:subfield[@code='g']"/>
                             </dateCreated>
                         </xsl:if>
-                        <xsl:for-each select="../marc:datafield[@tag=880]/marc:subfield[@code=6][contains(text(),'250')]">
+                        <xsl:for-each
+                                select="../marc:datafield[@tag=880]/marc:subfield[@code=6][contains(text(),'250')]">
                             <edition>
                                 <xsl:value-of select="following-sibling::marc:subfield"/>
                             </edition>
@@ -1426,7 +1286,8 @@
         </xsl:for-each>
 
         <!-- language 041 -->
-        <xsl:variable name="controlField008-35-37" select="normalize-space(translate(substring($controlField008,36,3),'|#',''))"/>
+        <xsl:variable name="controlField008-35-37"
+                      select="normalize-space(translate(substring($controlField008,36,3),'|#',''))"/>
         <xsl:if test="$controlField008-35-37">
             <language>
                 <languageTerm authority="iso639-2b" type="code">
@@ -1435,7 +1296,8 @@
             </language>
         </xsl:if>
         <xsl:for-each select="marc:datafield[@tag=041]">
-            <xsl:for-each select="marc:subfield[@code='a' or @code='b' or @code='d' or @code='e' or @code='f' or @code='g' or @code='h']">
+            <xsl:for-each
+                    select="marc:subfield[@code='a' or @code='b' or @code='d' or @code='e' or @code='f' or @code='g' or @code='h']">
                 <xsl:variable name="langCodes" select="."/>
                 <xsl:choose>
                     <xsl:when test="../marc:subfield[@code='2']='rfc3066'">
@@ -1504,23 +1366,28 @@
                 </xsl:if>
             </xsl:variable>
             <xsl:choose>
-                <xsl:when test="($check008-23 and $controlField008-23='f') or ($check008-29 and $controlField008-29='f')">
+                <xsl:when
+                        test="($check008-23 and $controlField008-23='f') or ($check008-29 and $controlField008-29='f')">
                     <form authority="marcform">braille</form>
                 </xsl:when>
-                <xsl:when test="($controlField008-23=' ' and ($leader6='c' or $leader6='d')) or (($typeOf008='BK' or $typeOf008='SE') and ($controlField008-23=' ' or $controlField008='r'))">
+                <xsl:when
+                        test="($controlField008-23=' ' and ($leader6='c' or $leader6='d')) or (($typeOf008='BK' or $typeOf008='SE') and ($controlField008-23=' ' or $controlField008='r'))">
                     <form authority="marcform">print</form>
                 </xsl:when>
-                <xsl:when test="$leader6 = 'm' or ($check008-23 and $controlField008-23='s') or ($check008-29 and $controlField008-29='s')">
+                <xsl:when
+                        test="$leader6 = 'm' or ($check008-23 and $controlField008-23='s') or ($check008-29 and $controlField008-29='s')">
                     <form authority="marcform">electronic</form>
                 </xsl:when>
                 <!-- 1.33 -->
                 <xsl:when test="$leader6 = 'o'">
                     <form authority="marcform">kit</form>
                 </xsl:when>
-                <xsl:when test="($check008-23 and $controlField008-23='b') or ($check008-29 and $controlField008-29='b')">
+                <xsl:when
+                        test="($check008-23 and $controlField008-23='b') or ($check008-29 and $controlField008-29='b')">
                     <form authority="marcform">microfiche</form>
                 </xsl:when>
-                <xsl:when test="($check008-23 and $controlField008-23='a') or ($check008-29 and $controlField008-29='a')">
+                <xsl:when
+                        test="($check008-23 and $controlField008-23='a') or ($check008-29 and $controlField008-29='a')">
                     <form authority="marcform">microfilm</form>
                 </xsl:when>
             </xsl:choose>
@@ -2864,7 +2731,8 @@
                             hdl
                         </xsl:if>
                     </xsl:attribute>
-                    <xsl:value-of select="concat('hdl:',substring-after(marc:subfield[@code='u'],'http://hdl.loc.gov/'))"/>
+                    <xsl:value-of
+                            select="concat('hdl:',substring-after(marc:subfield[@code='u'],'http://hdl.loc.gov/'))"/>
                 </identifier>
             </xsl:if>
             <xsl:if test="starts-with(marc:subfield[@code='u'],'urn:hdl') or starts-with(marc:subfield[@code='u'],'hdl')">
@@ -2876,7 +2744,8 @@
                             </xsl:call-template>
                         </xsl:attribute>
                     </xsl:if>
-                    <xsl:value-of select="concat('hdl:',substring-after(marc:subfield[@code='u'],'http://hdl.loc.gov/'))"/>
+                    <xsl:value-of
+                            select="concat('hdl:',substring-after(marc:subfield[@code='u'],'http://hdl.loc.gov/'))"/>
                 </identifier>
             </xsl:if>
         </xsl:for-each>
@@ -3044,7 +2913,9 @@
         </xsl:for-each>
     </xsl:template>
     <xsl:template name="gndAuthorityURI">
-        <xsl:for-each select="marc:subfield[@code='0' and (             starts-with(.,'(DE-588)') or starts-with(.,'(DE-588a)') or starts-with(.,'(DE-588b)') or starts-with(.,'(DE-588c)')         )]">
+        <xsl:for-each select="marc:subfield[@code='0' and (
+            starts-with(.,'(DE-588)') or starts-with(.,'(DE-588a)') or starts-with(.,'(DE-588b)') or starts-with(.,'(DE-588c)')
+        )]">
             <xsl:attribute name="authority">gnd</xsl:attribute>
             <xsl:attribute name="authorityURI">http://d-nb.info/gnd/</xsl:attribute>
             <xsl:attribute name="valueURI">
@@ -3901,7 +3772,7 @@
                     </language>
                 </xsl:if>
             </xsl:when>
-            <xsl:otherwise/>
+            <xsl:otherwise></xsl:otherwise>
         </xsl:choose>
     </xsl:template>
 
@@ -4048,7 +3919,7 @@
                 </xsl:attribute>
             </xsl:when>
         </xsl:choose>
-        <xsl:if test="//marc:datafield/marc:subfield[@code='6']"/>
+        <xsl:if test="//marc:datafield/marc:subfield[@code='6']"></xsl:if>
     </xsl:template>
 
     <xsl:template name="z3xx880">
@@ -4137,7 +4008,7 @@
                 </xsl:attribute>
             </xsl:when>
         </xsl:choose>
-        <xsl:if test="//marc:datafield/marc:subfield[@code='6']"/>
+        <xsl:if test="//marc:datafield/marc:subfield[@code='6']"></xsl:if>
     </xsl:template>
 
 
@@ -5926,7 +5797,9 @@
 
     <!-- Link to GND authority, introduced by German and Austrian National libraries (tag 689) -->
     <xsl:template name="gndSubject">
-        <xsl:if test="marc:subfield[@code='0' and (             starts-with(.,'(DE-588)') or starts-with(.,'(DE-588a)') or starts-with(.,'(DE-588b)') or starts-with(.,'(DE-588c)')         )]">
+        <xsl:if test="marc:subfield[@code='0' and (
+            starts-with(.,'(DE-588)') or starts-with(.,'(DE-588a)') or starts-with(.,'(DE-588b)') or starts-with(.,'(DE-588c)')
+        )]">
             <subject>
                 <topic>
                     <xsl:call-template name="gndAuthorityURI"/>

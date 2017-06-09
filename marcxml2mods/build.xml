@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="marcxml2mods">
 
-    <property name="script" value="marcxml2mods.xsl"/>
+    <property name="script" value="marcxml2mods-gbv.xsl"/>
+    <property name="merged" value="marcxml2mods.xsl"/>
     <property name="schema" value="schemas/mods-3-6.xsd"/>
 
     <!-- additional tasks from ant-contrib and ant-schematron -->
@@ -10,6 +11,7 @@
             <pathelement location="lib/ant-contrib-1.0b3.jar"/>
         </classpath>
     </taskdef>
+
     <!-- Schematron requires Saxon. FIXME! -->
     <taskdef name="schematron"
         classname="com.schematron.ant.SchematronTask"
@@ -57,9 +59,9 @@
         </delete>
     </target>
 
-  <target name="mergeIncludes">
-      <echo>merging xsl files to one</echo>
-      <xslt in="marcxml2mods.xsl" out="marcxml2mods.generated.xsl" style="mergeIncludes.xsl"/>
-  </target>
+    <target name="merged">
+        <echo>merging xsl files to one</echo>
+        <xslt in="${script}" out="${merged}" style="../mergeIncludes.xsl"/>
+    </target>
 
 </project>
