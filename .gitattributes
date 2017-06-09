@@ -1,0 +1,3 @@
+# Enforce Unix line endings for XML and XSLT
+*.xml text eol=lf
+*.xsl text eol=lf
