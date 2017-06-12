@@ -1,76 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Person xmlns="http://d-nb.info/standards/elementset/gnd#" uri="http://d-nb.info/gnd/100002773" ppn="076574563">
-  <variantName>
-    <forename>Benedetto</forename>
-    <surname>Accolti</surname>
-  </variantName>
-  <variantName>
-    <forename>Benedictus</forename>
-    <prefix>de</prefix>
-    <surname>Acolti</surname>
-  </variantName>
-  <variantName>
-    <forename>Benedictus</forename>
-    <prefix>de</prefix>
-    <surname>Accoltis</surname>
-  </variantName>
-  <variantName>
-    <forename>Benoît</forename>
-    <surname>Accolti</surname>
-  </variantName>
-  <variantName>
-    <forename>Benedictus</forename>
-    <surname>Accoltus Aretinus</surname>
-  </variantName>
-  <variantName>
-    <forename>Benedetto</forename>
-    <surname>Accolti Aretino</surname>
-  </variantName>
-  <variantName>
-    <personalName>Benedetto</personalName>
-    <epithetGenericNameTitleOrTerritory>Accolti</epithetGenericNameTitleOrTerritory>
-  </variantName>
-  <variantName>
-    <personalName>Benoît</personalName>
-    <epithetGenericNameTitleOrTerritory>Accolti</epithetGenericNameTitleOrTerritory>
-  </variantName>
-  <variantName>
-    <personalName>Benoît</personalName>
-    <epithetGenericNameTitleOrTerritory>Accolti d'Arezzo</epithetGenericNameTitleOrTerritory>
-  </variantName>
-  <variantName>
-    <personalName>Benoît</personalName>
-    <epithetGenericNameTitleOrTerritory>d'Arezzo</epithetGenericNameTitleOrTerritory>
-  </variantName>
-  <variantName>
-    <personalName>Benedictus</personalName>
-    <epithetGenericNameTitleOrTerritory>Accolti</epithetGenericNameTitleOrTerritory>
-  </variantName>
-  <variantName>
-    <personalName>Benedictus</personalName>
-    <epithetGenericNameTitleOrTerritory>Accolti Aretinus</epithetGenericNameTitleOrTerritory>
-  </variantName>
-  <variantName>
-    <personalName>Benedictus</personalName>
-    <epithetGenericNameTitleOrTerritory>de Acoltis</epithetGenericNameTitleOrTerritory>
-  </variantName>
-  <variantName>
-    <forename>Benedetto</forename>
-    <surname>Accolti</surname>
-    <epithetGenericNameTitleOrTerritory>il Vecchio</epithetGenericNameTitleOrTerritory>
-  </variantName>
-  <variantName>
-    <forename>Benedictus</forename>
-    <prefix>de</prefix>
-    <surname>Acoltis</surname>
-  </variantName>
-  <variantName>
-    <personalName>Benedictus</personalName>
-    <epithetGenericNameTitleOrTerritory>Aretinus</epithetGenericNameTitleOrTerritory>
-  </variantName>
-  <preferredName>
-    <forename>Benedictus</forename>
-    <surname>Accoltus</surname>
-  </preferredName>
-  <biographicalOrHistoricalInformation>Dialogus de praestantia virorum sui aevi; De bello a christianis contra barbaros gesto; Ital. Humanist</biographicalOrHistoricalInformation>
+   <variantName>
+      <forename>Benedetto</forename>
+      <surname>Accolti</surname>
+   </variantName>
+   <variantName>
+      <forename>Benedictus</forename>
+      <prefix>de</prefix>
+      <surname>Acolti</surname>
+   </variantName>
+   <variantName>
+      <forename>Benedictus</forename>
+      <prefix>de</prefix>
+      <surname>Accoltis</surname>
+   </variantName>
+   <variantName>
+      <forename>Benoît</forename>
+      <surname>Accolti</surname>
+   </variantName>
+   <variantName>
+      <forename>Benedictus</forename>
+      <surname>Accoltus Aretinus</surname>
+   </variantName>
+   <variantName>
+      <forename>Benedetto</forename>
+      <surname>Accolti Aretino</surname>
+   </variantName>
+   <variantName>
+      <personalName>Benedetto</personalName>
+      <epithetGenericNameTitleOrTerritory>Accolti</epithetGenericNameTitleOrTerritory>
+   </variantName>
+   <variantName>
+      <personalName>Benoît</personalName>
+      <epithetGenericNameTitleOrTerritory>Accolti</epithetGenericNameTitleOrTerritory>
+   </variantName>
+   <variantName>
+      <personalName>Benoît</personalName>
+      <epithetGenericNameTitleOrTerritory>Accolti d'Arezzo</epithetGenericNameTitleOrTerritory>
+   </variantName>
+   <variantName>
+      <personalName>Benoît</personalName>
+      <epithetGenericNameTitleOrTerritory>d'Arezzo</epithetGenericNameTitleOrTerritory>
+   </variantName>
+   <variantName>
+      <personalName>Benedictus</personalName>
+      <epithetGenericNameTitleOrTerritory>Accolti</epithetGenericNameTitleOrTerritory>
+   </variantName>
+   <variantName>
+      <personalName>Benedictus</personalName>
+      <epithetGenericNameTitleOrTerritory>Accolti Aretinus</epithetGenericNameTitleOrTerritory>
+   </variantName>
+   <variantName>
+      <personalName>Benedictus</personalName>
+      <epithetGenericNameTitleOrTerritory>de Acoltis</epithetGenericNameTitleOrTerritory>
+   </variantName>
+   <variantName>
+      <forename>Benedetto</forename>
+      <surname>Accolti</surname>
+      <epithetGenericNameTitleOrTerritory>il Vecchio</epithetGenericNameTitleOrTerritory>
+   </variantName>
+   <variantName>
+      <forename>Benedictus</forename>
+      <prefix>de</prefix>
+      <surname>Acoltis</surname>
+   </variantName>
+   <variantName>
+      <forename>Benedictus</forename>
+      <surname>Aretinus</surname>
+   </variantName>
+   <variantName>
+      <personalName>Benedictus</personalName>
+      <epithetGenericNameTitleOrTerritory>Aretinus</epithetGenericNameTitleOrTerritory>
+   </variantName>
+   <preferredName>
+      <forename>Benedictus</forename>
+      <surname>Accoltus</surname>
+   </preferredName>
+   <biographicalOrHistoricalInformation>Dialogus de praestantia virorum sui aevi; De bello a christianis contra barbaros gesto; Ital. Humanist</biographicalOrHistoricalInformation>
 </Person>
