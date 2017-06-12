@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foo xmlns:bar="http://example.org" doz="baz">
+  <bar:bar/>
+</foo>

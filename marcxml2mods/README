@@ -24,8 +24,12 @@ The tests/ directory contains unit tests to be run with Apache ant. Running
     ant -lib lib test
 
 will ensure that marcxml2mods.xsl is valid XSLT and creates valid MODS, at
-least for the test cases. Additional tests require ant-contrib and Schematron 
-for Apache Ant, which requires Saxon 9:
+least for the test cases. The tests can also be run without ant:
+
+    ../testrunner
+
+Additional tests require ant-contrib and Schematron for Apache Ant, which
+requires Saxon 9:
 
 http://ant-contrib.sourceforge.net/
 http://www.schematron.com/implementation.html

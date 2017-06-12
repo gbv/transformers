@@ -31,8 +31,8 @@ function diag {
 }
 
 function xslt_tests {
-    if [ ! `which xsltproc` ]; then
-        error "missing xsltproc"
+    if [ ! `which saxon-xslt` ]; then
+        error "missing saxon-xslt"
     fi
 
     XSLTSCRIPT=$1
@@ -40,6 +40,20 @@ function xslt_tests {
 
     if [ ! -f $XSLTSCRIPT ]; then
         error "missing XSLT script $XSLTSCRIPT"
+    fi
+
+    if [ ! -f "../xslVersion.xsl" ]; then
+        error "missing XSLT script xslVersion.xsl"
+    fi
+
+    XSLTVERSION=$(saxon-xslt "$XSLTSCRIPT" ../xslVersion.xsl)
+    if [ "$XSLTVERSION" = "1.0" ]; then
+        SAXON=saxon-xslt
+    elif [ "$XSLTVERSION" = "2.0" ]; then
+        SAXON=saxonb-xslt
+    else
+        ok "skipping $XSLTSCRIPT - cannot process XSLT version $XSLTVERSION"
+        return
     fi
 
     for INFILE in $@
@@ -50,15 +64,20 @@ function xslt_tests {
         TESTDIR=`dirname $INFILE`
         OUTFILE=$TESTDIR/`basename $INFILE .in.xml`.out.xml
         OKFILE=$TESTDIR/`basename $INFILE .in.xml`.ok.xml
-        xsltproc $XSLTSCRIPT $INFILE > $OUTFILE
+        
+        rm -f $OUTFILE
+        $SAXON -o $OUTFILE $INFILE $XSLTSCRIPT
+        echo >> $OUTFILE # add newline at end of file
+
         if [ -f $OKFILE ]
         then
-            if diff $OUTFILE $OKFILE > /dev/null
+            # ignore blank lines and whitespace on diff
+            if diff -Bb $OUTFILE $OKFILE > /dev/null
             then
-                ok "$INFILE =\> $OUTFILE"
+                ok "$INFILE => $OUTFILE"
             else
-                not_ok "$OUTFILE \!= $OKFILE"
-                diff $OUTFILE $OKFILE | diag
+                not_ok "$OUTFILE != $OKFILE"
+                diff -Bn $OUTFILE $OKFILE | diag
             fi
         else
             not_ok "missing file $OKFILE"
@@ -67,3 +86,33 @@ function xslt_tests {
 }
 
 start_testing
+
+XSLTSCRIPT=$(basename `pwd`).xsl
+
+if [ "$#" -eq 0 ]
+then
+    if [ "$(ls test/*.in.xml)" != "" ]
+    then 
+        xslt_tests $XSLTSCRIPT test/*.in.xml
+    else
+        ok "skipped because of missing test cases test/*.in.xml"
+    fi
+else
+    for file in "$@"
+    do
+        if [ -f "$file" ]
+        then
+            xslt_tests $XSLTSCRIPT "$file"
+        elif [ -f "$file.in.xml" ]
+        then
+            xslt_tests $XSLTSCRIPT "$file.in.xml"
+        elif [ -f "test/$file.in.xml" ]
+        then
+            xslt_tests $XSLTSCRIPT "test/$file.in.xml"
+        else
+            not_ok "test file not found: $file"
+        fi
+    done
+fi
+
+done_testing
