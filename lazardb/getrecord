@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+LIBDIR=$(dirname ${BASH_SOURCE[0]})
+source $LIBDIR/oai.sh
+
+URL=$(GetRecordURL "$BASE" "$IDENTIFIER" "$FORMAT")
+
+echo $URL >&2
+curl --silent "$URL" > oai-response.xml
+saxonb-xslt oai-response.xml $LIBDIR/getrecord.xsl

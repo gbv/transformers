@@ -1,0 +1,11 @@
+#!/bin/bash
+# get record in easydbXML format and locally apply transformation
+
+set -e
+LIBDIR=$(dirname ${BASH_SOURCE[0]})
+source $LIBDIR/oai.sh
+
+URL=$(GetRecordURL "$BASE" "$IDENTIFIER" easydb)
+curl --silent "$URL" > oai-response.xml
+saxonb-xslt oai-response.xml $LIBDIR/getrecord.xsl > oai-record.xml
+saxonb-xslt oai-record.xml lazardb2$FORMAT.xsl
