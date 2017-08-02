@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <datacite:resource xmlns:datacite="http://datacite.org/schema/kernel-4">
-   <datacite:creator>
-      <datacite:creatorName>Dadunashvili, Elguja</datacite:creatorName>
-   </datacite:creator>
+   <datacite:creators>
+      <datacite:creator>
+         <datacite:creatorName>Dadunashvili, Elguja</datacite:creatorName>
+         <datacite:affiliation>FSU Jena / Ilia-Universität Tiflis</datacite:affiliation>
+      </datacite:creator>
+   </datacite:creators>
+   <datacite:titles>
+      <datacite:title xml:lang="de">Herstellung des Besens</datacite:title>
+   </datacite:titles>
+   <datacite:publisher>LaZAR</datacite:publisher>
+   <datacite:resourceType resourceTypeGeneral="Collection">Collection</datacite:resourceType>
    <datacite:dates>
       <datacite:date dateType="Created">2011-09-29</datacite:date>
    </datacite:dates>
+   <datacite:alternateIdentifiers>
+      <datacite:alternateIdentifier alternateIdentifierType="LaZAR URL">https://lazardb.gbv.de/detail/494</datacite:alternateIdentifier>
+      <datacite:alternateIdentifier alternateIdentifierType="UUID">31ab40ef-9fbf-4674-9c5b-2391e0b5cdb4</datacite:alternateIdentifier>
+   </datacite:alternateIdentifiers>
+   <datacite:version>1.0</datacite:version>
 </datacite:resource>

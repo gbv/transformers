@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datacite:resource xmlns:datacite="http://datacite.org/schema/kernel-4">
+   <datacite:creators>
+      <datacite:creator>
+         <datacite:creatorName>Voß, Jakob</datacite:creatorName>
+         <datacite:affiliation>VZG</datacite:affiliation>
+      </datacite:creator>
+   </datacite:creators>
+   <datacite:titles>
+      <datacite:title xml:lang="de">Katalogkarte</datacite:title>
+      <datacite:title xml:lang="de" titleType="AlternativeTitle">annotierte Katalogkarte</datacite:title>
+   </datacite:titles>
+   <datacite:publisher>LaZAR</datacite:publisher>
+   <datacite:dates>
+      <datacite:date dateType="Created">1966</datacite:date>
+   </datacite:dates>
+   <datacite:alternateIdentifiers>
+      <datacite:alternateIdentifier alternateIdentifierType="LaZAR URL">https://lazardb.gbv.de/detail/8223</datacite:alternateIdentifier>
+      <datacite:alternateIdentifier alternateIdentifierType="UUID">b79de4e5-8d1f-4840-b85f-e052db92a52f</datacite:alternateIdentifier>
+      <datacite:alternateIdentifier alternateIdentifierType="unknown">572.04 Mal</datacite:alternateIdentifier>
+      <datacite:alternateIdentifier alternateIdentifierType="unknown">TEST</datacite:alternateIdentifier>
+   </datacite:alternateIdentifiers>
+   <datacite:version>0.9</datacite:version>
+</datacite:resource>
