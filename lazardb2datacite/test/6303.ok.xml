@@ -11,6 +11,7 @@
       <datacite:title xml:lang="de" titleType="AlternativeTitle">annotierte Katalogkarte</datacite:title>
    </datacite:titles>
    <datacite:publisher>LaZAR</datacite:publisher>
+   <datacite:resourceType resourceTypeGeneral="Image">Image</datacite:resourceType>
    <datacite:dates>
       <datacite:date dateType="Created">1966</datacite:date>
    </datacite:dates>
@@ -20,5 +21,7 @@
       <datacite:alternateIdentifier alternateIdentifierType="unknown">572.04 Mal</datacite:alternateIdentifier>
       <datacite:alternateIdentifier alternateIdentifierType="unknown">TEST</datacite:alternateIdentifier>
    </datacite:alternateIdentifiers>
+   <datacite:size>768 x 381 @ 8 bit, 62.4 kB</datacite:size>
    <datacite:version>0.9</datacite:version>
+   <datacite:rights rightsURI="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</datacite:rights>
 </datacite:resource>
