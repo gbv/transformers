@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<datacite:resource xmlns:datacite="http://datacite.org/schema/kernel-4">
+<datacite:resource xmlns:datacite="http://datacite.org/schema/kernel-4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+   <identifier identifierType="DOI"/>
    <datacite:creators>
       <datacite:creator>
          <datacite:creatorName>Dadunashvili, Elguja</datacite:creatorName>
@@ -18,5 +19,8 @@
       <datacite:alternateIdentifier alternateIdentifierType="LaZAR URL">https://lazardb.gbv.de/detail/494</datacite:alternateIdentifier>
       <datacite:alternateIdentifier alternateIdentifierType="UUID">31ab40ef-9fbf-4674-9c5b-2391e0b5cdb4</datacite:alternateIdentifier>
    </datacite:alternateIdentifiers>
+   <datacite:relatedIdentifiers>
+      <datacite:relatedIdentifier relatedIdentifierType="URL" relationType="isIdenticalTo">https://lazardb.gbv.de/detail/494</datacite:relatedIdentifier>
+   </datacite:relatedIdentifiers>
    <datacite:version>1.0</datacite:version>
 </datacite:resource>

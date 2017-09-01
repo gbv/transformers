@@ -1,534 +1,277 @@
-<?xml version="1.0" encoding="UTF-8"?><objects xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  
-          <objekttyp>
-            
-    
-            <_version>6</_version>
-            
-    
-            <_id>6303</_id>
-            
-    
-            <_objecttype>objekttyp</_objecttype>
-            
-    
-            <_system_object_id>8223</_system_object_id>
-            
-    
-            <_global_object_id>8223@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
-            
-    
-            <_uuid>b79de4e5-8d1f-4840-b85f-e052db92a52f</_uuid>
-            
-    
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+  <objekttyp>
+    <_version>15</_version>
+    <_id>6303</_id>
+    <_objecttype>objekttyp</_objecttype>
+    <_system_object_id>8223</_system_object_id>
+    <_global_object_id>8223@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
+    <_uuid>b79de4e5-8d1f-4840-b85f-e052db92a52f</_uuid>
+    <tags>
+      <tag id="2"/>
+      <tag id="6"/>
+      <tag id="20"/>
+      <tag id="22"/>
+    </tags>
+    <collections/>
+    <pool id="31">
+      <de-DE>Testpool</de-DE>
+    </pool>
+    <_parent>
+      <id>6304</id>
+      <_uuid>cbb75a05-af39-4479-b2b0-d7d05237059a</_uuid>
+      <_global_object_id>8227@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
+      <_system_object_id>8227</_system_object_id>
+      <name>
+        <de-DE>Beispielkonvolut</de-DE>
+        <en-US>#8227</en-US>
+      </name>
+      <pfad>
+        <de-DE>Beispielkonvolut</de-DE>
+        <en-US>#8227</en-US>
+      </pfad>
+    </_parent>
+    <_urls>
+      <url type="deep-link">https://lazardb.gbv.de/api/v1/objects/uuid/b79de4e5-8d1f-4840-b85f-e052db92a52f</url>
+      <url type="easydb-id">https://lazardb.gbv.de/detail/8223</url>
+    </_urls>
+    <_standard>
+      <de-DE>0.9, Katalogkarte, annotierte Katalogkarte</de-DE>
+      <en-US>0.9</en-US>
+    </_standard>
+    <datei>
+      <files>
+        <file>
+          <eas-id>1001974122</eas-id>
+          <preferred>true</preferred>
+          <status>done</status>
+          <class>image</class>
+          <extension>png</extension>
+          <original_filename>Library-Card-pic.png</original_filename>
+          <compiled>png image, 768 x 381 @ 8 bit, 62.4 kB</compiled>
+          <eas_parent_id/>
+          <date_inserted>2017-08-03T13:40:43Z</date_inserted>
+          <date_created>2017-08-01T09:49:56+00:00</date_created>
+          <date_uploaded>2017-08-01T09:49:54Z</date_uploaded>
+          <filesize>63853</filesize>
+          <pages_allowed>0</pages_allowed>
+          <technical_metadata>
+            <height>381</height>
+            <format>landscape</format>
+            <width>768</width>
+            <colorspace>grayscale</colorspace>
+            <aspect_ratio>2.015748031496063</aspect_ratio>
+            <max_dimension>768</max_dimension>
+            <file_sha224_checksum>c620d8858d148a3c4a4f82546f604ea80e93a094edd5dbe013f50d05</file_sha224_checksum>
+            <colordepth>8</colordepth>
+          </technical_metadata>
+          <versions>
+            <version name="small">
+              <extension>png</extension>
+              <_download_allowed>1</_download_allowed>
+              <status>done</status>
+              <filesize>74580</filesize>
+              <height>250</height>
+              <has_more_jobs>0</has_more_jobs>
+              <width>504</width>
+              <class>image</class>
+              <deep_link_url>https://lazardb.gbv.de/api/v1/objects/uuid/b79de4e5-8d1f-4840-b85f-e052db92a52f/file/id/1001974122/file_version/name/small/disposition/inline</deep_link_url>
+            </version>
+          </versions>
+        </file>
+      </files>
+    </datei>
+    <_nested__objekttyp__titel>
+      <objekttyp__titel>
+        <_id>0</_id>
+        <titel>
+          <de-DE>Katalogkarte</de-DE>
+          <en-US/>
+          <es-ES/>
+          <it-IT/>
+        </titel>
+        <typ>
+          <object_title_type date-created="2016-03-14T18:30:24Z" date-last-updated="2017-04-27T09:43:30Z">
+            <_version>2</_version>
+            <_id>3</_id>
             <_standard>
-              
-      
-              <de-DE>0.9, Katalogkarte, annotierte Katalogkarte</de-DE>
-              
-      
-              <en-US>0.9</en-US>
-              
-    
+              <de-DE>Haupttitel</de-DE>
+              <en-US>Maintitle</en-US>
             </_standard>
-            
-    
-            <tags>
-              
-      
-              <tag id="2"/>
-              
-      
-              <tag id="6"/>
-              
-      
-              <tag id="10"/>
-              
-    
-            </tags>
-            
-    
-            <collections/>
-            
-    
-            <pool id="31">
-              
-      
-              <de-DE>Testpool</de-DE>
-              
-    
-            </pool>
-            
-    
-            <_parent>
-              
-      
-              <id>6304</id>
-              
-      
-              <_uuid>cbb75a05-af39-4479-b2b0-d7d05237059a</_uuid>
-              
-      
-              <_global_object_id>8227@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
-              
-      
-              <_system_object_id>8227</_system_object_id>
-              
-      
-              <name>
-                
-        
-                <de-DE>Beispielkonvolut</de-DE>
-                
-        
-                <en-US>Beispielkonvolut</en-US>
-                
-      
-              </name>
-              
-      
-              <pfad>
-                
-        
-                <de-DE>Beispielkonvolut</de-DE>
-                
-        
-                <en-US>Beispielkonvolut</en-US>
-                
-      
-              </pfad>
-              
-    
-            </_parent>
-            
-    
-            <_urls>
-              
-      
-              <url type="deep-link">https://lazardb.gbv.de/api/v1/objects/uuid/b79de4e5-8d1f-4840-b85f-e052db92a52f</url>
-              
-      
-              <url type="easydb-id">https://lazardb.gbv.de/detail/8223</url>
-              
-    
-            </_urls>
-            
-    
-            <datei>
-              
-      
-              <files>
-                
-        
-                <file>
-                  
-          
-                  <eas-id>1001974122</eas-id>
-                  
-          
-                  <preferred>true</preferred>
-                  
-          
-                  <status>done</status>
-                  
-          
-                  <class>image</class>
-                  
-          
-                  <extension>png</extension>
-                  
-          
-                  <original_filename>Library-Card-pic.png</original_filename>
-                  
-          
-                  <compiled>png image, 768 x 381 @ 8 bit, 62.4 kB</compiled>
-                  
-          
-                  <eas_parent_id/>
-                  
-          
-                  <date_inserted>2017-08-02T09:31:55Z</date_inserted>
-                  
-          
-                  <date_created>2017-08-01T09:49:56+00:00</date_created>
-                  
-          
-                  <date_uploaded>2017-08-01T09:49:54Z</date_uploaded>
-                  
-          
-                  <filesize>63853</filesize>
-                  
-          
-                  <pages_allowed>0</pages_allowed>
-                  
-          
-                  <technical_metadata>
-                    
-            
-                    <height>381</height>
-                    
-            
-                    <format>landscape</format>
-                    
-            
-                    <width>768</width>
-                    
-            
-                    <colorspace>grayscale</colorspace>
-                    
-            
-                    <aspect_ratio>2.015748031496063</aspect_ratio>
-                    
-            
-                    <max_dimension>768</max_dimension>
-                    
-            
-                    <file_sha224_checksum>c620d8858d148a3c4a4f82546f604ea80e93a094edd5dbe013f50d05</file_sha224_checksum>
-                    
-            
-                    <colordepth>8</colordepth>
-                    
-          
-                  </technical_metadata>
-                  
-          
-                  <versions>
-                    
-            
-                    <version name="small">
-                      
-              
-                      <extension>png</extension>
-                      
-              
-                      <_download_allowed>1</_download_allowed>
-                      
-              
-                      <status>done</status>
-                      
-              
-                      <filesize>74580</filesize>
-                      
-              
-                      <height>250</height>
-                      
-              
-                      <has_more_jobs>0</has_more_jobs>
-                      
-              
-                      <width>504</width>
-                      
-              
-                      <class>image</class>
-                      
-              
-                      <deep_link_url>https://lazardb.gbv.de/api/v1/objects/uuid/b79de4e5-8d1f-4840-b85f-e052db92a52f/file/id/1001974122/file_version/name/small</deep_link_url>
-                      
-            
-                    </version>
-                    
-          
-                  </versions>
-                  
-        
-                </file>
-                
-      
-              </files>
-              
-    
-            </datei>
-            
-    
-            <_nested__objekttyp__titel>
-              
-      
-              <objekttyp__titel>
-                
-        
-                <_id>0</_id>
-                
-        
-                <titel>
-                  
-          
-                  <de-DE>Katalogkarte</de-DE>
-                  
-          
-                  <en-US/>
-                  
-          
-                  <es-ES/>
-                  
-          
-                  <it-IT/>
-                  
-        
-                </titel>
-                
-        
-                <typ>
-                  
-          
-                  <object_title_type date-created="2016-03-14T18:30:24Z" date-last-updated="2017-04-27T09:43:30Z">
-                    
-            
-                    <_version>2</_version>
-                    
-            
-                    <_id>3</_id>
-                    
-            
-                    <name>
-                      
-              
-                      <de-DE>Haupttitel</de-DE>
-                      
-              
-                      <en-US>Maintitle</en-US>
-                      
-              
-                      <es-ES/>
-                      
-              
-                      <it-IT/>
-                      
-            
-                    </name>
-                    
-          
-                  </object_title_type>
-                  
-        
-                </typ>
-                
-      
-              </objekttyp__titel>
-              
-      
-              <objekttyp__titel>
-                
-        
-                <_id>0</_id>
-                
-        
-                <titel>
-                  
-          
-                  <de-DE>annotierte Katalogkarte</de-DE>
-                  
-          
-                  <en-US/>
-                  
-          
-                  <es-ES/>
-                  
-          
-                  <it-IT/>
-                  
-        
-                </titel>
-                
-        
-                <typ>
-                  
-          
-                  <object_title_type date-created="2016-04-09T08:56:50Z" date-last-updated="2017-04-27T09:43:43Z">
-                    
-            
-                    <_version>2</_version>
-                    
-            
-                    <_id>5</_id>
-                    
-            
-                    <name>
-                      
-              
-                      <de-DE>Alternativer Titel</de-DE>
-                      
-              
-                      <en-US>Alternative title</en-US>
-                      
-              
-                      <es-ES/>
-                      
-              
-                      <it-IT/>
-                      
-            
-                    </name>
-                    
-          
-                  </object_title_type>
-                  
-        
-                </typ>
-                
-      
-              </objekttyp__titel>
-              
-    
-            </_nested__objekttyp__titel>
-            
-    
-            <version>0.9</version>
-            
-    
-            <_nested__objekttyp__urheber>
-              
-      
-              <objekttyp__urheber>
-                
-        
-                <_id>0</_id>
-                
-        
-                <urheber>
-                  
-          
-                  <person_urheber date-created="2017-08-01T12:39:35Z" date-last-updated="2017-08-01T12:39:35Z">
-                    
-            
-                    <_version>1</_version>
-                    
-            
-                    <_id>30</_id>
-                    
-            
-                    <name>Voß, Jakob</name>
-                    
-            
-                    <gnd/>
-                    
-            
-                    <orcid/>
-                    
-            
-                    <grid/>
-                    
-          
-                  </person_urheber>
-                  
-        
-                </urheber>
-                
-        
-                <affiliation>VZG</affiliation>
-                
-      
-              </objekttyp__urheber>
-              
-    
-            </_nested__objekttyp__urheber>
-            
-    
-            <_nested__objekttyp__datum>
-              
-      
-              <objekttyp__datum>
-                
-        
-                <_id>0</_id>
-                
-        
-                <anfang>1966</anfang>
-                
-        
-                <ende/>
-                
-        
-                <datumstyp>
-                  
-          
-                  <datumstyp date-created="2016-04-20T15:27:51Z" date-last-updated="2016-10-11T09:06:30Z">
-                    
-            
-                    <_version>4</_version>
-                    
-            
-                    <_id>1</_id>
-                    
-            
-                    <name>
-                      
-              
-                      <de-DE>Entstehungsdatum</de-DE>
-                      
-              
-                      <en-US>date of creation</en-US>
-                      
-              
-                      <es-ES/>
-                      
-              
-                      <it-IT/>
-                      
-            
-                    </name>
-                    
-          
-                  </datumstyp>
-                  
-        
-                </datumstyp>
-                
-      
-              </objekttyp__datum>
-              
-    
-            </_nested__objekttyp__datum>
-            
-    
-            <_nested__objekttyp__alternative_id>
-              
-      
-              <objekttyp__alternative_id>
-                
-        
-                <_id>0</_id>
-                
-        
-                <name>572.04 Mal</name>
-                
-      
-              </objekttyp__alternative_id>
-              
-      
-              <objekttyp__alternative_id>
-                
-        
-                <_id>0</_id>
-                
-        
-                <name>TEST</name>
-                
-      
-              </objekttyp__alternative_id>
-              
-    
-            </_nested__objekttyp__alternative_id>
-            
-    
-            <_nested__objekttyp__keywords_getty>
-              
-      
-              <objekttyp__keywords_getty>
-                
-        
-                <_id>0</_id>
-                
-        
-                <keyword/>
-                
-      
-              </objekttyp__keywords_getty>
-              
-    
-            </_nested__objekttyp__keywords_getty>
-            
-  
+            <name>
+              <de-DE>Haupttitel</de-DE>
+              <en-US>Maintitle</en-US>
+              <es-ES/>
+              <it-IT/>
+            </name>
+          </object_title_type>
+        </typ>
+      </objekttyp__titel>
+      <objekttyp__titel>
+        <_id>0</_id>
+        <titel>
+          <de-DE>annotierte Katalogkarte</de-DE>
+          <en-US/>
+          <es-ES/>
+          <it-IT/>
+        </titel>
+        <typ>
+          <object_title_type date-created="2016-04-09T08:56:50Z" date-last-updated="2017-04-27T09:43:43Z">
+            <_version>2</_version>
+            <_id>5</_id>
+            <_standard>
+              <de-DE>Alternativer Titel</de-DE>
+              <en-US>Alternative title</en-US>
+            </_standard>
+            <name>
+              <de-DE>Alternativer Titel</de-DE>
+              <en-US>Alternative title</en-US>
+              <es-ES/>
+              <it-IT/>
+            </name>
+          </object_title_type>
+        </typ>
+      </objekttyp__titel>
+    </_nested__objekttyp__titel>
+    <version>0.9</version>
+    <_nested__objekttyp__urheber>
+      <objekttyp__urheber>
+        <_id>0</_id>
+        <urheber>
+          <person_urheber date-created="2017-08-01T12:39:35Z" date-last-updated="2017-08-01T12:39:35Z">
+            <_version>1</_version>
+            <_id>30</_id>
+            <_standard>
+              <de-DE>Voß, Jakob</de-DE>
+              <en-US>Voß, Jakob</en-US>
+            </_standard>
+            <name>Voß, Jakob</name>
+            <gnd/>
+            <orcid/>
+            <grid/>
+          </person_urheber>
+        </urheber>
+        <affiliation>VZG</affiliation>
+      </objekttyp__urheber>
+    </_nested__objekttyp__urheber>
+    <thema>
+      <de-DE>Katalogisierung</de-DE>
+      <en-US/>
+      <es-ES/>
+      <it-IT/>
+    </thema>
+    <_nested__objekttyp__keywords_gnd>
+      <objekttyp__keywords_gnd>
+        <_id>0</_id>
+      </objekttyp__keywords_gnd>
+      <objekttyp__keywords_gnd>
+        <_id>0</_id>
+      </objekttyp__keywords_gnd>
+    </_nested__objekttyp__keywords_gnd>
+    <_nested__objekttyp__contributor>
+      <objekttyp__contributor>
+        <_id>0</_id>
+      </objekttyp__contributor>
+    </_nested__objekttyp__contributor>
+    <_nested__objekttyp__datum>
+      <objekttyp__datum>
+        <_id>0</_id>
+        <anfang>1966</anfang>
+        <ende>1968</ende>
+        <datumstyp>
+          <datumstyp date-created="2016-04-20T15:27:51Z" date-last-updated="2016-10-11T09:06:30Z">
+            <_version>4</_version>
+            <_id>1</_id>
+            <_standard>
+              <de-DE>Entstehungsdatum</de-DE>
+              <en-US>date of creation</en-US>
+            </_standard>
+            <name>
+              <de-DE>Entstehungsdatum</de-DE>
+              <en-US>date of creation</en-US>
+              <es-ES/>
+              <it-IT/>
+            </name>
+          </datumstyp>
+        </datumstyp>
+      </objekttyp__datum>
+      <objekttyp__datum>
+        <_id>0</_id>
+        <anfang>2017-08-01</anfang>
+        <ende/>
+      </objekttyp__datum>
+    </_nested__objekttyp__datum>
+    <_nested__objekttyp__sprachen>
+      <objekttyp__sprachen>
+        <_id>0</_id>
+      </objekttyp__sprachen>
+      <objekttyp__sprachen>
+        <_id>0</_id>
+      </objekttyp__sprachen>
+    </_nested__objekttyp__sprachen>
+    <_nested__objekttyp__alternative_id>
+      <objekttyp__alternative_id>
+        <_id>0</_id>
+        <name>572.04 Mal</name>
+      </objekttyp__alternative_id>
+      <objekttyp__alternative_id>
+        <_id>0</_id>
+        <name>TEST</name>
+      </objekttyp__alternative_id>
+    </_nested__objekttyp__alternative_id>
+    <beschreibung>
+      <de-DE>Annotierte Katalogkarte aus den 1960ern</de-DE>
+      <en-US/>
+      <es-ES/>
+      <it-IT/>
+    </beschreibung>
+    <_nested__objekttyp__orte>
+      <objekttyp__orte>
+        <_id>0</_id>
+      </objekttyp__orte>
+    </_nested__objekttyp__orte>
+    <_nested__objekttyp__relationen>
+      <objekttyp__relationen>
+        <_id>0</_id>
+        <lk_relation_typ_id>
+          <relation_typ date-created="2016-04-01T19:22:04Z" date-last-updated="2016-04-01T19:22:04Z">
+            <_version>1</_version>
+            <_id>21</_id>
+            <_standard>
+              <de-DE>IsIdenticalTo</de-DE>
+              <en-US>IsIdenticalTo</en-US>
+            </_standard>
+            <name>
+              <de-DE>IsIdenticalTo</de-DE>
+              <en-US>IsIdenticalTo</en-US>
+              <es-ES>IsIdenticalTo</es-ES>
+              <it-IT>IsIdenticalTo</it-IT>
+            </name>
+          </relation_typ>
+        </lk_relation_typ_id>
+        <lk_relation_id>
+          <objekttyp>
+            <_id>6303</_id>
           </objekttyp>
-          
-
-        </objects>
+        </lk_relation_id>
+        <extern>
+          <de-DE>sich selbst</de-DE>
+          <en-US/>
+          <es-ES/>
+          <it-IT/>
+        </extern>
+      </objekttyp__relationen>
+    </_nested__objekttyp__relationen>
+    <_nested__objekttyp__methoden>
+      <objekttyp__methoden>
+        <_id>0</_id>
+      </objekttyp__methoden>
+    </_nested__objekttyp__methoden>
+    <_nested__objekttyp__keywords_getty>
+      <objekttyp__keywords_getty>
+        <_id>0</_id>
+        <keyword/>
+      </objekttyp__keywords_getty>
+    </_nested__objekttyp__keywords_getty>
+  </objekttyp>
+</objects>

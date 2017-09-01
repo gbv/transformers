@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<datacite:resource xmlns:datacite="http://datacite.org/schema/kernel-4">
+<datacite:resource xmlns:datacite="http://datacite.org/schema/kernel-4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+   <identifier identifierType="DOI"/>
    <datacite:creators>
       <datacite:creator>
          <datacite:creatorName>Voß, Jakob</datacite:creatorName>
@@ -12,8 +13,12 @@
    </datacite:titles>
    <datacite:publisher>LaZAR</datacite:publisher>
    <datacite:resourceType resourceTypeGeneral="Image">Image</datacite:resourceType>
+   <datacite:descriptions>
+      <datacite:description descriptionType="Abstracts" xml:lang="de">Annotierte Katalogkarte aus den 1960ern</datacite:description>
+   </datacite:descriptions>
    <datacite:dates>
-      <datacite:date dateType="Created">1966</datacite:date>
+      <datacite:date dateType="Created">1966/1968</datacite:date>
+      <datacite:date dateType="Created">2017-08-01</datacite:date>
    </datacite:dates>
    <datacite:alternateIdentifiers>
       <datacite:alternateIdentifier alternateIdentifierType="LaZAR URL">https://lazardb.gbv.de/detail/8223</datacite:alternateIdentifier>
@@ -21,7 +26,15 @@
       <datacite:alternateIdentifier alternateIdentifierType="unknown">572.04 Mal</datacite:alternateIdentifier>
       <datacite:alternateIdentifier alternateIdentifierType="unknown">TEST</datacite:alternateIdentifier>
    </datacite:alternateIdentifiers>
-   <datacite:size>768 x 381 @ 8 bit, 62.4 kB</datacite:size>
+   <datacite:relatedIdentifiers>
+      <datacite:relatedIdentifier relatedIdentifierType="URL" relationType="isIdenticalTo">https://lazardb.gbv.de/detail/8223</datacite:relatedIdentifier>
+      <datacite:relatedIdentifier relatedIdentifierType="URL" relationType="isIdenticalTo">https://lazardb.gbv.de/api/v1/objects/uuid/b79de4e5-8d1f-4840-b85f-e052db92a52f/file/id/1001974122/file_version/name/small/disposition/inline</datacite:relatedIdentifier>
+   </datacite:relatedIdentifiers>
+   <datacite:sizes>
+      <datacite:size>768 x 381 @ 8 bit, 62.4 kB</datacite:size>
+   </datacite:sizes>
    <datacite:version>0.9</datacite:version>
-   <datacite:rights rightsURI="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</datacite:rights>
+   <datacite:rightsList>
+      <datacite:rights rightsURI="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</datacite:rights>
+   </datacite:rightsList>
 </datacite:resource>

@@ -2,8 +2,7 @@
 <!--
      LaZAR-DB Export nach DataCite
 -->
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xpath-default-namespace="http://www.openarchives.org/OAI/2.0/"
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:datacite="http://datacite.org/schema/kernel-4">
 
   <xsl:output method="xml" indent="yes"/>
@@ -15,9 +14,13 @@
 
   <!-- LaZAR-Objekttyp "Objekttyp" -->
   <xsl:template match="objekttyp">
-    <datacite:resource>
+    <datacite:resource
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
       <!-- mandatory fields -->
-      <!-- TODO: identifier (DOI) -->
+      <identifier identifierType="DOI">
+        <!-- TODO (mandatory!) -->
+      </identifier>
       <datacite:creators>
         <xsl:apply-templates select="_nested__objekttyp__urheber/objekttyp__urheber"/>
       </datacite:creators>
@@ -28,8 +31,10 @@
       <xsl:call-template name="publicationYear"/>
       <xsl:call-template name="resourceType"/>
       <!-- optional fields -->
+      <xsl:call-template name="descriptions"/>
       <xsl:call-template name="dates"/>
       <xsl:call-template name="alternateIdentifiers"/>
+      <xsl:call-template name="relatedIdentifiers"/>
       <xsl:call-template name="size"/>
       <xsl:apply-templates select="version"/>
       <xsl:call-template name="rights"/>
@@ -103,24 +108,16 @@
         </xsl:otherwise>
       </xsl:choose> 
     </xsl:variable>
-    <!-- Deutscher Titel -->
-    <xsl:if test="string(titel/de-DE)">
-      <datacite:title xml:lang="de">
+    <xsl:for-each select="titel/*[string()]">
+      <datacite:title xml:lang="{substring-before(local-name(),'-')}">
         <xsl:if test="$titleType!=''">
-          <xsl:attribute name="titleType" select="normalize-space($titleType)"/>
+          <xsl:attribute name="titleType">
+            <xsl:value-of select="normalize-space($titleType)"/>
+          </xsl:attribute>
         </xsl:if>
-        <xsl:value-of select="titel/de-DE"/>
+        <xsl:value-of select="."/>
       </datacite:title>
-    </xsl:if> 
-    <!-- Englischer Titel -->
-    <xsl:if test="string(titel/en-US)">
-      <datacite:title xml:lang="en">
-        <xsl:if test="$titleType!=''">
-          <xsl:attribute name="titleType" select="normalize-space($titleType)"/>
-        </xsl:if>
-        <xsl:value-of select="titel/en-US"/>
-      </datacite:title>
-    </xsl:if> 
+    </xsl:for-each> 
   </xsl:template>
 
   <!-- 4 Publisher (mandatory) -->
@@ -134,6 +131,7 @@
     <xsl:variable name="pubdates" select="$dates[datumstyp/datumstyp/name/de-DE='Publikationsdatum']"/>
     <xsl:variable name="year" select="substring($pubdates/anfang,1,4)"/>
     <xsl:if test="string($year)">
+      <!-- TODO: this is required! -->
       <datacite:publicationYear>
         <xsl:value-of select="$year"/>
       </datacite:publicationYear>
@@ -199,7 +197,6 @@
 
   <!-- 11 AlternativeIdentifier (optional) -->
   <xsl:template name="alternateIdentifiers">
-    <xsl:variable name="ids" select="_nested__objekttyp__alternative_id/objekttyp__alternative_id"/> 
     <datacite:alternateIdentifiers>
       <datacite:alternateIdentifier alternateIdentifierType="LaZAR URL">
         <xsl:value-of select="_urls/url[@type='easydb-id']"/>
@@ -207,7 +204,7 @@
       <datacite:alternateIdentifier alternateIdentifierType="UUID">
         <xsl:value-of select="_uuid"/>
       </datacite:alternateIdentifier>
-      <xsl:for-each select="$ids">
+      <xsl:for-each select="_nested__objekttyp__alternative_id/objekttyp__alternative_id">
         <datacite:alternateIdentifier alternateIdentifierType="unknown">
           <xsl:value-of select="name"/>
         </datacite:alternateIdentifier>
@@ -215,8 +212,20 @@
     </datacite:alternateIdentifiers>
   </xsl:template>
 
-  <!-- 12 RelatedIdentifier (optional): TODO -->
-  <!-- TOOD: link to files? -->
+  <!-- 12 RelatedIdentifier (optional) -->
+  <xsl:template name="relatedIdentifiers">
+    <datacite:relatedIdentifiers>
+      <!-- Deep Link to record view in easydb -->
+      <datacite:relatedIdentifier relatedIdentifierType="URL" relationType="isIdenticalTo">
+        <xsl:value-of select="_urls/url[@type='easydb-id']"/>
+      </datacite:relatedIdentifier>
+      <xsl:if test="tags/tag[@id='2']">
+        <datacite:relatedIdentifier relatedIdentifierType="URL" relationType="isIdenticalTo">
+          <xsl:value-of select="datei/files/file/versions/version[1]/deep_link_url"/>
+        </datacite:relatedIdentifier>
+      </xsl:if>
+    </datacite:relatedIdentifiers>
+  </xsl:template>
 
   <!-- 13 Size (optional) -->
   <xsl:template name="size">
@@ -226,13 +235,15 @@
         <xsl:when test="tags/tag[@id='2']">
           <xsl:value-of select="substring-after(datei/files/file/compiled,', ')"/>
         </xsl:when>
-        <!-- TODO: Konvolut und Ausschnitt -->
+        <!-- TODO: Konvolute und Ausschnitte? -->
       </xsl:choose>
     </xsl:variable>
     <xsl:if test="string($size)">
-      <datacite:size>
-        <xsl:value-of select="$size"/>
-      </datacite:size>
+      <datacite:sizes>
+        <datacite:size>
+          <xsl:value-of select="$size"/>
+        </datacite:size>
+      </datacite:sizes>
     </xsl:if>
   </xsl:template>
 
@@ -249,30 +260,58 @@
   <xsl:template name="rights">
     <xsl:choose>
       <xsl:when test="tags/tag[@id='10']">
-        <datacite:rights rightsURI="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</datacite:rights>
+        <datacite:rightsList>
+          <datacite:rights rightsURI="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</datacite:rights>
+        </datacite:rightsList>
       </xsl:when>
       <xsl:when test="tags/tag[@id='11']">
-        <datacite:rights rightsURI="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</datacite:rights>
+        <datacite:rightsList>
+          <datacite:rights rightsURI="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</datacite:rights>
+        </datacite:rightsList>
       </xsl:when>
       <xsl:when test="tags/tag[@id='12']">
-        <datacite:rights rightsURI="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</datacite:rights>
+        <datacite:rightsList>
+          <datacite:rights rightsURI="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</datacite:rights>
+        </datacite:rightsList>
       </xsl:when>
       <xsl:when test="tags/tag[@id='13']">
-        <datacite:rights rightsURI="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)</datacite:rights>
+        <datacite:rightsList>
+          <datacite:rights rightsURI="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)</datacite:rights>
+        </datacite:rightsList>
       </xsl:when>
       <xsl:when test="tags/tag[@id='14']">
-        <datacite:rights rightsURI="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)</datacite:rights>
+        <datacite:rightsList>
+          <datacite:rights rightsURI="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)</datacite:rights>
+        </datacite:rightsList>
       </xsl:when>
       <xsl:when test="tags/tag[@id='22']">
-        <datacite:rights rightsURI="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</datacite:rights>
+        <datacite:rightsList>
+          <datacite:rights rightsURI="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</datacite:rights>
+        </datacite:rightsList>
       </xsl:when>
       <xsl:when test="tags/tag[@id='17']">
-        <datacite:rights rightsURI="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)</datacite:rights>
+        <datacite:rightsList>
+          <datacite:rights rightsURI="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)</datacite:rights>
+        </datacite:rightsList>
       </xsl:when>
     </xsl:choose>
   </xsl:template>
 
-  <!-- 17 Description (optional): TODO -->
+  <!-- 17 Description (optional) -->
+  <xsl:template name="descriptions">
+    <xsl:variable name="descriptions" select="beschreibung/*[string()]"/>
+    <!-- TODO: Methoden => Methods -->
+    <xsl:if test="$descriptions">
+      <datacite:descriptions>
+        <xsl:for-each select="$descriptions">
+          <xsl:variable name="language" select="substring-before(local-name(),'-')"/>
+          <datacite:description descriptionType="Abstracts" xml:lang="{$language}">
+            <xsl:value-of select="."/>
+          </datacite:description>
+        </xsl:for-each>
+      </datacite:descriptions>
+    </xsl:if>
+  </xsl:template>
 
   <!-- 18 Geolocation (optional): TODO -->
 

@@ -1,421 +1,142 @@
-<?xml version="1.0" encoding="UTF-8"?><objects xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-					
-  
-					<objekttyp>
-						
-    
-						<_version>28</_version>
-						
-    
-						<_id>399</_id>
-						
-    
-						<_objecttype>objekttyp</_objecttype>
-						
-    
-						<_system_object_id>494</_system_object_id>
-						
-    
-						<_global_object_id>494@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
-						
-    
-						<_uuid>31ab40ef-9fbf-4674-9c5b-2391e0b5cdb4</_uuid>
-						
-    
-						<_standard>
-							
-      
-							<de-DE>1.0, Herstellung des Besens</de-DE>
-							
-      
-							<en-US>1.0</en-US>
-							
-    
-						</_standard>
-						
-    
-						<tags>
-							
-      
-							<tag id="1"/>
-							
-      
-							<tag id="6"/>
-							
-    
-						</tags>
-						
-    
-						<collections/>
-						
-    
-						<pool id="2">
-							
-      
-							<de-DE>Kaukasusiologie Uni Jena</de-DE>
-							
-    
-						</pool>
-						
-    
-						<_parent>
-							
-      
-							<id>220</id>
-							
-      
-							<_uuid>4c5b995c-32b5-45c0-8ad4-8f5c3964bcdb</_uuid>
-							
-      
-							<_global_object_id>252@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
-							
-      
-							<_system_object_id>252</_system_object_id>
-							
-      
-							<name>
-								
-        
-								<de-DE>Feldforschung in Kachetien 2011</de-DE>
-								
-        
-								<en-US>Feldforschung in Kachetien 2011</en-US>
-								
-      
-							</name>
-							
-      
-							<pfad>
-								
-        
-								<de-DE>Feldforschung in Kachetien 2011</de-DE>
-								
-        
-								<en-US>Feldforschung in Kachetien 2011</en-US>
-								
-      
-							</pfad>
-							
-    
-						</_parent>
-						
-    
-						<_urls>
-							
-      
-							<url type="deep-link">https://lazardb.gbv.de/api/v1/objects/uuid/31ab40ef-9fbf-4674-9c5b-2391e0b5cdb4</url>
-							
-      
-							<url type="easydb-id">https://lazardb.gbv.de/detail/494</url>
-							
-    
-						</_urls>
-						
-    
-						<datei>
-							
-      
-							<files>
-								
-        
-								<file>
-									
-          
-									<eas-id>1001966202</eas-id>
-									
-          
-									<preferred>true</preferred>
-									
-          
-									<status>done</status>
-									
-          
-									<class>image</class>
-									
-          
-									<extension>png</extension>
-									
-          
-									<original_filename>Konvolut.png</original_filename>
-									
-          
-									<compiled>png image, 640 x 418 @ 32 bit, 35.3 kB</compiled>
-									
-          
-									<eas_parent_id/>
-									
-          
-									<date_inserted>2017-05-08T10:28:56Z</date_inserted>
-									
-          
-									<date_created>2016-05-16T09:04:45+00:00</date_created>
-									
-          
-									<date_uploaded>2016-05-16T08:04:45Z</date_uploaded>
-									
-          
-									<filesize>36139</filesize>
-									
-          
-									<pages_allowed>0</pages_allowed>
-									
-          
-									<technical_metadata>
-										
-            
-										<height>418</height>
-										
-            
-										<format>landscape</format>
-										
-            
-										<width>640</width>
-										
-            
-										<colorspace>rgb</colorspace>
-										
-            
-										<aspect_ratio>1.5311004784688995</aspect_ratio>
-										
-            
-										<max_dimension>640</max_dimension>
-										
-            
-										<file_sha224_checksum>9132a140ca3afcff81d5aeaac16e9e8f4ebef8e163421d6326302b72</file_sha224_checksum>
-										
-            
-										<colordepth>32</colordepth>
-										
-          
-									</technical_metadata>
-									
-          
-									<versions>
-										
-            
-										<version name="small">
-											
-              
-											<extension>png</extension>
-											
-              
-											<_download_allowed>0</_download_allowed>
-											
-              
-											<status>done</status>
-											
-              
-											<filesize>18407</filesize>
-											
-              
-											<height>250</height>
-											
-              
-											<has_more_jobs>0</has_more_jobs>
-											
-              
-											<width>383</width>
-											
-              
-											<class>image</class>
-											
-              
-											<deep_link_url>https://lazardb.gbv.de/api/v1/objects/uuid/31ab40ef-9fbf-4674-9c5b-2391e0b5cdb4/file/id/1001966202/file_version/name/small</deep_link_url>
-											
-            
-										</version>
-										
-          
-									</versions>
-									
-        
-								</file>
-								
-      
-							</files>
-							
-    
-						</datei>
-						
-    
-						<_nested__objekttyp__titel>
-							
-      
-							<objekttyp__titel>
-								
-        
-								<_id>0</_id>
-								
-        
-								<titel>
-									
-          
-									<de-DE>Herstellung des Besens</de-DE>
-									
-          
-									<en-US/>
-									
-          
-									<es-ES/>
-									
-          
-									<it-IT/>
-									
-        
-								</titel>
-								
-        
-								<typ>
-									
-          
-									<object_title_type date-created="2016-03-14T18:30:24Z" date-last-updated="2017-04-27T09:43:30Z">
-										
-            
-										<_version>2</_version>
-										
-            
-										<_id>3</_id>
-										
-            
-										<name>
-											
-              
-											<de-DE>Haupttitel</de-DE>
-											
-              
-											<en-US>Maintitle</en-US>
-											
-              
-											<es-ES/>
-											
-              
-											<it-IT/>
-											
-            
-										</name>
-										
-          
-									</object_title_type>
-									
-        
-								</typ>
-								
-      
-							</objekttyp__titel>
-							
-    
-						</_nested__objekttyp__titel>
-						
-    
-						<version>1.0</version>
-						
-    
-						<_nested__objekttyp__urheber>
-							
-      
-							<objekttyp__urheber>
-								
-        
-								<_id>0</_id>
-								
-        
-								<urheber>
-									
-          
-									<person_urheber date-created="2016-04-06T15:39:29Z" date-last-updated="2017-03-03T14:00:40Z">
-										
-            
-										<_version>8</_version>
-										
-            
-										<_id>3</_id>
-										
-            
-										<name>Dadunashvili, Elguja</name>
-										
-            
-										<gnd/>
-										
-            
-										<orcid/>
-										
-            
-										<grid/>
-										
-          
-									</person_urheber>
-									
-        
-								</urheber>
-								
-        
-								<affiliation>FSU Jena / Ilia-Universität Tiflis</affiliation>
-								
-      
-							</objekttyp__urheber>
-							
-    
-						</_nested__objekttyp__urheber>
-						
-    
-						<_nested__objekttyp__datum>
-							
-      
-							<objekttyp__datum>
-								
-        
-								<_id>0</_id>
-								
-        
-								<anfang>2011-09-29</anfang>
-								
-        
-								<ende/>
-								
-        
-								<datumstyp>
-									
-          
-									<datumstyp date-created="2016-04-20T15:27:51Z" date-last-updated="2016-10-11T09:06:30Z">
-										
-            
-										<_version>4</_version>
-										
-            
-										<_id>1</_id>
-										
-            
-										<name>
-											
-              
-											<de-DE>Entstehungsdatum</de-DE>
-											
-              
-											<en-US>date of creation</en-US>
-											
-              
-											<es-ES/>
-											
-              
-											<it-IT/>
-											
-            
-										</name>
-										
-          
-									</datumstyp>
-									
-        
-								</datumstyp>
-								
-      
-							</objekttyp__datum>
-							
-    
-						</_nested__objekttyp__datum>
-						
-  
-					</objekttyp>
-					
-
-				</objects>
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+  <objekttyp>
+    <_version>28</_version>
+    <_id>399</_id>
+    <_objecttype>objekttyp</_objecttype>
+    <_system_object_id>494</_system_object_id>
+    <_global_object_id>494@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
+    <_uuid>31ab40ef-9fbf-4674-9c5b-2391e0b5cdb4</_uuid>
+    <_standard>
+      <de-DE>1.0, Herstellung des Besens</de-DE>
+      <en-US>1.0</en-US>
+    </_standard>
+    <tags>
+      <tag id="1"/>
+      <tag id="6"/>
+    </tags>
+    <collections/>
+    <pool id="2">
+      <de-DE>Kaukasusiologie Uni Jena</de-DE>
+    </pool>
+    <_parent>
+      <id>220</id>
+      <_uuid>4c5b995c-32b5-45c0-8ad4-8f5c3964bcdb</_uuid>
+      <_global_object_id>252@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
+      <_system_object_id>252</_system_object_id>
+      <name>
+        <de-DE>Feldforschung in Kachetien 2011</de-DE>
+        <en-US>Feldforschung in Kachetien 2011</en-US>
+      </name>
+      <pfad>
+        <de-DE>Feldforschung in Kachetien 2011</de-DE>
+        <en-US>Feldforschung in Kachetien 2011</en-US>
+      </pfad>
+    </_parent>
+    <_urls>
+      <url type="deep-link">https://lazardb.gbv.de/api/v1/objects/uuid/31ab40ef-9fbf-4674-9c5b-2391e0b5cdb4</url>
+      <url type="easydb-id">https://lazardb.gbv.de/detail/494</url>
+    </_urls>
+    <datei>
+      <files>
+        <file>
+          <eas-id>1001966202</eas-id>
+          <preferred>true</preferred>
+          <status>done</status>
+          <class>image</class>
+          <extension>png</extension>
+          <original_filename>Konvolut.png</original_filename>
+          <compiled>png image, 640 x 418 @ 32 bit, 35.3 kB</compiled>
+          <eas_parent_id/>
+          <date_inserted>2017-05-08T10:28:56Z</date_inserted>
+          <date_created>2016-05-16T09:04:45+00:00</date_created>
+          <date_uploaded>2016-05-16T08:04:45Z</date_uploaded>
+          <filesize>36139</filesize>
+          <pages_allowed>0</pages_allowed>
+          <technical_metadata>
+            <height>418</height>
+            <format>landscape</format>
+            <width>640</width>
+            <colorspace>rgb</colorspace>
+            <aspect_ratio>1.5311004784688995</aspect_ratio>
+            <max_dimension>640</max_dimension>
+            <file_sha224_checksum>9132a140ca3afcff81d5aeaac16e9e8f4ebef8e163421d6326302b72</file_sha224_checksum>
+            <colordepth>32</colordepth>
+          </technical_metadata>
+          <versions>
+            <version name="small">
+              <extension>png</extension>
+              <_download_allowed>0</_download_allowed>
+              <status>done</status>
+              <filesize>18407</filesize>
+              <height>250</height>
+              <has_more_jobs>0</has_more_jobs>
+              <width>383</width>
+              <class>image</class>
+              <deep_link_url>https://lazardb.gbv.de/api/v1/objects/uuid/31ab40ef-9fbf-4674-9c5b-2391e0b5cdb4/file/id/1001966202/file_version/name/small</deep_link_url>
+            </version>
+          </versions>
+        </file>
+      </files>
+    </datei>
+    <_nested__objekttyp__titel>
+      <objekttyp__titel>
+        <_id>0</_id>
+        <titel>
+          <de-DE>Herstellung des Besens</de-DE>
+          <en-US/>
+          <es-ES/>
+          <it-IT/>
+        </titel>
+        <typ>
+          <object_title_type date-created="2016-03-14T18:30:24Z" date-last-updated="2017-04-27T09:43:30Z">
+            <_version>2</_version>
+            <_id>3</_id>
+            <name>
+              <de-DE>Haupttitel</de-DE>
+              <en-US>Maintitle</en-US>
+              <es-ES/>
+              <it-IT/>
+            </name>
+          </object_title_type>
+        </typ>
+      </objekttyp__titel>
+    </_nested__objekttyp__titel>
+    <version>1.0</version>
+    <_nested__objekttyp__urheber>
+      <objekttyp__urheber>
+        <_id>0</_id>
+        <urheber>
+          <person_urheber date-created="2016-04-06T15:39:29Z" date-last-updated="2017-03-03T14:00:40Z">
+            <_version>8</_version>
+            <_id>3</_id>
+            <name>Dadunashvili, Elguja</name>
+            <gnd/>
+            <orcid/>
+            <grid/>
+          </person_urheber>
+        </urheber>
+        <affiliation>FSU Jena / Ilia-Universität Tiflis</affiliation>
+      </objekttyp__urheber>
+    </_nested__objekttyp__urheber>
+    <_nested__objekttyp__datum>
+      <objekttyp__datum>
+        <_id>0</_id>
+        <anfang>2011-09-29</anfang>
+        <ende/>
+        <datumstyp>
+          <datumstyp date-created="2016-04-20T15:27:51Z" date-last-updated="2016-10-11T09:06:30Z">
+            <_version>4</_version>
+            <_id>1</_id>
+            <name>
+              <de-DE>Entstehungsdatum</de-DE>
+              <en-US>date of creation</en-US>
+              <es-ES/>
+              <it-IT/>
+            </name>
+          </datumstyp>
+        </datumstyp>
+      </objekttyp__datum>
+    </_nested__objekttyp__datum>
+  </objekttyp>
+</objects>
