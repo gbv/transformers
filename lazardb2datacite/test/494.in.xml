@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects>
+<objects base-schema="180" instance="lazar" timestamp="2017-12-18T10:13:02+01:00" user-schema="207" uuid="33a8cae1-a9fa-4655-8c3d-b71241bbc99b" xmlns="http://schema.programmfabrik.de/easydb-data/1.0">
   <objekttyp>
     <_version>28</_version>
     <_id>399</_id>
@@ -7,36 +7,61 @@
     <_system_object_id>494</_system_object_id>
     <_global_object_id>494@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
     <_uuid>31ab40ef-9fbf-4674-9c5b-2391e0b5cdb4</_uuid>
-    <_standard>
-      <de-DE>1.0, Herstellung des Besens</de-DE>
-      <en-US>1.0</en-US>
-    </_standard>
+    <_mask>objekttyp__restricted</_mask>
+    <_last_modified>2017-10-21T19:54:04Z</_last_modified>
     <tags>
-      <tag id="1"/>
-      <tag id="6"/>
+      <tag id="1">
+        <name>
+          <de-DE>Konvolut</de-DE>
+          <en-US>bundle</en-US>
+        </name>
+      </tag>
+      <tag id="6">
+        <name>
+          <de-DE>freigegeben</de-DE>
+          <en-US>approved</en-US>
+        </name>
+      </tag>
     </tags>
     <collections/>
     <pool id="2">
       <de-DE>Kaukasusiologie Uni Jena</de-DE>
     </pool>
-    <_parent>
-      <id>220</id>
-      <_uuid>4c5b995c-32b5-45c0-8ad4-8f5c3964bcdb</_uuid>
-      <_global_object_id>252@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
-      <_system_object_id>252</_system_object_id>
-      <name>
-        <de-DE>Feldforschung in Kachetien 2011</de-DE>
-        <en-US>Feldforschung in Kachetien 2011</en-US>
-      </name>
-      <pfad>
-        <de-DE>Feldforschung in Kachetien 2011</de-DE>
-        <en-US>Feldforschung in Kachetien 2011</en-US>
-      </pfad>
-    </_parent>
+    <_path>
+      <objekttyp level="0" parent-level="1">
+        <_system_object_id>252</_system_object_id>
+        <_global_object_id>252@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
+        <_uuid>4c5b995c-32b5-45c0-8ad4-8f5c3964bcdb</_uuid>
+        <_id>220</_id>
+        <_objecttype>objekttyp</_objecttype>
+        <_standard>
+          <de-DE>1.0, Feldforschung in Kachetien 2011</de-DE>
+          <en-US>1.0</en-US>
+          <ka-GE>1.0</ka-GE>
+        </_standard>
+      </objekttyp>
+      <objekttyp level="1" parent-level="0">
+        <_system_object_id>494</_system_object_id>
+        <_global_object_id>494@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
+        <_uuid>31ab40ef-9fbf-4674-9c5b-2391e0b5cdb4</_uuid>
+        <_id>399</_id>
+        <_objecttype>objekttyp</_objecttype>
+        <_standard>
+          <de-DE>1.0, Herstellung des Besens</de-DE>
+          <en-US>1.0</en-US>
+          <ka-GE>1.0</ka-GE>
+        </_standard>
+      </objekttyp>
+    </_path>
     <_urls>
       <url type="deep-link">https://lazardb.gbv.de/api/v1/objects/uuid/31ab40ef-9fbf-4674-9c5b-2391e0b5cdb4</url>
       <url type="easydb-id">https://lazardb.gbv.de/detail/494</url>
     </_urls>
+    <_standard>
+      <de-DE>1.0, Herstellung des Besens</de-DE>
+      <en-US>1.0</en-US>
+      <ka-GE>1.0</ka-GE>
+    </_standard>
     <datei>
       <files>
         <file>
@@ -48,7 +73,7 @@
           <original_filename>Konvolut.png</original_filename>
           <compiled>png image, 640 x 418 @ 32 bit, 35.3 kB</compiled>
           <eas_parent_id/>
-          <date_inserted>2017-05-08T10:28:56Z</date_inserted>
+          <date_inserted>2017-10-21T19:54:04Z</date_inserted>
           <date_created>2016-05-16T09:04:45+00:00</date_created>
           <date_uploaded>2016-05-16T08:04:45Z</date_uploaded>
           <filesize>36139</filesize>
@@ -66,14 +91,14 @@
           <versions>
             <version name="small">
               <extension>png</extension>
-              <_download_allowed>0</_download_allowed>
+              <_download_allowed>1</_download_allowed>
               <status>done</status>
               <filesize>18407</filesize>
               <height>250</height>
               <has_more_jobs>0</has_more_jobs>
               <width>383</width>
               <class>image</class>
-              <deep_link_url>https://lazardb.gbv.de/api/v1/objects/uuid/31ab40ef-9fbf-4674-9c5b-2391e0b5cdb4/file/id/1001966202/file_version/name/small</deep_link_url>
+              <deep_link_url>https://lazardb.gbv.de/api/v1/objects/uuid/31ab40ef-9fbf-4674-9c5b-2391e0b5cdb4/file/id/1001966202/file_version/name/small/disposition/inline</deep_link_url>
             </version>
           </versions>
         </file>
@@ -81,62 +106,79 @@
     </datei>
     <_nested__objekttyp__titel>
       <objekttyp__titel>
-        <_id>0</_id>
-        <titel>
+        <titel type="text_l10n_oneline">
           <de-DE>Herstellung des Besens</de-DE>
-          <en-US/>
-          <es-ES/>
-          <it-IT/>
         </titel>
-        <typ>
-          <object_title_type date-created="2016-03-14T18:30:24Z" date-last-updated="2017-04-27T09:43:30Z">
-            <_version>2</_version>
-            <_id>3</_id>
-            <name>
-              <de-DE>Haupttitel</de-DE>
-              <en-US>Maintitle</en-US>
-              <es-ES/>
-              <it-IT/>
-            </name>
-          </object_title_type>
-        </typ>
       </objekttyp__titel>
     </_nested__objekttyp__titel>
-    <version>1.0</version>
+    <version type="text_oneline">1.0</version>
     <_nested__objekttyp__urheber>
       <objekttyp__urheber>
-        <_id>0</_id>
         <urheber>
-          <person_urheber date-created="2016-04-06T15:39:29Z" date-last-updated="2017-03-03T14:00:40Z">
-            <_version>8</_version>
+          <person_urheber>
+            <_objecttype>person_urheber</_objecttype>
             <_id>3</_id>
-            <name>Dadunashvili, Elguja</name>
-            <gnd/>
-            <orcid/>
-            <grid/>
+            <_version>10</_version>
+            <_parent_id>399</_parent_id>
+            <_system_object_id>418</_system_object_id>
+            <_global_object_id>418@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
+            <_uuid>eca63e7e-f5de-46a6-8fcc-51484ae6041a</_uuid>
+            <_mask>person_urheber__all_fields</_mask>
+            <_standard>
+              <de-DE>Dadunashvili, Elguja</de-DE>
+              <en-US>Dadunashvili, Elguja</en-US>
+              <ka-GE>Dadunashvili, Elguja</ka-GE>
+            </_standard>
           </person_urheber>
         </urheber>
-        <affiliation>FSU Jena / Ilia-Universität Tiflis</affiliation>
       </objekttyp__urheber>
     </_nested__objekttyp__urheber>
+    <thema type="text_l10n">
+      <de-DE>Besen, Schilf, Faden, Nadel,  Klemme, Einfache Technologien</de-DE>
+    </thema>
+    <_nested__objekttyp__keywords_gnd>
+      <objekttyp__keywords_gnd/>
+      <objekttyp__keywords_gnd/>
+      <objekttyp__keywords_gnd/>
+    </_nested__objekttyp__keywords_gnd>
+    <_nested__objekttyp__contributor>
+      <objekttyp__contributor/>
+    </_nested__objekttyp__contributor>
     <_nested__objekttyp__datum>
       <objekttyp__datum>
-        <_id>0</_id>
-        <anfang>2011-09-29</anfang>
-        <ende/>
+        <anfang type="date">2011-09-29</anfang>
+        <ende type="date"/>
         <datumstyp>
-          <datumstyp date-created="2016-04-20T15:27:51Z" date-last-updated="2016-10-11T09:06:30Z">
-            <_version>4</_version>
+          <datumstyp>
+            <_objecttype>datumstyp</_objecttype>
             <_id>1</_id>
-            <name>
+            <_version>4</_version>
+            <_parent_id>399</_parent_id>
+            <_system_object_id>599</_system_object_id>
+            <_global_object_id>599@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
+            <_uuid>547c232c-2fc4-403f-b126-cec586b8fd36</_uuid>
+            <_mask>datumstyp__all_fields</_mask>
+            <_standard>
               <de-DE>Entstehungsdatum</de-DE>
               <en-US>date of creation</en-US>
-              <es-ES/>
-              <it-IT/>
-            </name>
+              <ka-GE>#599</ka-GE>
+            </_standard>
           </datumstyp>
         </datumstyp>
       </objekttyp__datum>
     </_nested__objekttyp__datum>
+    <_nested__objekttyp__sprachen>
+      <objekttyp__sprachen/>
+      <objekttyp__sprachen/>
+      <objekttyp__sprachen/>
+    </_nested__objekttyp__sprachen>
+    <beschreibung type="text_l10n">
+      <de-DE>Die Video- und Fotodateien zeigen die Anfertigung des Besens im Detail</de-DE>
+    </beschreibung>
+    <_nested__objekttyp__orte>
+      <objekttyp__orte/>
+      <objekttyp__orte/>
+      <objekttyp__orte/>
+    </_nested__objekttyp__orte>
   </objekttyp>
 </objects>

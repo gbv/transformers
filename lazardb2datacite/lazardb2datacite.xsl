@@ -3,32 +3,35 @@
      LaZAR-DB Export nach DataCite
 -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:datacite="http://datacite.org/schema/kernel-4">
+  xmlns:datacite="http://datacite.org/schema/kernel-4"
+  xmlns:edb="http://schema.programmfabrik.de/easydb-data/1.0"
+  exclude-result-prefixes="edb xsl">
 
   <xsl:output method="xml" indent="yes"/>
 
   <!-- Wurzelelement -->
-  <xsl:template match="objects">
+  <xsl:template match="edb:objects">
     <xsl:apply-templates/>
   </xsl:template>
 
   <!-- LaZAR-Objekttyp "Objekttyp" -->
-  <xsl:template match="objekttyp">
+  <xsl:template match="edb:objekttyp">
     <datacite:resource
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
-      <!-- mandatory fields -->
+      <!-- required fields -->
       <identifier identifierType="DOI">
-        <!-- TODO (mandatory!) -->
+        <!-- TODO (required!) -->
       </identifier>
       <datacite:creators>
-        <xsl:apply-templates select="_nested__objekttyp__urheber/objekttyp__urheber"/>
+        <xsl:apply-templates select="edb:_nested__objekttyp__urheber/edb:objekttyp__urheber"/>
       </datacite:creators>
       <datacite:titles>
-        <xsl:apply-templates select="_nested__objekttyp__titel/objekttyp__titel"/>
+        <xsl:apply-templates select="edb:_nested__objekttyp__titel/edb:objekttyp__titel"/>
       </datacite:titles>
       <xsl:call-template name="publisher"/>
       <xsl:call-template name="publicationYear"/>
+      <xsl:call-template name="subjects"/>
       <xsl:call-template name="resourceType"/>
       <!-- optional fields -->
       <xsl:call-template name="descriptions"/>
@@ -36,100 +39,77 @@
       <xsl:call-template name="alternateIdentifiers"/>
       <xsl:call-template name="relatedIdentifiers"/>
       <xsl:call-template name="size"/>
-      <xsl:apply-templates select="version"/>
+      <xsl:apply-templates select="edb:version"/>
       <xsl:call-template name="rights"/>
     </datacite:resource>
   </xsl:template>
 
-  <!-- 1 Identifier (mandatory) -->
+  <!-- 1 Identifier (required) -->
   <!-- TODO: DOI -->
  
-  <!-- 2 Creator (mandatory) -->
-  <xsl:template match="objekttyp__urheber">
+  <!-- 2 Creator (required) -->
+  <xsl:template match="edb:objekttyp__urheber">
     <datacite:creator>
-      <xsl:apply-templates select="urheber/person_urheber"/>
+      <xsl:apply-templates select="edb:urheber/edb:person_urheber"/>
       <!-- 2.3 affiliation -->
-      <xsl:if test="string(affiliation)">
+      <!-- TODO: affiliation is not available anymore!? -->
+      <xsl:variable name="affiliation"
+           select="edb:affiliation/edb:affiliation/edb:_standard/*[text()][1]"/>
+      <xsl:if test="$affiliation">
         <datacite:affiliation>
-          <xsl:value-of select="affiliation"/>
+          <xsl:value-of select="$affiliation"/>
         </datacite:affiliation>
       </xsl:if> 
     </datacite:creator>
   </xsl:template>
 
-  <xsl:template match="person_urheber">
+  <xsl:template match="edb:person_urheber">
     <!-- 2.1 creatorName -->
     <datacite:creatorName>
-      <xsl:value-of select="name"/>
+      <xsl:value-of select="edb:_standard/*[text()][1]"/>
     </datacite:creatorName>
     <!-- TODO: GND/ORCID/GRID werden nicht in easydb-XML mitgeliefert (!!) -->
     <!-- 2.2 nameIdentifier -->
     <xsl:choose>
-      <xsl:when test="string(orcid)">
+      <xsl:when test="string(edb:orcid)">
         <datacite:nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">
-          <xsl:value-of select="orcid"/>
+          <xsl:value-of select="edb:orcid"/>
         </datacite:nameIdentifier>
       </xsl:when>
-      <xsl:when test="string(grid)">
+      <xsl:when test="string(edb:grid)">
         <!-- TODO: add schemeURI. Which? -->
         <datacite:nameIdentifier nameIdentifierScheme="GRID">
-          <xsl:value-of select="grid"/>
+          <xsl:value-of select="edb:grid"/>
         </datacite:nameIdentifier>
       </xsl:when>
-      <xsl:when test="string(gnd)">
+      <xsl:when test="string(edb:gnd)">
         <!-- TODO: add schemeURI. Which? -->
         <datacite:nameIdentifier nameIdentifierScheme="GND">
-          <xsl:value-of select="gnd"/>
+          <xsl:value-of select="edb:gnd"/>
         </datacite:nameIdentifier>
       </xsl:when>
     </xsl:choose>
   </xsl:template>
 
-  <!-- 3 Title (mandatory) -->
-  <xsl:template match="objekttyp__titel">
-    <!-- Titeltyp -->
-    <xsl:variable name="titleTypeName" select="typ/object_title_type/name/de-DE"/>
-    <xsl:variable name="titleType">
-      <xsl:choose>
-        <xsl:when test="$titleTypeName='Haupttitel'">
-          <!-- default -->
-        </xsl:when>
-        <xsl:when test="$titleTypeName='Alternativer Titel'">
-          AlternativeTitle
-        </xsl:when>
-        <xsl:when test="$titleTypeName='Ergänzender Titel'">
-          Subtitle
-        </xsl:when>
-        <xsl:when test="$titleTypeName='Übersetzter Titel'">
-          TranslatedTitle
-        </xsl:when>
-        <xsl:otherwise>
-          Other
-        </xsl:otherwise>
-      </xsl:choose> 
-    </xsl:variable>
-    <xsl:for-each select="titel/*[string()]">
+  <!-- 3 Title (required) -->
+  <xsl:template match="edb:objekttyp__titel">
+    <xsl:for-each select="edb:titel/*[string()]">
       <datacite:title xml:lang="{substring-before(local-name(),'-')}">
-        <xsl:if test="$titleType!=''">
-          <xsl:attribute name="titleType">
-            <xsl:value-of select="normalize-space($titleType)"/>
-          </xsl:attribute>
-        </xsl:if>
         <xsl:value-of select="."/>
       </datacite:title>
     </xsl:for-each> 
   </xsl:template>
 
-  <!-- 4 Publisher (mandatory) -->
+  <!-- 4 Publisher (required) -->
   <xsl:template name="publisher">
     <datacite:publisher>LaZAR</datacite:publisher>
   </xsl:template>
 
-  <!-- 5 Publication Year (mandatory) -->
+  <!-- 5 Publication Year (required) -->
   <xsl:template name="publicationYear">
-    <xsl:variable name="dates" select="_nested__objekttyp__datum/objekttyp__datum"/>
-    <xsl:variable name="pubdates" select="$dates[datumstyp/datumstyp/name/de-DE='Publikationsdatum']"/>
-    <xsl:variable name="year" select="substring($pubdates/anfang,1,4)"/>
+    <xsl:variable name="dates" select="edb:_nested__objekttyp__datum/edb:objekttyp__datum"/>
+    <xsl:variable name="pubdates" select="$dates[edb:datumstyp/edb:datumstyp/edb:name/edb:de-DE='Publikationsdatum']"/>
+    <xsl:variable name="year" select="substring($pubdates/edb:anfang,1,4)"/>
     <xsl:if test="string($year)">
       <!-- TODO: this is required! -->
       <datacite:publicationYear>
@@ -138,25 +118,46 @@
     </xsl:if>
   </xsl:template>
 
+  <!-- 6 Subject (required) -->
+  <xsl:template name="subjects">
+
+  <!-- TODO: add GND, Orte, Methoden(?) -->
+
+    <xsl:variable name="getty" select="edb:_nested__objekttyp__keywords_getty/edb:objekttyp__keywords_getty"/>
+    <xsl:if test="$getty">
+      <datacite:subjects>
+        <xsl:for-each select="$getty">
+          <datacite:subject
+            schemeURI="http://vocab.getty.edu/dataset/aat"
+            valueURI="{edb:custom/edb:string[@name='conceptURI']}">
+            <xsl:value-of select="edb:custom/edb:string[@name='conceptName']"/>
+          </datacite:subject>
+        </xsl:for-each>
+      </datacite:subjects>
+    </xsl:if>
+  </xsl:template>
+
+  <!-- 7 Contributor (required): TODO -->
+
   <!-- 8 Date (optional) -->
   <xsl:template name="dates">
     <!-- Entstehungs- und/oder Publikationsdatum -->
-    <xsl:variable name="dates" select="_nested__objekttyp__datum/objekttyp__datum"/>
+    <xsl:variable name="dates" select="edb:_nested__objekttyp__datum/edb:objekttyp__datum"/>
     <xsl:if test="$dates">
       <datacite:dates>
         <xsl:for-each select="$dates">
           <datacite:date>
             <xsl:attribute name="dateType">
               <xsl:choose>
-                <xsl:when test="datumstyp/datumstyp[_id='2']">Issued</xsl:when>
+                <xsl:when test="edb:datumstyp/edb:datumstyp[_id='2']">Issued</xsl:when>
                 <xsl:otherwise>Created</xsl:otherwise>
               </xsl:choose>
             </xsl:attribute>
             <!-- Datumswert, ggf. als Zeitraum -->
-            <xsl:value-of select="anfang"/>
-            <xsl:if test="string(ende)">
+            <xsl:value-of select="edb:anfang"/>
+            <xsl:if test="string(edb:ende)">
               <xsl:text>/</xsl:text>
-              <xsl:value-of select="ende"/>
+              <xsl:value-of select="edb:ende"/>
             </xsl:if>
           </datacite:date>
         </xsl:for-each>
@@ -166,16 +167,16 @@
 
   <!-- 9 Language (optional): TODO -->
 
-  <!-- 10 Resource Type (mandatory) -->
+  <!-- 10 Resource Type (required) -->
   <xsl:template name="resourceType">
     <xsl:choose>
       <!-- Konvolut -->
-      <xsl:when test="tags/tag[@id='1']">
+     <xsl:when test="edb:tags/edb:tag[@id='1']"> <!-- TODO -->
         <datacite:resourceType resourceTypeGeneral="Collection">Collection</datacite:resourceType>
       </xsl:when>
       <!-- Datei oder Ausschnitt -->
       <xsl:otherwise>
-        <xsl:variable name="class" select="datei/files/file/class"/>
+        <xsl:variable name="class" select="edb:datei/edb:files/edb:file/edb:class"/>
         <!-- Datei-Klasse -->
         <xsl:variable name="type">
           <xsl:choose>
@@ -199,14 +200,14 @@
   <xsl:template name="alternateIdentifiers">
     <datacite:alternateIdentifiers>
       <datacite:alternateIdentifier alternateIdentifierType="LaZAR URL">
-        <xsl:value-of select="_urls/url[@type='easydb-id']"/>
+        <xsl:value-of select="edb:_urls/edb:url[@type='easydb-id']"/>
       </datacite:alternateIdentifier>
       <datacite:alternateIdentifier alternateIdentifierType="UUID">
-        <xsl:value-of select="_uuid"/>
+        <xsl:value-of select="edb:_uuid"/>
       </datacite:alternateIdentifier>
-      <xsl:for-each select="_nested__objekttyp__alternative_id/objekttyp__alternative_id">
+      <xsl:for-each select="edb:_nested__objekttyp__alternative_id/edb:objekttyp__alternative_id">
         <datacite:alternateIdentifier alternateIdentifierType="unknown">
-          <xsl:value-of select="name"/>
+          <xsl:value-of select="edb:name"/>
         </datacite:alternateIdentifier>
       </xsl:for-each>
     </datacite:alternateIdentifiers>
@@ -217,11 +218,11 @@
     <datacite:relatedIdentifiers>
       <!-- Deep Link to record view in easydb -->
       <datacite:relatedIdentifier relatedIdentifierType="URL" relationType="isIdenticalTo">
-        <xsl:value-of select="_urls/url[@type='easydb-id']"/>
+        <xsl:value-of select="edb:_urls/edb:url[@type='easydb-id']"/>
       </datacite:relatedIdentifier>
-      <xsl:if test="tags/tag[@id='2']">
+      <xsl:if test="edb:tags/edb:tag[@id='2']">
         <datacite:relatedIdentifier relatedIdentifierType="URL" relationType="isIdenticalTo">
-          <xsl:value-of select="datei/files/file/versions/version[1]/deep_link_url"/>
+          <xsl:value-of select="edb:datei/edb:files/edb:file/edb:versions/edb:version[1]/edb:deep_link_url"/>
         </datacite:relatedIdentifier>
       </xsl:if>
     </datacite:relatedIdentifiers>
@@ -232,8 +233,8 @@
     <xsl:variable name="size">
       <xsl:choose>
         <!-- Datei -->
-        <xsl:when test="tags/tag[@id='2']">
-          <xsl:value-of select="substring-after(datei/files/file/compiled,', ')"/>
+        <xsl:when test="edb:tags/edb:tag[@id='2']">
+          <xsl:value-of select="substring-after(edb:datei/edb:files/edb:file/edb:compiled,', ')"/>
         </xsl:when>
         <!-- TODO: Konvolute und Ausschnitte? -->
       </xsl:choose>
@@ -250,7 +251,7 @@
   <!-- 14 Format (optional): TODO -->
 
   <!-- 15 Version (optional) -->
-  <xsl:template match="version">
+  <xsl:template match="edb:version">
     <datacite:version>
       <xsl:value-of select="."/>
     </datacite:version>
@@ -259,37 +260,37 @@
   <!-- 16 Rights (optional) -->
   <xsl:template name="rights">
     <xsl:choose>
-      <xsl:when test="tags/tag[@id='10']">
+      <xsl:when test="edb:tags/edb:tag[@id='10']">
         <datacite:rightsList>
           <datacite:rights rightsURI="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</datacite:rights>
         </datacite:rightsList>
       </xsl:when>
-      <xsl:when test="tags/tag[@id='11']">
+      <xsl:when test="edb:tags/edb:tag[@id='11']">
         <datacite:rightsList>
           <datacite:rights rightsURI="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</datacite:rights>
         </datacite:rightsList>
       </xsl:when>
-      <xsl:when test="tags/tag[@id='12']">
+      <xsl:when test="edb:tags/edb:tag[@id='12']">
         <datacite:rightsList>
           <datacite:rights rightsURI="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</datacite:rights>
         </datacite:rightsList>
       </xsl:when>
-      <xsl:when test="tags/tag[@id='13']">
+      <xsl:when test="edb:tags/edb:tag[@id='13']">
         <datacite:rightsList>
           <datacite:rights rightsURI="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)</datacite:rights>
         </datacite:rightsList>
       </xsl:when>
-      <xsl:when test="tags/tag[@id='14']">
+      <xsl:when test="edb:tags/edb:tag[@id='14']">
         <datacite:rightsList>
           <datacite:rights rightsURI="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)</datacite:rights>
         </datacite:rightsList>
       </xsl:when>
-      <xsl:when test="tags/tag[@id='22']">
+      <xsl:when test="edb:tags/edb:tag[@id='22']">
         <datacite:rightsList>
           <datacite:rights rightsURI="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</datacite:rights>
         </datacite:rightsList>
       </xsl:when>
-      <xsl:when test="tags/tag[@id='17']">
+      <xsl:when test="edb:tags/edb:tag[@id='17']">
         <datacite:rightsList>
           <datacite:rights rightsURI="http://creativecommons.org/licenses/by-nd/4.0/">Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)</datacite:rights>
         </datacite:rightsList>
@@ -299,7 +300,7 @@
 
   <!-- 17 Description (optional) -->
   <xsl:template name="descriptions">
-    <xsl:variable name="descriptions" select="beschreibung/*[string()]"/>
+    <xsl:variable name="descriptions" select="edb:beschreibung/*[string()]"/>
     <!-- TODO: Methoden => Methods -->
     <xsl:if test="$descriptions">
       <datacite:descriptions>

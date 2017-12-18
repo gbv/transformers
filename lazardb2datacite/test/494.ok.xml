@@ -4,7 +4,6 @@
    <datacite:creators>
       <datacite:creator>
          <datacite:creatorName>Dadunashvili, Elguja</datacite:creatorName>
-         <datacite:affiliation>FSU Jena / Ilia-Universität Tiflis</datacite:affiliation>
       </datacite:creator>
    </datacite:creators>
    <datacite:titles>
@@ -12,6 +11,9 @@
    </datacite:titles>
    <datacite:publisher>LaZAR</datacite:publisher>
    <datacite:resourceType resourceTypeGeneral="Collection">Collection</datacite:resourceType>
+   <datacite:descriptions>
+      <datacite:description descriptionType="Abstracts" xml:lang="de">Die Video- und Fotodateien zeigen die Anfertigung des Besens im Detail</datacite:description>
+   </datacite:descriptions>
    <datacite:dates>
       <datacite:date dateType="Created">2011-09-29</datacite:date>
    </datacite:dates>

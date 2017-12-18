@@ -9,9 +9,12 @@
    </datacite:creators>
    <datacite:titles>
       <datacite:title xml:lang="de">Katalogkarte</datacite:title>
-      <datacite:title xml:lang="de" titleType="AlternativeTitle">annotierte Katalogkarte</datacite:title>
+      <datacite:title xml:lang="de">annotierte Katalogkarte</datacite:title>
    </datacite:titles>
    <datacite:publisher>LaZAR</datacite:publisher>
+   <datacite:subjects>
+      <datacite:subject schemeURI="http://vocab.getty.edu/dataset/aat" valueURI="http://vocab.getty.edu/aat/300026769">catalog cards</datacite:subject>
+   </datacite:subjects>
    <datacite:resourceType resourceTypeGeneral="Image">Image</datacite:resourceType>
    <datacite:descriptions>
       <datacite:description descriptionType="Abstracts" xml:lang="de">Annotierte Katalogkarte aus den 1960ern</datacite:description>

@@ -1,36 +1,82 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<objects>
+<?xml version="1.0"?>
+<objects xmlns="http://schema.programmfabrik.de/easydb-data/1.0" base-schema="180" instance="lazar" timestamp="2017-12-18T10:57:51+01:00" user-schema="207" uuid="33a8cae1-a9fa-4655-8c3d-b71241bbc99b">
   <objekttyp>
-    <_version>15</_version>
+    <_version>20</_version>
     <_id>6303</_id>
     <_objecttype>objekttyp</_objecttype>
     <_system_object_id>8223</_system_object_id>
     <_global_object_id>8223@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
     <_uuid>b79de4e5-8d1f-4840-b85f-e052db92a52f</_uuid>
+    <_mask>objekttyp__restricted</_mask>
+    <_last_modified>2017-11-20T15:30:16Z</_last_modified>
     <tags>
-      <tag id="2"/>
-      <tag id="6"/>
-      <tag id="20"/>
-      <tag id="22"/>
+      <tag id="2">
+        <name>
+          <de-DE>Datei</de-DE>
+          <en-US>file</en-US>
+        </name>
+      </tag>
+      <tag id="6">
+        <name>
+          <de-DE>freigegeben</de-DE>
+          <en-US>approved</en-US>
+        </name>
+      </tag>
+      <tag id="20">
+        <name>
+          <de-DE>LZA bewilligt</de-DE>
+          <en-US>digital preservation granted</en-US>
+        </name>
+      </tag>
+      <tag id="22">
+        <name>
+          <de-DE>CC BY-NC-SA</de-DE>
+          <en-US>CC BY-NC-SA</en-US>
+        </name>
+      </tag>
     </tags>
     <collections/>
     <pool id="31">
       <de-DE>Testpool</de-DE>
     </pool>
-    <_parent>
-      <id>6304</id>
-      <_uuid>cbb75a05-af39-4479-b2b0-d7d05237059a</_uuid>
-      <_global_object_id>8227@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
-      <_system_object_id>8227</_system_object_id>
-      <name>
-        <de-DE>Beispielkonvolut</de-DE>
-        <en-US>#8227</en-US>
-      </name>
-      <pfad>
-        <de-DE>Beispielkonvolut</de-DE>
-        <en-US>#8227</en-US>
-      </pfad>
-    </_parent>
+    <_path>
+      <objekttyp level="0" parent-level="2">
+        <_system_object_id>8227</_system_object_id>
+        <_global_object_id>8227@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
+        <_uuid>cbb75a05-af39-4479-b2b0-d7d05237059a</_uuid>
+        <_id>6304</_id>
+        <_objecttype>objekttyp</_objecttype>
+        <_standard>
+          <de-DE>Beispielkonvolut</de-DE>
+          <en-US>#8227</en-US>
+          <ka-GE>#8227</ka-GE>
+        </_standard>
+      </objekttyp>
+      <objekttyp level="1" parent-level="1">
+        <_system_object_id>9136</_system_object_id>
+        <_global_object_id>9136@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
+        <_uuid>3727fd5b-0523-4e59-8de6-0fbd1f6b39f8</_uuid>
+        <_id>7211</_id>
+        <_objecttype>objekttyp</_objecttype>
+        <_standard>
+          <de-DE>Beispiel-Unterkonvolut</de-DE>
+          <en-US>#9136</en-US>
+          <ka-GE>#9136</ka-GE>
+        </_standard>
+      </objekttyp>
+      <objekttyp level="2" parent-level="0">
+        <_system_object_id>8223</_system_object_id>
+        <_global_object_id>8223@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
+        <_uuid>b79de4e5-8d1f-4840-b85f-e052db92a52f</_uuid>
+        <_id>6303</_id>
+        <_objecttype>objekttyp</_objecttype>
+        <_standard>
+          <de-DE>0.9, Katalogkarte, annotierte Katalogkarte</de-DE>
+          <en-US>0.9</en-US>
+          <ka-GE>0.9</ka-GE>
+        </_standard>
+      </objekttyp>
+    </_path>
     <_urls>
       <url type="deep-link">https://lazardb.gbv.de/api/v1/objects/uuid/b79de4e5-8d1f-4840-b85f-e052db92a52f</url>
       <url type="easydb-id">https://lazardb.gbv.de/detail/8223</url>
@@ -38,6 +84,7 @@
     <_standard>
       <de-DE>0.9, Katalogkarte, annotierte Katalogkarte</de-DE>
       <en-US>0.9</en-US>
+      <ka-GE>0.9</ka-GE>
     </_standard>
     <datei>
       <files>
@@ -50,7 +97,7 @@
           <original_filename>Library-Card-pic.png</original_filename>
           <compiled>png image, 768 x 381 @ 8 bit, 62.4 kB</compiled>
           <eas_parent_id/>
-          <date_inserted>2017-08-03T13:40:43Z</date_inserted>
+          <date_inserted>2017-11-20T15:30:16Z</date_inserted>
           <date_created>2017-08-01T09:49:56+00:00</date_created>
           <date_uploaded>2017-08-01T09:49:54Z</date_uploaded>
           <filesize>63853</filesize>
@@ -83,194 +130,167 @@
     </datei>
     <_nested__objekttyp__titel>
       <objekttyp__titel>
-        <_id>0</_id>
-        <titel>
+        <titel type="text_l10n_oneline">
           <de-DE>Katalogkarte</de-DE>
-          <en-US/>
-          <es-ES/>
-          <it-IT/>
         </titel>
-        <typ>
-          <object_title_type date-created="2016-03-14T18:30:24Z" date-last-updated="2017-04-27T09:43:30Z">
-            <_version>2</_version>
-            <_id>3</_id>
-            <_standard>
-              <de-DE>Haupttitel</de-DE>
-              <en-US>Maintitle</en-US>
-            </_standard>
-            <name>
-              <de-DE>Haupttitel</de-DE>
-              <en-US>Maintitle</en-US>
-              <es-ES/>
-              <it-IT/>
-            </name>
-          </object_title_type>
-        </typ>
       </objekttyp__titel>
       <objekttyp__titel>
-        <_id>0</_id>
-        <titel>
+        <titel type="text_l10n_oneline">
           <de-DE>annotierte Katalogkarte</de-DE>
-          <en-US/>
-          <es-ES/>
-          <it-IT/>
         </titel>
-        <typ>
-          <object_title_type date-created="2016-04-09T08:56:50Z" date-last-updated="2017-04-27T09:43:43Z">
-            <_version>2</_version>
-            <_id>5</_id>
-            <_standard>
-              <de-DE>Alternativer Titel</de-DE>
-              <en-US>Alternative title</en-US>
-            </_standard>
-            <name>
-              <de-DE>Alternativer Titel</de-DE>
-              <en-US>Alternative title</en-US>
-              <es-ES/>
-              <it-IT/>
-            </name>
-          </object_title_type>
-        </typ>
       </objekttyp__titel>
     </_nested__objekttyp__titel>
-    <version>0.9</version>
+    <version type="text_oneline">0.9</version>
     <_nested__objekttyp__urheber>
       <objekttyp__urheber>
-        <_id>0</_id>
         <urheber>
-          <person_urheber date-created="2017-08-01T12:39:35Z" date-last-updated="2017-08-01T12:39:35Z">
-            <_version>1</_version>
+          <person_urheber>
+            <_objecttype>person_urheber</_objecttype>
             <_id>30</_id>
+            <_version>1</_version>
+            <_parent_id>6303</_parent_id>
+            <_system_object_id>8226</_system_object_id>
+            <_global_object_id>8226@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
+            <_uuid>c6103de7-bde2-439b-bfe7-de6b03d3eba5</_uuid>
+            <_mask>person_urheber__all_fields</_mask>
             <_standard>
               <de-DE>Voß, Jakob</de-DE>
               <en-US>Voß, Jakob</en-US>
+              <ka-GE>Voß, Jakob</ka-GE>
             </_standard>
-            <name>Voß, Jakob</name>
-            <gnd/>
-            <orcid/>
-            <grid/>
           </person_urheber>
         </urheber>
-        <affiliation>VZG</affiliation>
+        <affiliation>
+          <affiliation>
+            <_objecttype>affiliation</_objecttype>
+            <_id>5</_id>
+            <_version>2</_version>
+            <_parent_id>6303</_parent_id>
+            <_system_object_id>10196</_system_object_id>
+            <_global_object_id>10196@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
+            <_uuid>96cc8195-78cb-4c0c-840c-aefbd436b78e</_uuid>
+            <_mask>affiliation__all_fields</_mask>
+            <_standard>
+              <de-DE>VZG</de-DE>
+              <en-US>VZG</en-US>
+              <ka-GE>VZG</ka-GE>
+            </_standard>
+          </affiliation>
+        </affiliation>
       </objekttyp__urheber>
     </_nested__objekttyp__urheber>
-    <thema>
+    <thema type="text_l10n">
       <de-DE>Katalogisierung</de-DE>
-      <en-US/>
-      <es-ES/>
-      <it-IT/>
     </thema>
     <_nested__objekttyp__keywords_gnd>
-      <objekttyp__keywords_gnd>
-        <_id>0</_id>
-      </objekttyp__keywords_gnd>
-      <objekttyp__keywords_gnd>
-        <_id>0</_id>
-      </objekttyp__keywords_gnd>
+      <objekttyp__keywords_gnd/>
+      <objekttyp__keywords_gnd/>
     </_nested__objekttyp__keywords_gnd>
     <_nested__objekttyp__contributor>
-      <objekttyp__contributor>
-        <_id>0</_id>
-      </objekttyp__contributor>
+      <objekttyp__contributor/>
     </_nested__objekttyp__contributor>
     <_nested__objekttyp__datum>
       <objekttyp__datum>
-        <_id>0</_id>
-        <anfang>1966</anfang>
-        <ende>1968</ende>
+        <anfang type="date">1966</anfang>
+        <ende type="date">1968</ende>
         <datumstyp>
-          <datumstyp date-created="2016-04-20T15:27:51Z" date-last-updated="2016-10-11T09:06:30Z">
-            <_version>4</_version>
+          <datumstyp>
+            <_objecttype>datumstyp</_objecttype>
             <_id>1</_id>
+            <_version>4</_version>
+            <_parent_id>6303</_parent_id>
+            <_system_object_id>599</_system_object_id>
+            <_global_object_id>599@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
+            <_uuid>547c232c-2fc4-403f-b126-cec586b8fd36</_uuid>
+            <_mask>datumstyp__all_fields</_mask>
             <_standard>
               <de-DE>Entstehungsdatum</de-DE>
               <en-US>date of creation</en-US>
+              <ka-GE>#599</ka-GE>
             </_standard>
-            <name>
-              <de-DE>Entstehungsdatum</de-DE>
-              <en-US>date of creation</en-US>
-              <es-ES/>
-              <it-IT/>
-            </name>
           </datumstyp>
         </datumstyp>
       </objekttyp__datum>
       <objekttyp__datum>
-        <_id>0</_id>
-        <anfang>2017-08-01</anfang>
-        <ende/>
+        <anfang type="date">2017-08-01</anfang>
+        <ende type="date"/>
       </objekttyp__datum>
     </_nested__objekttyp__datum>
     <_nested__objekttyp__sprachen>
-      <objekttyp__sprachen>
-        <_id>0</_id>
-      </objekttyp__sprachen>
-      <objekttyp__sprachen>
-        <_id>0</_id>
-      </objekttyp__sprachen>
+      <objekttyp__sprachen/>
+      <objekttyp__sprachen/>
     </_nested__objekttyp__sprachen>
     <_nested__objekttyp__alternative_id>
       <objekttyp__alternative_id>
-        <_id>0</_id>
-        <name>572.04 Mal</name>
+        <name type="text_oneline">572.04 Mal</name>
       </objekttyp__alternative_id>
       <objekttyp__alternative_id>
-        <_id>0</_id>
-        <name>TEST</name>
+        <name type="text_oneline">TEST</name>
       </objekttyp__alternative_id>
     </_nested__objekttyp__alternative_id>
-    <beschreibung>
+    <beschreibung type="text_l10n">
       <de-DE>Annotierte Katalogkarte aus den 1960ern</de-DE>
-      <en-US/>
-      <es-ES/>
-      <it-IT/>
     </beschreibung>
     <_nested__objekttyp__orte>
-      <objekttyp__orte>
-        <_id>0</_id>
-      </objekttyp__orte>
+      <objekttyp__orte/>
+      <objekttyp__orte/>
+      <objekttyp__orte/>
+      <objekttyp__orte/>
     </_nested__objekttyp__orte>
     <_nested__objekttyp__relationen>
       <objekttyp__relationen>
-        <_id>0</_id>
         <lk_relation_typ_id>
-          <relation_typ date-created="2016-04-01T19:22:04Z" date-last-updated="2016-04-01T19:22:04Z">
-            <_version>1</_version>
+          <relation_typ>
+            <_objecttype>relation_typ</_objecttype>
             <_id>21</_id>
+            <_version>2</_version>
+            <_parent_id>6303</_parent_id>
+            <_system_object_id>395</_system_object_id>
+            <_global_object_id>395@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
+            <_uuid>14e76546-66e3-4b4e-b2bf-169a03950571</_uuid>
+            <_mask>relation_typ__all_fields</_mask>
             <_standard>
-              <de-DE>IsIdenticalTo</de-DE>
+              <de-DE>IstIdentischZu</de-DE>
               <en-US>IsIdenticalTo</en-US>
+              <ka-GE>არის_იდენტური</ka-GE>
             </_standard>
-            <name>
-              <de-DE>IsIdenticalTo</de-DE>
-              <en-US>IsIdenticalTo</en-US>
-              <es-ES>IsIdenticalTo</es-ES>
-              <it-IT>IsIdenticalTo</it-IT>
-            </name>
           </relation_typ>
         </lk_relation_typ_id>
         <lk_relation_id>
           <objekttyp>
+            <_objecttype>objekttyp</_objecttype>
             <_id>6303</_id>
+            <_version>20</_version>
+            <_parent_id>6303</_parent_id>
+            <_system_object_id>8223</_system_object_id>
+            <_global_object_id>8223@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
+            <_uuid>b79de4e5-8d1f-4840-b85f-e052db92a52f</_uuid>
+            <_mask>objekttyp__all_fields</_mask>
+            <_standard>
+              <de-DE>Katalogkarte, annotierte Katalogkarte, 1966, 01.08.2017, 572.04 Mal, TEST</de-DE>
+              <en-US>1966, 08/01/2017, 572.04 Mal, TEST</en-US>
+              <ka-GE>%y, 01.08.%y, 572.04 Mal, TEST</ka-GE>
+            </_standard>
           </objekttyp>
         </lk_relation_id>
-        <extern>
+        <extern type="text_l10n_oneline">
           <de-DE>sich selbst</de-DE>
-          <en-US/>
-          <es-ES/>
-          <it-IT/>
         </extern>
       </objekttyp__relationen>
     </_nested__objekttyp__relationen>
     <_nested__objekttyp__methoden>
-      <objekttyp__methoden>
-        <_id>0</_id>
-      </objekttyp__methoden>
+      <objekttyp__methoden/>
     </_nested__objekttyp__methoden>
     <_nested__objekttyp__keywords_getty>
       <objekttyp__keywords_getty>
-        <_id>0</_id>
-        <keyword/>
+        <custom name="keyword" type="custom:base.custom-data-type-getty.getty">
+          <object name="_fulltext">
+            <string name="text">catalog cards</string>
+            <string name="string">http://vocab.getty.edu/aat/300026769</string>
+          </object>
+          <string name="conceptURI">http://vocab.getty.edu/aat/300026769</string>
+          <string name="conceptName">catalog cards</string>
+        </custom>
       </objekttyp__keywords_getty>
     </_nested__objekttyp__keywords_getty>
   </objekttyp>
