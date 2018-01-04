@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<objects xmlns="http://schema.programmfabrik.de/easydb-data/1.0" base-schema="180" instance="lazar" timestamp="2017-12-18T10:57:51+01:00" user-schema="207" uuid="33a8cae1-a9fa-4655-8c3d-b71241bbc99b">
+<objects base-schema="182" instance="lazar" timestamp="2018-01-04T13:17:59+01:00" user-schema="207" uuid="33a8cae1-a9fa-4655-8c3d-b71241bbc99b">
   <objekttyp>
     <_version>20</_version>
     <_id>6303</_id>
@@ -144,37 +144,52 @@
     <_nested__objekttyp__urheber>
       <objekttyp__urheber>
         <urheber>
-          <person_urheber>
-            <_objecttype>person_urheber</_objecttype>
-            <_id>30</_id>
+          <person_urheber date-created="2017-08-01T12:39:35Z" date-last-updated="2017-08-01T12:39:35Z">
             <_version>1</_version>
+            <_id>30</_id>
+            <name type="text_oneline">Voß, Jakob</name>
+            <custom name="gnd" type="custom:base.custom-data-type-gnd.gnd">
+              <string name="conceptName">Voß, Jakob</string>
+              <string name="conceptURI">http://d-nb.info/gnd/1038709040</string>
+              <object name="_fulltext">
+                <string name="text">Voß, Jakob</string>
+                <string name="string">http://d-nb.info/gnd/1038709040</string>
+              </object>
+            </custom>
+            <custom name="orcid" type="custom:base.custom-data-type-link.link">
+              <string name="url">https://orcid.org/0000-0002-7613-4123</string>
+              <string name="hostname">orcid.org</string>
+              <string name="tld">org</string>
+              <object name="text">
+                <string name="en_US"/>
+                <string name="de_DE"/>
+              </object>
+              <object name="_fulltext">
+                <object name="l10ntext">
+                  <string name="en_US"/>
+                  <string name="de_DE"/>
+                </object>
+                <string name="string">https://orcid.org/0000-0002-7613-4123</string>
+              </object>
+            </custom>
             <_parent_id>6303</_parent_id>
+            <_objecttype>person_urheber</_objecttype>
             <_system_object_id>8226</_system_object_id>
             <_global_object_id>8226@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
             <_uuid>c6103de7-bde2-439b-bfe7-de6b03d3eba5</_uuid>
             <_mask>person_urheber__all_fields</_mask>
-            <_standard>
-              <de-DE>Voß, Jakob</de-DE>
-              <en-US>Voß, Jakob</en-US>
-              <ka-GE>Voß, Jakob</ka-GE>
-            </_standard>
           </person_urheber>
         </urheber>
         <affiliation>
           <affiliation>
-            <_objecttype>affiliation</_objecttype>
-            <_id>5</_id>
             <_version>2</_version>
+            <_id>5</_id>
             <_parent_id>6303</_parent_id>
+            <_objecttype>affiliation</_objecttype>
             <_system_object_id>10196</_system_object_id>
             <_global_object_id>10196@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
             <_uuid>96cc8195-78cb-4c0c-840c-aefbd436b78e</_uuid>
             <_mask>affiliation__all_fields</_mask>
-            <_standard>
-              <de-DE>VZG</de-DE>
-              <en-US>VZG</en-US>
-              <ka-GE>VZG</ka-GE>
-            </_standard>
           </affiliation>
         </affiliation>
       </objekttyp__urheber>
@@ -194,20 +209,19 @@
         <anfang type="date">1966</anfang>
         <ende type="date">1968</ende>
         <datumstyp>
-          <datumstyp>
-            <_objecttype>datumstyp</_objecttype>
-            <_id>1</_id>
+          <datumstyp date-created="2016-04-20T15:27:51Z" date-last-updated="2016-10-11T09:06:30Z">
             <_version>4</_version>
+            <_id>1</_id>
+            <name type="text_l10n_oneline">
+              <de-DE>Entstehungsdatum</de-DE>
+              <en-US>date of creation</en-US>
+            </name>
             <_parent_id>6303</_parent_id>
+            <_objecttype>datumstyp</_objecttype>
             <_system_object_id>599</_system_object_id>
             <_global_object_id>599@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
             <_uuid>547c232c-2fc4-403f-b126-cec586b8fd36</_uuid>
             <_mask>datumstyp__all_fields</_mask>
-            <_standard>
-              <de-DE>Entstehungsdatum</de-DE>
-              <en-US>date of creation</en-US>
-              <ka-GE>#599</ka-GE>
-            </_standard>
           </datumstyp>
         </datumstyp>
       </objekttyp__datum>
@@ -240,20 +254,20 @@
     <_nested__objekttyp__relationen>
       <objekttyp__relationen>
         <lk_relation_typ_id>
-          <relation_typ>
-            <_objecttype>relation_typ</_objecttype>
-            <_id>21</_id>
+          <relation_typ date-created="2016-04-01T19:22:04Z" date-last-updated="2017-09-12T09:47:16Z">
             <_version>2</_version>
+            <_id>21</_id>
+            <name type="text_l10n_oneline">
+              <de-DE>IstIdentischZu</de-DE>
+              <en-US>IsIdenticalTo</en-US>
+              <ka-GE>არის_იდენტური</ka-GE>
+            </name>
             <_parent_id>6303</_parent_id>
+            <_objecttype>relation_typ</_objecttype>
             <_system_object_id>395</_system_object_id>
             <_global_object_id>395@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
             <_uuid>14e76546-66e3-4b4e-b2bf-169a03950571</_uuid>
             <_mask>relation_typ__all_fields</_mask>
-            <_standard>
-              <de-DE>IstIdentischZu</de-DE>
-              <en-US>IsIdenticalTo</en-US>
-              <ka-GE>არის_იდენტური</ka-GE>
-            </_standard>
           </relation_typ>
         </lk_relation_typ_id>
         <lk_relation_id>

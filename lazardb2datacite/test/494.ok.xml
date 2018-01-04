@@ -4,6 +4,8 @@
    <datacite:creators>
       <datacite:creator>
          <datacite:creatorName>Dadunashvili, Elguja</datacite:creatorName>
+         <datacite:nameIdentifier nameIdentifierScheme="GND" schemeURI="http://d-nb.info/gnd/">http://d-nb.info/gnd/133557154</datacite:nameIdentifier>
+         <datacite:nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">http://orcid.org/0000-0002-5434-0815</datacite:nameIdentifier>
       </datacite:creator>
    </datacite:creators>
    <datacite:titles>

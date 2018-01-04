@@ -5,7 +5,6 @@ Extract one easyDB XML from OAI-PMH getRecord request.
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:oai="http://www.openarchives.org/OAI/2.0/"
   xmlns:datacite="http://datacite.org/schema/kernel-4"
-  xmlns="http://schema.programmfabrik.de/easydb-data/1.0"
   exclude-result-prefixes="oai datacite">
 
   <xsl:output method="xml" indent="yes"/>
@@ -15,7 +14,7 @@ Extract one easyDB XML from OAI-PMH getRecord request.
   </xsl:template>
 
   <xsl:template match="objects">
-    <objects xmlns="http://schema.programmfabrik.de/easydb-data/1.0">
+    <objects>
       <xsl:apply-templates/>
     </objects>
   </xsl:template>

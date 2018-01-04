@@ -4,7 +4,8 @@
    <datacite:creators>
       <datacite:creator>
          <datacite:creatorName>Voß, Jakob</datacite:creatorName>
-         <datacite:affiliation>VZG</datacite:affiliation>
+         <datacite:nameIdentifier nameIdentifierScheme="GND" schemeURI="http://d-nb.info/gnd/">http://d-nb.info/gnd/1038709040</datacite:nameIdentifier>
+         <datacite:nameIdentifier nameIdentifierScheme="ORCID" schemeURI="http://orcid.org/">https://orcid.org/0000-0002-7613-4123</datacite:nameIdentifier>
       </datacite:creator>
    </datacite:creators>
    <datacite:titles>

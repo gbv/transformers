@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<objects base-schema="180" instance="lazar" timestamp="2017-12-18T10:13:02+01:00" user-schema="207" uuid="33a8cae1-a9fa-4655-8c3d-b71241bbc99b" xmlns="http://schema.programmfabrik.de/easydb-data/1.0">
+<?xml version="1.0"?>
+<objects base-schema="182" instance="lazar" timestamp="2018-01-04T13:18:04+01:00" user-schema="207" uuid="33a8cae1-a9fa-4655-8c3d-b71241bbc99b">
   <objekttyp>
     <_version>28</_version>
     <_id>399</_id>
@@ -115,26 +115,48 @@
     <_nested__objekttyp__urheber>
       <objekttyp__urheber>
         <urheber>
-          <person_urheber>
-            <_objecttype>person_urheber</_objecttype>
-            <_id>3</_id>
+          <person_urheber date-created="2016-04-06T15:39:29Z" date-last-updated="2017-10-09T18:39:58Z">
             <_version>10</_version>
+            <_id>3</_id>
+            <name type="text_oneline">Dadunashvili, Elguja</name>
+            <custom name="gnd" type="custom:base.custom-data-type-gnd.gnd">
+              <string name="conceptName">Dadunašvili, Elguǰa</string>
+              <string name="conceptURI">http://d-nb.info/gnd/133557154</string>
+              <object name="_fulltext">
+                <string name="text">Dadunašvili, Elguǰa</string>
+                <string name="string">http://d-nb.info/gnd/133557154</string>
+              </object>
+            </custom>
+            <custom name="orcid" type="custom:base.custom-data-type-link.link">
+              <string name="url">http://orcid.org/0000-0002-5434-0815</string>
+              <string name="hostname">orcid.org</string>
+              <string name="tld">org</string>
+              <object name="text">
+                <string name="en_US"/>
+                <string name="de_DE"/>
+                <string name="ka_GE"/>
+              </object>
+              <object name="_fulltext">
+                <object name="l10ntext">
+                  <string name="en_US"/>
+                  <string name="de_DE"/>
+                  <string name="ka_GE"/>
+                </object>
+                <string name="string">http://orcid.org/0000-0002-5434-0815</string>
+              </object>
+            </custom>
             <_parent_id>399</_parent_id>
+            <_objecttype>person_urheber</_objecttype>
             <_system_object_id>418</_system_object_id>
             <_global_object_id>418@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
             <_uuid>eca63e7e-f5de-46a6-8fcc-51484ae6041a</_uuid>
             <_mask>person_urheber__all_fields</_mask>
-            <_standard>
-              <de-DE>Dadunashvili, Elguja</de-DE>
-              <en-US>Dadunashvili, Elguja</en-US>
-              <ka-GE>Dadunashvili, Elguja</ka-GE>
-            </_standard>
           </person_urheber>
         </urheber>
       </objekttyp__urheber>
     </_nested__objekttyp__urheber>
     <thema type="text_l10n">
-      <de-DE>Besen, Schilf, Faden, Nadel,  Klemme, Einfache Technologien</de-DE>
+      <de-DE>Besen, Schilf, Faden, Nadel, Klemme, Einfache Technologien</de-DE>
     </thema>
     <_nested__objekttyp__keywords_gnd>
       <objekttyp__keywords_gnd/>
@@ -149,20 +171,19 @@
         <anfang type="date">2011-09-29</anfang>
         <ende type="date"/>
         <datumstyp>
-          <datumstyp>
-            <_objecttype>datumstyp</_objecttype>
-            <_id>1</_id>
+          <datumstyp date-created="2016-04-20T15:27:51Z" date-last-updated="2016-10-11T09:06:30Z">
             <_version>4</_version>
+            <_id>1</_id>
+            <name type="text_l10n_oneline">
+              <de-DE>Entstehungsdatum</de-DE>
+              <en-US>date of creation</en-US>
+            </name>
             <_parent_id>399</_parent_id>
+            <_objecttype>datumstyp</_objecttype>
             <_system_object_id>599</_system_object_id>
             <_global_object_id>599@33a8cae1-a9fa-4655-8c3d-b71241bbc99b</_global_object_id>
             <_uuid>547c232c-2fc4-403f-b126-cec586b8fd36</_uuid>
             <_mask>datumstyp__all_fields</_mask>
-            <_standard>
-              <de-DE>Entstehungsdatum</de-DE>
-              <en-US>date of creation</en-US>
-              <ka-GE>#599</ka-GE>
-            </_standard>
           </datumstyp>
         </datumstyp>
       </objekttyp__datum>
