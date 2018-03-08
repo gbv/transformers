@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="info:srw/schema/5/picaXML-v1.0">
+  <datafield tag="001A">
+    <subfield code="0">2004:17-11-93</subfield>
+  </datafield>
+  <datafield tag="001B">
+    <subfield code="0">3100:06-07-16</subfield>
+    <subfield code="t">08:09:15.000</subfield>
+  </datafield>
+  <datafield tag="001D">
+    <subfield code="0">2004:29-09-96</subfield>
+  </datafield>
+  <datafield tag="001F">
+    <subfield code="0">0</subfield>
+  </datafield>
+  <datafield tag="001U">
+    <subfield code="0">utf8</subfield>
+  </datafield>
+  <datafield tag="002@">
+    <subfield code="0">Abvz</subfield>
+  </datafield>
+  <datafield tag="003@">
+    <subfield code="0">130662259</subfield>
+  </datafield>
+  <datafield tag="005A">
+    <subfield code="0">19952848</subfield>
+  </datafield>
+  <datafield tag="005A">
+    <subfield code="0">02550822</subfield>
+  </datafield>
+  <datafield tag="005P">
+    <subfield code="S">o</subfield>
+    <subfield code="0">16097491</subfield>
+  </datafield>
+  <datafield tag="006G">
+    <subfield code="0">014684039</subfield>
+  </datafield>
+  <datafield tag="006N">
+    <subfield code="0">01361465</subfield>
+  </datafield>
+  <datafield tag="006X">
+    <subfield code="c">OCoLC</subfield>
+    <subfield code="0">643628151</subfield>
+  </datafield>
+  <datafield tag="006Y">
+    <subfield code="0">DUB258653566</subfield>
+  </datafield>
+  <datafield tag="006Y">
+    <subfield code="0">FALzs08360</subfield>
+  </datafield>
+  <datafield tag="006Y">
+    <subfield code="0">ZBWT00037901</subfield>
+  </datafield>
+  <datafield tag="006Y">
+    <subfield code="0">islz000610</subfield>
+  </datafield>
+  <datafield tag="006Y">
+    <subfield code="0">MPIBaz9700351</subfield>
+  </datafield>
+  <datafield tag="006Z">
+    <subfield code="0">8581745</subfield>
+  </datafield>
+  <datafield tag="007G">
+    <subfield code="c">ZDB</subfield>
+    <subfield code="0">8581745</subfield>
+  </datafield>
+  <datafield tag="010@">
+    <subfield code="a">eng</subfield>
+  </datafield>
+  <datafield tag="011@">
+    <subfield code="a">1983</subfield>
+    <subfield code="n">1983-</subfield>
+  </datafield>
+  <datafield tag="018@">
+    <subfield code="a">z</subfield>
+  </datafield>
+  <datafield tag="019@">
+    <subfield code="a">XA-FR</subfield>
+  </datafield>
+  <datafield tag="021A">
+    <subfield code="a">OECD journal: economic studies</subfield>
+    <subfield code="h">Organisation for Economic Co-operation and Development</subfield>
+  </datafield>
+  <datafield tag="027A">
+    <subfield code="a">Economic studies</subfield>
+  </datafield>
+  <datafield tag="027A" occurrence="01">
+    <subfield code="a">@OECD economic studies</subfield>
+  </datafield>
+  <datafield tag="029A">
+    <subfield code="9">10014599X</subfield>
+    <subfield code="M">Tbv1</subfield>
+    <subfield code="a">OECD</subfield>
+    <subfield code="0">gnd/5157-3</subfield>
+    <subfield code="B">VerfasserIn</subfield>
+    <subfield code="4">aut</subfield>
+  </datafield>
+  <datafield tag="031@">
+    <subfield code="a">Nr. 1.1983(He.) - 43.2006(2007); 2008 -</subfield>
+  </datafield>
+  <datafield tag="031N">
+    <subfield code="d">1</subfield>
+    <subfield code="j">1983</subfield>
+    <subfield code="n">43</subfield>
+    <subfield code="k">2006</subfield>
+    <subfield code="0"> </subfield>
+    <subfield code="j">2008</subfield>
+    <subfield code="6"></subfield>
+  </datafield>
+  <datafield tag="033A">
+    <subfield code="p">Paris</subfield>
+    <subfield code="n">OECD</subfield>
+    <subfield code="h">1983-</subfield>
+  </datafield>
+  <datafield tag="036E">
+    <subfield code="a">Economics</subfield>
+  </datafield>
+  <datafield tag="039D">
+    <subfield code="c">Franz. Ausg</subfield>
+    <subfield code="l">OECD</subfield>
+    <subfield code="t">Revue économique de l&apos;OCDE</subfield>
+    <subfield code="d">Paris</subfield>
+    <subfield code="e">OCDE</subfield>
+    <subfield code="f">1983-</subfield>
+    <subfield code="C">ZDB</subfield>
+    <subfield code="6">775661-6</subfield>
+    <subfield code="C">DNB</subfield>
+    <subfield code="6">014250934</subfield>
+  </datafield>
+  <datafield tag="039D">
+    <subfield code="c">Online-Ausg</subfield>
+    <subfield code="l">OECD</subfield>
+    <subfield code="t">OECD economic studies</subfield>
+    <subfield code="d">Paris</subfield>
+    <subfield code="e">OECD</subfield>
+    <subfield code="f">1983-2006</subfield>
+    <subfield code="h">Online-Ressource</subfield>
+    <subfield code="C">ZDB</subfield>
+    <subfield code="6">2023779-0</subfield>
+    <subfield code="C">DNB</subfield>
+    <subfield code="6">020781830</subfield>
+  </datafield>
+  <datafield tag="039D">
+    <subfield code="c">Online-Ausg. ab 2008</subfield>
+    <subfield code="l">OECD</subfield>
+    <subfield code="t">OECD journal: economic studies</subfield>
+    <subfield code="d">Paris</subfield>
+    <subfield code="e">Organisation for Economic Cooperation &amp; Development</subfield>
+    <subfield code="f">2008-</subfield>
+    <subfield code="h">Online-Ressource</subfield>
+    <subfield code="C">ZDB</subfield>
+    <subfield code="6">2580328-1</subfield>
+    <subfield code="C">DNB</subfield>
+    <subfield code="6">1008099759</subfield>
+  </datafield>
+  <datafield tag="039E">
+    <subfield code="c">Vorg.</subfield>
+    <subfield code="l">OECD</subfield>
+    <subfield code="t">OECD economic outlook / Occasional studies</subfield>
+    <subfield code="d">Paris</subfield>
+    <subfield code="e">OECD</subfield>
+    <subfield code="f">1967-1983</subfield>
+    <subfield code="C">ZDB</subfield>
+    <subfield code="6">8249-1</subfield>
+    <subfield code="C">DNB</subfield>
+    <subfield code="6">010108467</subfield>
+  </datafield>
+  <datafield tag="041A">
+    <subfield code="9">106338226</subfield>
+    <subfield code="M">Tsv1</subfield>
+    <subfield code="a">Entwicklungspolitik</subfield>
+    <subfield code="0">gnd/4014957-2</subfield>
+  </datafield>
+  <datafield tag="041A" occurrence="01">
+    <subfield code="9">10454466X</subfield>
+    <subfield code="M">Tsv1</subfield>
+    <subfield code="a">Zeitschrift</subfield>
+    <subfield code="0">gnd/4067488-5</subfield>
+  </datafield>
+  <datafield tag="041A" occurrence="09">
+    <subfield code="A">DE-600</subfield>
+  </datafield>
+  <datafield tag="045D">
+    <subfield code="9">091401143</subfield>
+    <subfield code="a">Wirtschaftspolitik</subfield>
+    <subfield code="S">stw</subfield>
+    <subfield code="0">10987-4</subfield>
+  </datafield>
+  <datafield tag="045D">
+    <subfield code="9">091398843</subfield>
+    <subfield code="a">Volkswirtschaft</subfield>
+    <subfield code="S">stw</subfield>
+    <subfield code="0">10025-6</subfield>
+  </datafield>
+  <datafield tag="045D">
+    <subfield code="9">091380731</subfield>
+    <subfield code="a">OECD-Staaten</subfield>
+    <subfield code="S">stw</subfield>
+    <subfield code="0">17993-2</subfield>
+  </datafield>
+  <datafield tag="045D" occurrence="49">
+    <subfield code="b">34</subfield>
+  </datafield>
+  <datafield tag="045D" occurrence="49">
+    <subfield code="b">46</subfield>
+  </datafield>
+  <datafield tag="045F">
+    <subfield code="e">22sdnb</subfield>
+    <subfield code="a">050</subfield>
+  </datafield>
+  <datafield tag="045G">
+    <subfield code="a">050</subfield>
+    <subfield code="A">DNB</subfield>
+  </datafield>
+  <datafield tag="045G">
+    <subfield code="a">330</subfield>
+    <subfield code="a">380</subfield>
+    <subfield code="a">320</subfield>
+    <subfield code="A">DNB</subfield>
+  </datafield>
+  <datafield tag="045Q" occurrence="01">
+    <subfield code="9">106414976</subfield>
+    <subfield code="a">83.30</subfield>
+    <subfield code="j">Wirtschaftsentwicklung</subfield>
+    <subfield code="j">Wirtschaftsstruktur: Allgemeines</subfield>
+  </datafield>
+  <datafield tag="045T">
+    <subfield code="a">QA 10000</subfield>
+    <subfield code="A">ZDB</subfield>
+  </datafield>
+  <datafield tag="045T">
+    <subfield code="a">QB 400</subfield>
+    <subfield code="A">ZDB</subfield>
+  </datafield>
+  <datafield tag="045T">
+    <subfield code="a">QL 000</subfield>
+    <subfield code="A">ZDB</subfield>
+  </datafield>
+  <datafield tag="045W">
+    <subfield code="a">wiw</subfield>
+    <subfield code="a">ibl</subfield>
+  </datafield>
+  <datafield tag="045X">
+    <subfield code="b">SKW</subfield>
+    <subfield code="9">665629923</subfield>
+    <subfield code="a">ECS-08001</subfield>
+  </datafield>
+  <datafield tag="046D">
+    <subfield code="b">Hauptsacht. bis 43.2006</subfield>
+    <subfield code="a">OECD economic studies</subfield>
+  </datafield>
+  <datafield tag="046P">
+    <subfield code="a">2007 nicht ersch.; ersch. bis 2006 2x jährl., ab 2008 1x jährl</subfield>
+  </datafield>
+  <datafield tag="046Q">
+    <subfield code="a">Einzelne Themenhefte haben den Zusatz &quot;Special Issue</subfield>
+  </datafield>
+  <datafield tag="047D">
+    <subfield code="a">Kopie b.997011-3)(IIA kein Split, Kopie, 2k)</subfield>
+  </datafield>
+  <datafield tag="101@">
+    <subfield code="a">110</subfield>
+  </datafield>
+  <datafield tag="101B">
+    <subfield code="0">27-03-01</subfield>
+    <subfield code="t">17:20:46.520</subfield>
+  </datafield>
+  <datafield tag="101C">
+    <subfield code="0">22-07-94</subfield>
+  </datafield>
+  <datafield tag="101D">
+    <subfield code="0">19-10-94</subfield>
+    <subfield code="b">4109</subfield>
+    <subfield code="a">0000</subfield>
+  </datafield>
+  <datafield tag="101U">
+    <subfield code="0">utf8</subfield>
+  </datafield>
+  <datafield tag="107F">
+    <subfield code="0">ZO 12</subfield>
+  </datafield>
+  <datafield tag="107F">
+    <subfield code="0">QP154278467</subfield>
+  </datafield>
+  <datafield tag="107F">
+    <subfield code="0">ZRU15410480</subfield>
+  </datafield>
+  <datafield tag="145Z">
+    <subfield code="a">VWL 1110</subfield>
+  </datafield>
+  <datafield tag="147B">
+    <subfield code="a">Durchgehende Heftzählung</subfield>
+  </datafield>
+  <datafield tag="201@" occurrence="01">
+    <subfield code="a">Ausleihbestand|-</subfield>
+    <subfield code="b">0</subfield>
+    <subfield code="e">128383321</subfield>
+    <subfield code="m">per</subfield>
+    <subfield code="f">1</subfield>
+    <subfield code="u">Ausleihbestand</subfield>
+    <subfield code="v">-</subfield>
+  </datafield>
+  <datafield tag="201B" occurrence="01">
+    <subfield code="0">11-08-05</subfield>
+    <subfield code="t">06:40:44.000</subfield>
+  </datafield>
+  <datafield tag="201C" occurrence="01">
+    <subfield code="0">22-07-94</subfield>
+  </datafield>
+  <datafield tag="201D" occurrence="01">
+    <subfield code="0">11-08-05</subfield>
+    <subfield code="b">384906</subfield>
+    <subfield code="a">1999</subfield>
+  </datafield>
+  <datafield tag="201F" occurrence="01">
+    <subfield code="0">0</subfield>
+  </datafield>
+  <datafield tag="201U" occurrence="01">
+    <subfield code="0">utf8</subfield>
+  </datafield>
+  <datafield tag="203@" occurrence="01">
+    <subfield code="0">128383321</subfield>
+  </datafield>
+  <datafield tag="208@" occurrence="01">
+    <subfield code="a">22-07-94</subfield>
+    <subfield code="b">bz</subfield>
+  </datafield>
+  <datafield tag="209A" occurrence="01">
+    <subfield code="b">3110</subfield>
+    <subfield code="f">CAM</subfield>
+    <subfield code="a">88-946</subfield>
+    <subfield code="d">u</subfield>
+    <subfield code="x">00</subfield>
+  </datafield>
+  <datafield tag="231@" occurrence="01">
+    <subfield code="d">1</subfield>
+    <subfield code="j">1983</subfield>
+    <subfield code="n">9</subfield>
+    <subfield code="k">1987/</subfield>
+    <subfield code="0"> </subfield>
+    <subfield code="d">14</subfield>
+    <subfield code="j">1990/</subfield>
+    <subfield code="0"> </subfield>
+    <subfield code="d">16</subfield>
+    <subfield code="j">1991</subfield>
+    <subfield code="r">-</subfield>
+    <subfield code="s">2</subfield>
+    <subfield code="t">Y</subfield>
+  </datafield>
+  <datafield tag="237A" occurrence="01">
+    <subfield code="a">Für Bandanzeige  &quot;zugehörige Publikationen&quot; anklicken</subfield>
+  </datafield>
+</record>
