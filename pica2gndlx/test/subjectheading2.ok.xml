@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<SubjectHeading xmlns="http://d-nb.info/standards/elementset/gnd#" uri="http://d-nb.info/gnd/4275084-2" ppn="104210885">
-  <variantName>GUI</variantName>
-  <variantName>Graphic user interface</variantName>
-  <variantName>Grafisch orientierte Benutzeroberfläche</variantName>
-  <variantName>Graphical User Interface (FOLDOC)</variantName>
-  <preferredName>Graphische Benutzeroberfläche</preferredName>
-  <broaderTerm uri="http://d-nb.info/gnd/4131424-4">Benutzeroberfläche</broaderTerm>
-</SubjectHeading>
